@@ -1,0 +1,152 @@
+<template>
+<div class="page" data-name="about">
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+       <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
+      </div>
+      
+      <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>
+      <div class="right">
+
+      <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
+      <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+      </div>
+      
+    </div>
+  </div>
+  <div class="page-content howitWorks">
+  
+ 
+   
+    <div class="block">
+
+
+
+
+  <div class="intro">    
+<h2>How It Works</h2>
+<p>Feeturre is a cloud based e-commerce marketplace for artists to sell their audio, video, & influence.</p>
+</div>
+
+<div class="row">
+
+  <div class="col-30"><img src="./works03.jpg" /></div>
+  <div class="col-70">
+    <h3>Collaborate Easily</h3>
+  <p>Work with other talent all across the globe! Buy instant downloads or hire an artist for a specific project.</p>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col-30"><img src="./works01.jpg" /></div>
+  <div class="col-70">
+  <h3>Upload Your Art</h3>
+  <p>Upload your art to our website and sell it exclusively or lease your art to buyers all across the world.</p>
+  </div>
+
+</div>
+
+  <div class="row">
+  <div class="col-30"><img src="./works02.jpg" /></div>
+  <div class="col-70">
+  <h3>Buyers Come To You</h3>
+  <p>Buyers can search for a specific sound, video, or find someone to promote their next project or venture. </p>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-30"><img src="./works04.jpg" /></div>
+  <div class="col-70">
+  <h3>Secure Payment</h3>
+  <p>Focus on your art! Feeturre accepts the payments for you and ensures the transaction is safe and secure. </p>
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+<div class="browse text-center">
+  <div class="intro">    
+<h2>Browse Audio, Video & Influence</h2>
+<p>Use filters to expedite finding, vetting, and negotiating your artistry.</p>
+</div>
+
+  <div class="row">
+  <div class="col-50"><img src="./howitworks/enhance01.jpg" /><h3>Bars-Measures</h3></div>
+  <div class="col-50"><img src="./howitworks/enhance02.jpg" /><h3>Beasts-Per-Minuts</h3></div>
+ </div>
+
+ <div class="row">
+  <div class="col-50"><img src="./howitworks/enhance03.jpg" /><h3>Exclusive</h3></div>
+  <div class="col-50"><img src="./howitworks/enhance04.jpg" /><h3>Genure</h3></div>
+ </div>
+
+ <div class="row">
+  <div class="col-50"><img src="./howitworks/enhance05.jpg" /><h3>Lease</h3></div>
+  <div class="col-50"><img src="./howitworks/enhance06.jpg" /><h3>Mood</h3></div>
+ </div>
+
+
+
+
+</div>
+
+<!--  <a href="#" @click="${go_to_signup}" class="col external button button-large button-fill button-green">Sign Up Now</a>
+ 
+ -->
+
+
+  </div>
+</div>
+</template>
+<script>
+  export default (props, { $f7, $update }) => {
+     
+
+
+
+const go_to_signup = ( ) => {
+
+    
+       var url = 'https://feeturre.com/signup';
+       var target = '_blank';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+
+
+  return $render;
+};
+</script>

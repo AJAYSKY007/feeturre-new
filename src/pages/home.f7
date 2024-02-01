@@ -1,0 +1,443 @@
+<template>
+  <div class="page" data-name="home">
+    
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        
+        <div class="left"><a href="/" class="link" ><img src="../assets/logo_1.png" class="logo" width="150" /></a></div>
+        <div class="title"></div>
+        <div class="right">
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+        </div>
+         
+      </div>
+    </div>
+
+   
+    <!-- Scrollable page content-->
+    <div class="page-content ptr-content" data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
+
+ <div class="ptr-preloader">
+        <div class="preloader"></div>
+        <div class="ptr-arrow"></div>
+      </div>
+ 
+
+ 
+
+
+<!-- <div class="backgroundImage"> -->
+
+<div class="block headingBlock">
+
+<h1>Empowering <br/>
+Artistry</h1>
+<p>Your Talent is Worth a Fee</p>
+
+    
+</div>
+
+
+<div class="row no-gap mb35">
+  <div  class="swiper-container PetTypeSlider">
+    <div class="swiper-wrapper">
+    </div>
+  </div>
+</div>
+
+
+<!-- 
+<div class="block">
+   
+  <div class="searchbar searchbar-inline">
+    <div class="searchbar-input-wrap">
+      <input type="search" placeholder="Search" class="searchbox" />
+      <i class="searchbar-icon"></i>
+      <span class="input-clear-button"></span>
+    </div>
+  </div>
+</div>-->
+
+<!-- </div>  -->
+
+
+
+<div class="block secTitle">
+  <!-- <div class="row">
+    <div class="col-70">
+      <h2>Trending Talent</h2>
+    </div>
+    <div class="col-30">
+    <div class="col-100 text-right"><a href="/artists/" class="alink">View All</a></div>
+    </div>
+  </div> -->
+  <div class="grid grid-cols-2 ">
+    <div><h2>Trending Talent</h2></div>
+    <div class="text-right home_filter"><a href="/artists/" class="alink">View All</a></div>
+  </div>
+</div>  
+
+
+ 
+  <div class="block ArtistList" >
+ 
+
+
+  <div class="artistitems" innerHTML=${home_artists}>   <div class="preloader color-orange"></div> </div>
+ </div>
+
+
+ <div class="block">
+
+<div class="row">
+<div><a href="/artists/" class=" button button-large button-fill">Artists</a></div>
+<div><a href="/feeturres/" class=" button button-large button-fill-border">Feeturres</a></div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="block home_3">
+
+<h2>Monetize Sound, Motion,
+& Influence</h2>
+ 
+
+</div> 
+
+<div class="block">
+<img src="../assets/feeturre_02.png" />
+</div>
+
+
+
+
+<div class="block">
+  <div class="bg2">
+    <p>Secure Payment System</p>
+    <h2>Celebrate your creation!</h2>
+  </div>
+</div>
+
+
+
+ 
+
+
+<div class="block secTitle">
+  <!-- <div class="row">
+    <div class="col-70">
+      <h2>Popular Feeturres</h2>
+
+      </div>
+      <div class="col-30">
+      <div class="col-100 text-right"><a href="/feeturres/" class="alink">View All</a></div>
+    </div>
+  </div> -->
+  <div class="grid grid-cols-2 ">
+    <div><h2>Popular Feeturres</h2></div>
+    <div class="text-right home_filter"><a href="/feeturres/" class="alink">View All</a></div>
+  </div>
+
+</div>   
+ 
+  <div class="block ArtistList" >
+
+  <div class="artistitems-2" innerHTML=${home_feeturre}> <div class="preloader color-orange"></div> </div>
+ </div>
+      
+   
+<!--     <div class="block">
+
+<div class="row">
+<div class="col-50"><a href="#" @click="${go_to_signup}" class="col button button-large button-fill button-green">Register</a></div>
+<div class="col-50"><a href="#" @click="${go_to_login}" class="col button button-large button-fill btn-white">Login</a></div>
+
+  </div>
+
+
+ </div>   -->
+
+
+
+<div class="block">
+
+
+<div class="bg3">
+  <h5>Revolutionizing Creation</h5>
+  <h2>Produce Content Today!</h2>
+  <p>Feeturre puts collaboration at your fingertips!</p>
+</div>
+
+</div>
+
+
+ 
+</div>
+
+
+
+  </div>
+</template>
+<script>
+
+import $$ from 'dom7';
+
+export default function (props, {$store, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted, $update }) {
+
+
+let home_artists = '';
+let home_mgmt = '';
+let home_feeturre = '';
+
+
+const api_url = 'https://feeturre.com/api/';
+//const api_url = 'http://localhost/feeturre/api/';
+const header = { "Authorization": "Basic VGFsZW50OkZlZQ=="} ;
+
+
+
+const go_to_signup = ( ) => {
+
+    
+       var url = 'https://feeturre.com/signup';
+       var target = '_blank';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+
+const go_to_login = ( ) => {
+
+    
+       var url = 'https://feeturre.com/login';
+       var target = '_blank';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+
+
+
+//Get Trending based on Type
+const get_trending = ( page ) => {
+
+
+  console.log('get trending');
+
+
+  var apiUrl = api_url+"trending-list";
+
+  fetch(apiUrl, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  data: { 'type': 'artist' }, // Pass your data directly to the data option
+})
+    .then(function (response) {
+      if (response.status === 200) {
+        return response.json(); // Parse the JSON response
+      } else {
+        throw new Error('Failed to fetch data');
+      }
+    })
+    .then(function (data) {
+      // Handle the API response data
+       
+      var artist = data;   
+        if(artist.success == true)
+        {
+
+                home_artists = artist.data; 
+                $update(); 
+        }
+
+        $update();
+
+ 
+    })
+    .catch(function (error) {
+      // Handle any errors
+      console.error('Error:', error);
+    });
+
+ 
+
+
+}
+
+
+//Get Trending based on Type
+const get_trending_feeturre = ( page ) => {
+
+  var apiUrl = api_url+"trending-list";
+
+  fetch(apiUrl, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  data: { 'type': 'feeturre' },
+  // body: JSON.stringify(data), // Pass your data directly to the data option
+})
+    .then(function (response) {
+      if (response.status === 200) {
+        return response.json(); // Parse the JSON response
+      } else {
+        throw new Error('Failed to fetch data');
+      }
+    })
+    .then(function (data) {
+      // Handle the API response data
+     
+      var artist = data;   
+        if(artist.success == true)
+        {
+
+          home_feeturre = artist.data; 
+          console.log(home_feeturre);
+                $update(); 
+        }
+        $update();
+
+ 
+    })
+    .catch(function (error) {
+      // Handle any errors
+      console.error('Error:', error);
+    });
+  
+
+
+// $f7.request({
+//                 url: api_url+'trending-list',
+//                 method : "GET",
+//                 data: { 'type': 'feeturre' },
+//                 timeout: 0,
+//                 //headers: header,
+                
+                
+
+//                 statusCode: {
+//                         404: function (xhr) {
+//                           alert('page not found');
+//                         },
+//                         401: function( xhr) {
+//                           console.log(xhr);
+//                         }
+//                  },
+                
+
+
+                 
+                 
+//                 success: function(data) {
+
+ 
+
+//                     var artist = JSON.parse(data); 
+//                     if(artist.success == true)
+//                     {
+
+//                           home_feeturre = artist.data; 
+//                            $update(); 
+//                     }
+     
+//                 },  
+//             })
+
+
+}
+
+
+ 
+
+const pageRefresh = (e, done) => {
+
+     setTimeout(() => { 
+     
+
+     get_trending();
+     get_trending_feeturre();
+
+      // Update state to rerender
+        $update();
+
+        // When loading done, we need to reset it
+        done();
+      }, 2000);
+
+}
+
+
+$on('pageInit', (e, page) => {
+ 
+ get_trending();
+ get_trending_feeturre();
+
+ 
+ // set to either landscape
+screen.orientation.lock('portrait');
+
+  
+
+});
+
+ 
+
+
+  return $render;
+}
+</script>

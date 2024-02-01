@@ -1,0 +1,340 @@
+
+<template>
+  <div id="app">
+
+
+
+
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark panel-init">
+      <div class="view">
+        <div class="page">
+           
+          <div class="page-content no-padding">
+
+ 
+            <div class="list links-list">
+        <ul>
+       <!--    <li><a href="/how-it-works/" class="panel-close">How It Works</a></li> -->
+          <li><a href="/artists/" class="panel-close">Artists</a></li>
+          <li><a href="/feeturres/" class="panel-close">Marketplace</a></li>
+          <li><a href="/management/" class="panel-close">Management</a></li>
+        <!--   <li><a href="#" @click="${go_to_login}" class="panel-close">Sign In</a></li>
+          <li><a href="#"  @click="${go_to_signup}" class="panel-close">Sign Up</a></li> -->
+    
+          <li><a href="#" @click="${go_to_help}" class="panel-close">Help Desk</a></li>
+
+          
+          
+        </ul>
+      </div>
+
+  
+
+      <div class="block versionData">
+
+<div class="socialOuter">
+<a href="https://facebook.com/feeturre/" target="_blank" class="external"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="https://twitter.com/feeturre/" target="_blank" class="external"><i class="fa fa-twitter" aria-hidden="true" ></i></a> <a href="https://www.instagram.com/feeturre/" target="_blank" class="external"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="https://soundcloud.com/feeturre" target="_blank" class="external"><i class="fa fa-soundcloud" aria-hidden="true"></i></a> <a href="https://www.tiktok.com/@feeturre?lang=en" target="_blank" class="external"><i class="fa fa-tiktok"></i></a>
+</div>
+
+
+       Version: 1.0.1<br/>
+
+   <a href="#" @click="${go_to_privacy}" class="panel-close">Privacy Policy</a><br/>
+   <a href="#" @click="${go_to_terms}" class="panel-close">Terms & Conditions</a><br/>
+   <a href="#" @click="${go_to_community}" class="panel-close">Community Guidelines</a>
+      </div>
+            
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main view-init safe-areas" data-url="/">
+       
+
+
+
+           <!-- Toolbar-->
+    <div class="toolbar tabbar-labels toolbar-bottom">
+      <div class="toolbar-inner">
+        <!-- <a href="/" class="link"><i class="icons material-icons">roofing</i> <span class="tabbar-label">Home</span></a> -->
+        <a href="/artists/" class="link"><i class="icons material-icons">group</i> <span class="tabbar-label">Artists</span></a>
+        <a href="/feeturres/" class="link"><i class="icons material-icons">music_note</i> <span class="tabbar-label">Marketplace</span></a>
+        <a href="/management/" class="link"><i class="icons material-icons">camera_indoor</i> <span class="tabbar-label">MGMT</span></a>
+        <a href="#" class="link" @click="${go_to_site}" ><i class="f7-icons">globe</i> <span class="tabbar-label">Web</span></a>
+        <!--  <a href="#" class="link" @click="${go_to_login}" ><i class="icons material-icons">login </i> <span class="tabbar-label">SignIn</span></a>  -->
+      </div>
+    </div>
+    </div>
+
+
+  
+
+ 
+
+
+    
+
+  </div>
+</template>
+<script>
+  export default (props, { $f7, $update }) => {
+    // Login screen demo data
+    let username = '';
+    let password = '';
+
+const go_to_help = ( ) => {
+
+    
+       var url = 'https://help.feeturre.com';
+       var target = '_system';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+
+const go_to_site = ( ) => {
+
+    
+       var url = 'https://feeturre.com';
+       var target = '_system';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+
+const go_to_signup = ( ) => {
+
+    
+       var url = 'https://feeturre.com/signup';
+       var target = '_blank';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+
+const go_to_login = ( ) => {
+
+    
+       var url = 'https://feeturre.com/login';
+       var target = '_blank';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+const go_to_privacy = ( ) => {
+
+    
+       var url = 'https://feeturre.com/privacy_policy';
+       var target = '_system';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+const go_to_terms = ( ) => {
+
+    
+       var url = 'https://feeturre.com/terms_condition';
+       var target = '_system';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+const go_to_community = ( ) => {
+
+    
+       var url = 'https://feeturre.com/community_guidelines';
+       var target = '_system';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+
+
+    const updateUsername = (e) => {
+      username = e.target.value;
+      $update();
+    }
+    const updatePassword = (e) => {
+      password = e.target.value;
+      $update();
+    }
+    const alertLoginData = () => {
+      $f7.dialog.alert('Username: ' + username + '<br/>Password: ' + password, () => {
+        $f7.loginScreen.close();
+      });
+    }
+
+
+
+
+    return $render;
+  }
+</script>

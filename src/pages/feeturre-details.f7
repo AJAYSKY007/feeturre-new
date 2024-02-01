@@ -1,0 +1,150 @@
+<template>
+<div class="page" data-name="feeturre-details">
+
+
+     <!-- Top Navbar -->
+    <div class="navbar navbar-small navbar-transparent">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+          <div class="left">
+          <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
+        </div>
+        <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>
+        <div class="right">
+       <!--  <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+          
+        </div>
+         
+      </div>
+    </div>
+
+   
+
+
+
+  
+    <div class="page-content ptr-content no-padding" data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
+
+ <div class="ptr-preloader">
+        <div class="preloader"></div>
+        <div class="ptr-arrow"></div>
+      </div>
+   
+
+
+    <div class="MainContent" innerHTML=${feetureDetail} >
+      <!-- Maincontent goes Here -->
+    </div>
+    
+
+
+
+  </div>
+</div>
+</template>
+<script>
+export default function (props, {$store, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted, $update }) {
+
+
+
+const api_url = 'https://feeturre.com/api/';
+const header = { "Authorization": "Basic VGFsZW50OkZlZQ=="} ;
+
+
+  const feeturreName = props.feeturreName;
+  let feetureDetail = '';
+
+
+
+const go_to_signup = ( ) => {
+
+    
+       var url = 'https://feeturre.com/login';
+       var target = '_blank';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+//Get Feeturre Details
+const getFeeturreDetails = ( userName ) => {
+
+$f7.request({
+                url: api_url+'feeturre-detail/'+feeturreName,
+                method : "GET",
+                timeout: 0,
+                //crossDomain: false,
+                headers: header,
+                success: function(data) {
+                    
+                    
+
+                    //console.log(data);
+
+                    //var artist_detail = JSON.parse(data);
+
+                    //console.log(artist_detail);
+
+                    feetureDetail = data;
+                    $update();
+
+                },  
+            })
+
+
+}
+
+const pageRefresh = (e, done) => {
+
+     setTimeout(() => { 
+     
+
+      getFeeturreDetails(feeturreName);
+
+      // Update state to rerender
+        $update();
+
+        // When loading done, we need to reset it
+        done();
+      }, 2000);
+
+}
+
+
+$on('pageInit', (e, page) => {
+
+    getFeeturreDetails(feeturreName);
+       
+});
+
+
+
+
+
+
+  return $render;
+};
+</script>

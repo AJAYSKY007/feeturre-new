@@ -1,0 +1,489 @@
+<template>
+<div class="page" data-name="artists">
+
+    <!-- Top Navbar -->
+    <div class="navbar navbar-small">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+          <div class="left">
+          <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
+        </div>
+        <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>  
+        <div class="right">
+          <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
+          <a href="#" data-popup=".popup-push" class="popup-open link" ><i class="icons material-icons">tune </i></a>
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+        </div>
+
+
+        
+          
+        
+         
+      </div>
+    </div>
+
+ 
+
+
+
+  
+<div class="page-content infinite-scroll-content ptr-content" @infinite=${loadMore}  data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
+  
+ <div class="ptr-preloader">
+        <div class="preloader"></div>
+        <div class="ptr-arrow"></div>
+      </div>
+
+
+
+<!--   <div class="block">
+  
+  <div class="searchbar searchbar-inline">
+    <div class="searchbar-input-wrap">
+      <input type="search" placeholder="Search" class="searchbox" />
+      <i class="searchbar-icon"></i>
+      <span class="input-clear-button"></span>
+    </div>
+  </div>
+
+</div> -->
+
+ 
+ <div class="block secTitle">
+  <div class="row">
+<div class="col-100">
+<h2>Browse Artists</h2>
+ 
+</div>
+ 
+</div>
+
+</div> 
+
+
+<div class="block ArtistList">
+ 
+<div class="artistitems" innerHTML=${all_artists}> </div>
+
+${hasMoreItems && $h`
+      <div class="preloader infinite-scroll-preloader"></div>
+`}
+
+</div>
+
+
+
+  </div>
+
+<div class="popup popup-push filterPopup">
+    
+    <div class="row">
+      <div class="col-100 text-right popClose"><a class="link popup-close">Close</a></div>
+    </div>
+     <div class="page-content">
+    <div class="block">
+      <form id="browse-form">
+        <input type="text" name="name" />
+     <div class="filterOuter" innerHTML=${filterOptions} ></div>
+
+<button type="button" @click="${filterArtistData}" class="btn btn-primary ripple-effect filterbtn clickbtn popup-close" id="artist-filter-click" value="Apply Filter" >Apply Filter</button>
+
+     </form>
+  </div>
+</div>
+
+ 
+
+</div>
+
+</div>
+
+  
+
+</template>
+<script>
+
+import $$ from 'dom7';
+
+
+export default function (props, {$store, $f7, $, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted, $update }) {
+
+
+const api_url = 'https://feeturre.com/api/';
+//const api_url = 'http://localhost/feeturre/api/';
+const header = { "Authorization": "Basic VGFsZW50OkZlZQ=="} ;
+
+let all_artists = '';
+let filterOptions = '';
+
+let flag=0;
+let page_num_load=1;
+let filterSet = false;
+
+        let page_num=1;
+        let filter_flag =0;
+
+let allowInfinite = true;
+let hasMoreItems = true;
+let lastItem = 20;
+
+
+
+const go_to_signup = ( ) => {
+
+    
+       var url = 'https://feeturre.com/login';
+       var target = '_blank';
+       var options = "location = yes"
+       var ref = cordova.InAppBrowser.open(url, target, options);
+       
+       ref.addEventListener('loadstart', loadstartCallback);
+       ref.addEventListener('loadstop', loadstopCallback);
+       ref.addEventListener('loaderror', loaderrorCallback);
+       ref.addEventListener('exit', exitCallback);
+
+       function loadstartCallback(event) {
+          //console.log('Loading started: '  + event.url)
+       }
+
+       function loadstopCallback(event) {
+          //console.log('Loading finished: ' + event.url)
+       }
+
+       function loaderrorCallback(error) {
+          //console.log('Loading error: ' + error.message)
+       }
+
+       function exitCallback() {
+          //console.log('Browser is closed...')
+       }
+   
+
+}
+
+const filterArtistData = () => {
+
+
+        filterSet = true;
+        page_num = 1;
+        filter_flag = 0;
+
+         
+        var formData = $f7.form.convertToData('#browse-form');
+
+        var gender = formData.gender;
+        var is_verified = formData.is_verified;
+        var is_managed = formData.is_managed;
+        var rating = formData.rating;
+        var name = formData.name;
+        var country_id = formData.country_id;
+        var country_id = formData.country_id;
+
+        var subCategoryId = [];
+
+        console.log(formData);
+
+
+        console.log(formData.sub_cats);
+
+        if(formData.sub_cats.length)
+        { 
+
+             for (let i = 0; i < formData.sub_cats.length; i++) {
+                subCategoryId += formData.sub_cats[i] + ",";
+             }
+
+             console.log(formData.sub_cats.length);
+       
+        }
+
+        console.log('sub Cat: '+subCategoryId);
+
+
+
+
+
+        var filterData = {'offset': 0,'limit': 8, page: page_num, 'gender':gender, 'name':name, 'is_verified':is_verified, 'is_managed':is_managed, 'rating':rating, 'country_id':country_id, 'sub_category_id':subCategoryId };
+
+        
+
+   
+
+
+$f7.request({
+                url: api_url+'getartists',
+                method : "GET",
+                timeout: 0,
+                data: filterData,
+                 
+                headers: header,
+                success: function(data) {
+
+                    var artist = JSON.parse(data);
+
+
+                    if(artist.success == true)
+                    {
+
+                         all_artists = artist.data;
+                         filter_flag += 8;
+                         page_num += 1;
+                          
+                         $update(); 
+                    }
+     
+                },  
+            })     
+
+
+
+        
+
+}
+
+
+
+
+
+
+//Get all Artist
+const get_all_artist = ( page ) => {
+
+
+page_num_load=1;
+
+$f7.request({
+                url: api_url+'getartists',
+                method : "GET",
+                timeout: 0,
+                data: {'offset': 0,'limit': 8, page: page_num_load },
+                //crossDomain: false,
+                headers: header,
+                success: function(data) {
+
+                    var artist = JSON.parse(data);
+
+
+                    if(artist.success == true)
+                    {
+
+                         all_artists = artist.data;
+                         flag += 8;
+                         page_num_load += 1;
+                          
+                         $update(); 
+                    }
+     
+                },  
+            })
+
+
+}
+
+const loadMore = () => {
+      if (!allowInfinite) return;
+      allowInfinite = false;
+
+      setTimeout(function () {
+
+
+        console.log('fS:'+filterSet);
+        console.log('page_num'+page_num); 
+        console.log('Flag:'+filter_flag);
+
+
+        
+        var formData = $f7.form.convertToData('#browse-form');
+
+        var gender = formData.gender;
+        var is_verified = formData.is_verified;
+        var is_managed = formData.is_managed;
+        var rating = formData.rating;
+        var name = formData.name;
+        var country_id = formData.country_id;
+
+
+        var subCategoryId = [];
+
+        if(filterSet)
+        {
+             page_num_load = page_num;
+             flag = filter_flag;
+        
+ 
+
+        if(formData.sub_cats.length)
+        { 
+
+             for (let i = 0; i < formData.sub_cats.length; i++) {
+                subCategoryId += formData.sub_cats[i] ;
+             }
+
+            
+       
+        }
+
+
+      }
+
+         
+        
+        var filterData = {'offset': flag,'limit': 8, page: page_num_load, 'gender':gender, 'name':name, 'is_verified':is_verified, 'is_managed':is_managed, 'rating':rating, 'country_id':country_id, 'sub_category_id': subCategoryId };
+
+        
+
+
+        
+
+        $f7.request({
+                url: api_url+'getartists',
+                method : "GET",
+                data: {'offset': flag,'limit': 8, page: page_num_load, 'gender':gender, 'name':name, 'is_verified':is_verified, 'is_managed':is_managed, 'rating':rating, 'country_id':country_id, 'sub_category_id': subCategoryId },
+                timeout: 0,
+                //crossDomain: false,
+                headers: header,
+                success: function(data) {
+
+
+                    var response = JSON.parse(data);
+
+                    console.log(response);
+
+
+                setTimeout(function() {
+     
+                      
+                    
+                       if(response.last_page < page_num_load ){
+                          hasMoreItems = false;
+                          $update();
+                          return;
+                        }
+
+
+
+                    $$('.artistitems').append(response.data);
+                    //$("#load-more-click").prop('disabled',false);
+
+                    
+        if(filterSet)
+        {
+                    page_num += 1;
+                    filter_flag += 8;
+             
+        }
+        else
+        {
+
+                    page_num_load += 1;
+                    flag += 8;
+
+        }
+                    
+                         
+                    
+                    }, 1000);
+
+                $update(); 
+
+
+
+                
+
+   
+                     
+     
+                },  
+            })
+
+
+
+
+   
+
+        allowInfinite = true;
+        lastItem += 20;
+
+        $update();
+      }, 1000);
+}
+
+
+const pageRefresh = (e, done) => {
+
+     setTimeout(() => { 
+     
+
+     if(filterSet == true)
+     {
+          filterArtistData();
+     }
+     else
+     {
+
+        get_all_artist();
+
+     }
+
+     get_filter_optioms();
+     
+
+      // Update state to rerender
+        $update();
+
+        // When loading done, we need to reset it
+        done();
+      }, 2000);
+
+}
+
+const get_filter_optioms = ( page ) => {    
+
+$f7.request({
+                url: api_url+'artist-filter',
+                method : "GET",
+                timeout: 0,
+                
+                //crossDomain: false,
+                headers: header,
+                success: function(data) {
+
+                    
+                if(data)
+                {
+                   filterOptions = data;
+                }
+                else
+                {
+                   filterOptions = 'Nothing Found';
+                }
+
+                   
+     
+                },  
+            })
+
+
+}
+
+
+$on('pageInit', (e, page) => {
+
+    get_all_artist(); //Get all Artist
+    get_filter_optioms(); //filter form popup
+
+    
+
+
+     
+});
+
+
+
+
+
+
+  return $render;
+};
+</script>
