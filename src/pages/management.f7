@@ -8,11 +8,10 @@
           <div class="left">
           <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
         </div>
-        <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>
+        <!-- <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div> -->
         <div class="right">
           <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-popup=".popup-push" class="popup-open link" ><i class="icons material-icons">tune </i></a> 
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
         </div>
          
       </div>
@@ -34,17 +33,16 @@
 
  <div class="block secTitle">
   <div class="row">
-<div class="col-100">
 <h2>Browse Management</h2>
- 
-</div>
+<a href="#" data-popup=".popup-push" class="popup-open link" ><span class="material-symbols-outlined"> filter_alt </span></a>
+
  
 </div>
 
 </div> 
  
 
-<div class="block ArtistList">
+<div class="block ArtistList mgmtlist">
  
 <div class="artistitems" innerHTML=${all_artists}></div>
 
@@ -145,30 +143,59 @@ const go_to_signup = ( ) => {
 
 //Get all Artist
 const get_artist = ( page ) => {
+var apiUrl = api_url+"load-company-list";
 
-$f7.request({
-                url: api_url+'load-company-list',
-                method : "GET",
-                timeout: 0,
+fetch(apiUrl, {
+                method: 'GET',
+                headers: {  'Content-Type': 'application/json',},
                 data: { 'page':page_num_load,'limit': 12,'offset': 0},
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+// body: JSON.stringify(data), // Pass your data directly to the data option
+              })
+              .then(function (response) {
+                if (response.status === 200) {
+                  return response.json(); // Parse the JSON response
+                } else {
+                  throw new Error('Failed to fetch data');
+                }
+              })
+              .then(function (data) {
+                // Handle the API response data
+              
+                var artist = data;   
+                  if(artist.success == true)
+                  {
 
-                    //console.log(data);
+                    all_artists = artist.data;
+                    flag += 12;
+                    page_num_load += 1;
+                    $update();
 
-                    var artist = JSON.parse(data);
-                    if(artist.success == true)
-                    {
+                  }
+                  $update();
+              })
+// $f7.request({
+//                 url: api_url+'load-company-list',
+//                 method : "GET",
+//                 timeout: 0,
+//                 data: { 'page':page_num_load,'limit': 12,'offset': 0},
+//                 //crossDomain: false,
+//                 headers: header,
+//                 success: function(data) {
 
-                         all_artists = artist.data;
-                         flag += 12; 
-                         page_num_load+=1;
-                         $update(); 
-                    }
+//                     //console.log(data);
+
+//                     var artist = JSON.parse(data);
+//                     if(artist.success == true)
+//                     {
+
+//                          all_artists = artist.data;
+//                          flag += 12; 
+//                          page_num_load+=1;
+//                          $update(); 
+//                     }
      
-                },  
-            })
+//                 },  
+//             })
 
 
 }
@@ -187,39 +214,66 @@ const filterArtistData = () => {
 
  
       
+     var apiUrl = api_url+"load-company-list";
 
+     fetch(apiUrl, {
+                method: 'GET',
+                headers: {  'Content-Type': 'application/json',},
+                data: { 'page':page_num_load,'limit': 12,'offset': 0, 'search_value': formData.searchValue, 'management_type': formData.managementType },
+// body: JSON.stringify(data), // Pass your data directly to the data option
+              })
+              .then(function (response) {
+                if (response.status === 200) {
+                  return response.json(); // Parse the JSON response
+                } else {
+                  throw new Error('Failed to fetch data');
+                }
+              })
+              .then(function (data) {
+                // Handle the API response data
+              
+                var artist = data;   
+                  if(artist.success == true)
+                  {
 
-    
+                    all_artists = artist.data;
+                    flag += 12;
+                    page_num_load += 1;
+                    $update();
+
+                  }
+                  $update();
+              })
     
  
-     $f7.request({
-                url: api_url+'load-company-list',
-                method : "GET",
-                data: { 'page':page_num_load,'limit': 12,'offset': 0, 'search_value': formData.searchValue, 'management_type': formData.managementType },
-                timeout: 0,
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+    //  $f7.request({
+    //             url: api_url+'load-company-list',
+    //             method : "GET",
+    //             data: { 'page':page_num_load,'limit': 12,'offset': 0, 'search_value': formData.searchValue, 'management_type': formData.managementType },
+    //             timeout: 0,
+    //             //crossDomain: false,
+    //             headers: header,
+    //             success: function(data) {
 
                  
 
-                    var artist = JSON.parse(data);
+    //                 var artist = JSON.parse(data);
 
 
-                    if(artist.success == true)
-                    {
+    //                 if(artist.success == true)
+    //                 {
 
-                      //console.log(feeturres.data);
+    //                   //console.log(feeturres.data);
 
-                         all_artists = artist.data;
-                         flag += 12;
-                         page_num_load += 1;
+    //                      all_artists = artist.data;
+    //                      flag += 12;
+    //                      page_num_load += 1;
                           
-                         $update(); 
-                    }
+    //                      $update(); 
+    //                 }
      
-                },  
-            })
+    //             },  
+    //         })
         
 
 }
@@ -235,72 +289,100 @@ const loadMore = () => {
         
 
       setTimeout(function () {
-         
+        var apiUrl = api_url+"load-company-list";
 
- 
-
-        $f7.request({
-                url: api_url+'load-company-list',
-                method : "GET",
+        fetch(apiUrl, {
+                method: 'GET',
+                headers: {  'Content-Type': 'application/json',},
                 data: {
                 'page': page_num_load,
                 'offset': flag,'limit': 12, 
                 'search_value': formData.searchValue, 'management_type': formData.managementType
-            },
-                timeout: 0,
-                headers: header,
-                //crossDomain: false,
-                statusCode: {
-                        404: function (xhr) {
-                          alert('page not found');
-                        },
-                        401: function( xhr) {
-                          console.log(xhr);
-                        }
-                 },
-                success: function(data) {
+                },
+// body: JSON.stringify(data), // Pass your data directly to the data option
+              })
+              .then(function (response) {
+                if (response.status === 200) {
+                  return response.json(); // Parse the JSON response
+                } else {
+                  throw new Error('Failed to fetch data');
+                }
+              })
+              .then(function (data) {
+                // Handle the API response data
+              
+                var artist = data;   
+                  if(artist.success == true)
+                  {
+
+                    
+
+                  }
+                  $update();
+              })
+
+        // $f7.request({
+        //         url: api_url+'load-company-list',
+        //         method : "GET",
+        //         data: {
+        //         'page': page_num_load,
+        //         'offset': flag,'limit': 12, 
+        //         'search_value': formData.searchValue, 'management_type': formData.managementType
+        //     },
+        //         timeout: 0,
+        //         headers: header,
+        //         //crossDomain: false,
+        //         statusCode: {
+        //                 404: function (xhr) {
+        //                   alert('page not found');
+        //                 },
+        //                 401: function( xhr) {
+        //                   console.log(xhr);
+        //                 }
+        //          },
+        //         success: function(data) {
 
 
-                    var response = JSON.parse(data);
+        //             var response = JSON.parse(data);
 
     
                
 
 
-                setTimeout(function() {
+        //         setTimeout(function() {
 
                     
      
                       
-                     if(response.last_page < page_num_load ){
-                          hasMoreItems = false;
-                          $update();
-                          return;
-                        }
-                     else {
+        //              if(response.last_page < page_num_load ){
+        //                   hasMoreItems = false;
+        //                   $update();
+        //                   return;
+        //                 }
+        //              else {
 
                         
 
-                     }
+        //              }
 
 
-                    $$('.artistitems').append(response.data);
-                    //$("#load-more-click").prop('disabled',false);
+        //             $$('.artistitems').append(response.data);
+        //             //$("#load-more-click").prop('disabled',false);
 
-                    flag += 12;
-                    page_num_load = page_num_load + 1;
+        //             flag += 12;
+        //             page_num_load = page_num_load + 1;
                          
                     
-                    }, 1000);
+        //             }, 1000);
 
-                $update(); 
+        //         $update(); 
                 
 
    
                      
      
-                },  
-            })
+        //         },  
+        //     })
 
 
 
@@ -334,29 +416,55 @@ const pageRefresh = (e, done) => {
 
 const get_filter_options = ( page ) => {    
 
-$f7.request({
-                url: api_url+'company-filter',
-                method : "GET",
-                timeout: 0,
+          var apiUrl = api_url+"company-filter";
+  
+          fetch(apiUrl, {
+                  method: 'GET',
+                  headers: {  'Content-Type': 'application/json',},
+  // body: JSON.stringify(data), // Pass your data directly to the data option
+                })
+                .then(function (response) {
+                  if (response.status === 200) {
+                    return response.json(); // Parse the JSON response
+                  } else {
+                    throw new Error('Failed to fetch data');
+                  }
+                })
+                .then(function (data) {
+                  // Handle the API response data
                 
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+                  var artist = data;   
+                    if(artist.success == true)
+                    {
+  
+                      
+  
+                    }
+                    $update();
+                })
+// $f7.request({
+//                 url: api_url+'company-filter',
+//                 method : "GET",
+//                 timeout: 0,
+                
+//                 //crossDomain: false,
+//                 headers: header,
+//                 success: function(data) {
 
                     
-                if(data)
-                {
-                   filterOptions = data;
-                }
-                else
-                {
-                   filterOptions = 'Nothing Found';
-                }
+//                 if(data)
+//                 {
+//                    filterOptions = data;
+//                 }
+//                 else
+//                 {
+//                    filterOptions = 'Nothing Found';
+//                 }
 
                    
      
-                },  
-            })
+//                 },  
+//             })
 
 
 }

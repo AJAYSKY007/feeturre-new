@@ -9,7 +9,7 @@
         <div class="left"><a href="/" class="link" ><img src="../assets/logo_1.png" class="logo" width="150" /></a></div>
         <div class="title"></div>
         <div class="right">
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
         </div>
          
       </div>
@@ -148,7 +148,41 @@ Artistry</h1>
  
   <div class="block ArtistList" >
 
-  <div class="artistitems-2" innerHTML=${home_feeturre}> <div class="preloader color-orange"></div> </div>
+  <div class="artistitems feeturreitems" innerHTML=${home_feeturre}> 
+    <!-- <div class="row listRow listRowdisable">
+    <div class="col-lg-3 col-md-4 col-6 col-50">
+      <div class="listBox  listBox--verified ">
+           <div class="listBox__favorite">
+              <label>
+                  <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
+                  <span class="icon-favorite"></span>
+              </label>
+          </div> 
+          <a href="/feeturre-detail/ill-help-you-pick-your-next-single" class="stretched-link">
+              <div class="listBox__img progressive">
+                  <img src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1638300475r88x51pl.png?Expires=1706785320&amp;Signature=R2IR1R~kMdUILZgVksM4HABrqiR2y2bibaW9KoHPz6L2oi1TLeuRs27dj1Jirljj~gg8EkbC7c5X2MS~-YD7hVXVoKhnyJHzeLdBAgd1aL0obftwvqn5UtknZWxToGm~-~8WILLJFNspew2TPJmj~j9ayIlfEv6VNEW~PNVnLYepDbxDGPhD0RhCQZVM3EfgIUSb4M3EeN6NslHXe5Rg3JoBUK5Ec6eB2Xdwp1l2pUFkYaRL5t0HR78hcP6acS0BZMI~NnXL7zPgXHI0web6iba2GRP~~X5Te1YtsXyBsxmPxzKeqbkR-TOCE6UtwS~sBC9ShtBIsNVL-lTqRHwikg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid progressive__img progressive--not-loaded">
+                  <div class="playBtn">
+                      <span class="icon-play"></span>
+                  </div>
+              </div>
+          </a>
+          <div class="listBox__detailFeeturres" style="padding-left: 0px;">
+              <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ujV02kAdKX5jA3NruD0TkD0ElBqlUl1634527486.png?Expires=1706785321&amp;Signature=FF-V1FHC1tjUcDXnxKX-JJOTXr1Wuwe~6XrpdSK1e3nJhDsqCGqTv53v-4RKsHX~J3DGX1VUUJL6jAKhuQXM6102c4M6~UGfhmEy3VV6EDGEzwA0vX4RGnmATLxZeTmLLTMLm-7w4a8yVHNoD6p0lkg76J6GdoM~jaOFBvGmpIf4yxQ8R9o3bpHSNgox-zCMAWMExL24Xh5e8MDawott1K3MiKZVinK30jeQ~m~SvDxNpzmaFJ3sJRJhsYm2qHIZ50QCZ5jMd5xksZxmvSc8~hKcXnHJK7yEUZglH2RyNLH4nld0M305fRiMvgmzMm5et-ywN-thqVgllrSvrxrSXg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid">
+              <div class="d-flex justify-content-between flex-wrap">
+                  <h2 class="h-27 font-bold col-100">I'll Help You Pick Your Next Single</h2>
+                  <span class="amount font-bold" style="position: relative;">$500</span>
+              </div>
+                                  <p class="sub h-18 font-bold">@John Monopoly</p>
+                                  <span class="genres font-semi"></span>
+          </div>
+      </div>
+  </div> 
+</div>-->
+
+    
+    
+    
+    <div class="preloader color-orange"></div> </div>
  </div>
       
    

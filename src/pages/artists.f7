@@ -8,11 +8,10 @@
           <div class="left">
           <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
         </div>
-        <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>  
+        <!-- <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>   -->
         <div class="right">
           <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-popup=".popup-push" class="popup-open link" ><i class="icons material-icons">tune </i></a>
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
         </div>
 
 
@@ -52,11 +51,10 @@
  
  <div class="block secTitle">
   <div class="row">
-<div class="col-100">
 <h2>Browse Artists</h2>
+<a href="#" data-popup=".popup-push" class="popup-open link" ><span class="material-symbols-outlined"> filter_alt </span></a>
  
-</div>
- 
+
 </div>
 
 </div> 
@@ -208,33 +206,71 @@ const filterArtistData = () => {
 
         
 
+        var apiUrl = api_url+"getartists";
+
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+data: filterData,
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
    
+    var artist = data;   
+      if(artist.success == true)
+      {
+
+        all_artists = artist.data;
+        filter_flag += 8;
+        page_num += 1;
+        
+        $update(); 
+                    
+      }
+      $update();
 
 
-$f7.request({
-                url: api_url+'getartists',
-                method : "GET",
-                timeout: 0,
-                data: filterData,
+  })
+  .catch(function (error) {
+    // Handle any errors
+    console.error('Error:', error);
+  });   
+
+
+// $f7.request({
+//                 url: api_url+'getartists',
+//                 method : "GET",
+//                 timeout: 0,
+//                 data: filterData,
                  
-                headers: header,
-                success: function(data) {
+//                 headers: header,
+//                 success: function(data) {
 
-                    var artist = JSON.parse(data);
+//                     var artist = JSON.parse(data);
 
 
-                    if(artist.success == true)
-                    {
+//                     if(artist.success == true)
+//                     {
 
-                         all_artists = artist.data;
-                         filter_flag += 8;
-                         page_num += 1;
+//                          all_artists = artist.data;
+//                          filter_flag += 8;
+//                          page_num += 1;
                           
-                         $update(); 
-                    }
+//                          $update(); 
+//                     }
      
-                },  
-            })     
+//                 },  
+//             })     
 
 
 
@@ -252,31 +288,65 @@ const get_all_artist = ( page ) => {
 
 
 page_num_load=1;
+var apiUrl = api_url+"getartists";
 
-$f7.request({
-                url: api_url+'getartists',
-                method : "GET",
-                timeout: 0,
-                data: {'offset': 0,'limit': 8, page: page_num_load },
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+data: {'offset': 0,'limit': 8, page: page_num_load },
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var artist = data;   
+      if(artist.success == true)
+      {
 
-                    var artist = JSON.parse(data);
+        all_artists = artist.data;
+        flag += 8;
+        page_num_load += 1;
+        
+        $update(); 
+      }
+      $update();
 
 
-                    if(artist.success == true)
-                    {
+  })
 
-                         all_artists = artist.data;
-                         flag += 8;
-                         page_num_load += 1;
+// $f7.request({
+//                 url: api_url+'getartists',
+//                 method : "GET",
+//                 timeout: 0,
+//                 data: {'offset': 0,'limit': 8, page: page_num_load },
+//                 //crossDomain: false,
+//                 headers: header,
+//                 success: function(data) {
+
+//                     var artist = JSON.parse(data);
+
+
+//                     if(artist.success == true)
+//                     {
+
+//                          all_artists = artist.data;
+//                          flag += 8;
+//                          page_num_load += 1;
                           
-                         $update(); 
-                    }
+//                          $update(); 
+//                     }
      
-                },  
-            })
+//                 },  
+//             })
 
 
 }
@@ -332,70 +402,95 @@ const loadMore = () => {
         var filterData = {'offset': flag,'limit': 8, page: page_num_load, 'gender':gender, 'name':name, 'is_verified':is_verified, 'is_managed':is_managed, 'rating':rating, 'country_id':country_id, 'sub_category_id': subCategoryId };
 
         
+        var apiUrl = api_url+"getartists";
 
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+'Content-Type': 'application/json',
+},
+data: {'offset': flag,'limit': 8, page: page_num_load, 'gender':gender, 'name':name, 'is_verified':is_verified, 'is_managed':is_managed, 'rating':rating, 'country_id':country_id, 'sub_category_id': subCategoryId },
+      
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var artist = data;   
+      if(artist.success == true)
+      {
+
+        all_artists = artist.data;
+
+      }
+      $update();
+
+
+  })
 
         
 
-        $f7.request({
-                url: api_url+'getartists',
-                method : "GET",
-                data: {'offset': flag,'limit': 8, page: page_num_load, 'gender':gender, 'name':name, 'is_verified':is_verified, 'is_managed':is_managed, 'rating':rating, 'country_id':country_id, 'sub_category_id': subCategoryId },
-                timeout: 0,
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+// $f7.request({
+//         url: api_url+'getartists',
+//         method : "GET",
+//         data: {'offset': flag,'limit': 8, page: page_num_load, 'gender':gender, 'name':name, 'is_verified':is_verified, 'is_managed':is_managed, 'rating':rating, 'country_id':country_id, 'sub_category_id': subCategoryId },
+//         timeout: 0,
+//         //crossDomain: false,
+//         headers: header,
+//         success: function(data) {
 
 
-                    var response = JSON.parse(data);
+//             var response = JSON.parse(data);
 
-                    console.log(response);
-
-
-                setTimeout(function() {
-     
-                      
-                    
-                       if(response.last_page < page_num_load ){
-                          hasMoreItems = false;
-                          $update();
-                          return;
-                        }
+//             console.log(response);
 
 
+//         setTimeout(function() {
 
-                    $$('.artistitems').append(response.data);
-                    //$("#load-more-click").prop('disabled',false);
-
-                    
-        if(filterSet)
-        {
-                    page_num += 1;
-                    filter_flag += 8;
-             
-        }
-        else
-        {
-
-                    page_num_load += 1;
-                    flag += 8;
-
-        }
-                    
-                         
-                    
-                    }, 1000);
-
-                $update(); 
+              
+            
+//                if(response.last_page < page_num_load ){
+//                   hasMoreItems = false;
+//                   $update();
+//                   return;
+//                 }
 
 
 
-                
+//             $$('.artistitems').append(response.data);
+//             //$("#load-more-click").prop('disabled',false);
 
-   
-                     
-     
-                },  
-            })
+            
+// if(filterSet)
+// {
+//             page_num += 1;
+//             filter_flag += 8;
+      
+// }
+// else
+// {
+
+//             page_num_load += 1;
+//             flag += 8;
+
+// }
+            
+                  
+            
+//             }, 1000);
+
+//         $update(); 
+  
+
+//         },  
+//     })
 
 
 
@@ -438,31 +533,66 @@ const pageRefresh = (e, done) => {
 
 }
 
-const get_filter_optioms = ( page ) => {    
+const get_filter_optioms = ( page ) => {   
+  
+  
+var apiUrl = api_url+"artist-filter";
 
-$f7.request({
-                url: api_url+'artist-filter',
-                method : "GET",
-                timeout: 0,
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var artist = data;   
+      if(artist.success == true)
+      {
+
+        all_artists = artist.data;
+//                          filter_flag += 8;
+//                          page_num += 1;
+                          
+//                          $update(); 
+//                     }
+      }
+      $update();
+
+
+  })
+// $f7.request({
+//                 url: api_url+'artist-filter',
+//                 method : "GET",
+//                 timeout: 0,
                 
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+//                 //crossDomain: false,
+//                 headers: header,
+//                 success: function(data) {
 
                     
-                if(data)
-                {
-                   filterOptions = data;
-                }
-                else
-                {
-                   filterOptions = 'Nothing Found';
-                }
+//                 if(data)
+//                 {
+//                    filterOptions = data;
+//                 }
+//                 else
+//                 {
+//                    filterOptions = 'Nothing Found';
+//                 }
 
                    
      
-                },  
-            })
+//                 },  
+//             })
 
 
 }

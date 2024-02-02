@@ -92,27 +92,59 @@ const go_to_signup = ( ) => {
 //Get Feeturre Details
 const getFeeturreDetails = ( userName ) => {
 
-$f7.request({
-                url: api_url+'feeturre-detail/'+feeturreName,
-                method : "GET",
-                timeout: 0,
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+
+  var apiUrl = api_url+"feeturre-detail/"+feeturreName;
+
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var feeturres = data;   
+      if(feeturres.success == true)
+      {
+
+        feetureDetail = feeturres.data;
+        $update();
+
+      }
+      $update();
+
+
+  })
+// $f7.request({
+//                 url: api_url+'feeturre-detail/'+feeturreName,
+//                 method : "GET",
+//                 timeout: 0,
+//                 //crossDomain: false,
+//                 headers: header,
+//                 success: function(data) {
                     
                     
 
-                    //console.log(data);
+//                     //console.log(data);
 
-                    //var artist_detail = JSON.parse(data);
+//                     //var artist_detail = JSON.parse(data);
 
-                    //console.log(artist_detail);
+//                     //console.log(artist_detail);
 
-                    feetureDetail = data;
-                    $update();
+//                     feetureDetail = data;
+//                     $update();
 
-                },  
-            })
+//                 },  
+//             })
 
 
 }

@@ -8,11 +8,10 @@
           <div class="left">
           <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
         </div>
-        <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>
+        <!-- <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div> -->
         <div class="right">
             <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-           <a href="#" data-popup=".popup-push" class="popup-open link" ><i class="icons material-icons">tune </i></a>
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+            <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
         </div>
              
   </div>
@@ -42,11 +41,9 @@
  
     <div class="block secTitle">
   <div class="row">
-<div class="col-100">
 <h2>Browse Marketplace</h2>
- 
-</div>
- 
+<a href="#" data-popup=".popup-push" class="popup-open link" ><span class="material-symbols-outlined"> filter_alt </span></a>
+
 </div>
 
 </div> 
@@ -73,6 +70,7 @@ ${hasMoreItems && $h`
         <div class="right">
           <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">close</i></a>
         </div>
+
     </div>
 </div>
 
@@ -188,37 +186,69 @@ const filterArtistData = () => {
 
 
 
+     var apiUrl = api_url+"gfeeturre-list";
 
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+data: formData,
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var feeturres = data;   
+      if(feeturres.success == true)
+      {
+
+        all_feeturres = feeturres.data;
+        flag += 8;
+        page_num_load += 1;
+        $update(); 
+      }
+      $update();
+
+
+  })
      
 
-     $f7.request({
-                url: api_url+'feeturre-list',
-                method : "GET",
-                data: formData,
-                timeout: 0,
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+    //  $f7.request({
+    //             url: api_url+'feeturre-list',
+    //             method : "GET",
+    //             data: formData,
+    //             timeout: 0,
+    //             //crossDomain: false,
+    //             headers: header,
+    //             success: function(data) {
 
                  
 
-                    var feeturres = JSON.parse(data);
+    //                 var feeturres = JSON.parse(data);
 
 
-                    if(feeturres.success == true)
-                    {
+    //                 if(feeturres.success == true)
+    //                 {
 
-                      //console.log(feeturres.data);
+    //                   //console.log(feeturres.data);
 
-                         all_feeturres = feeturres.data;
-                         flag += 8;
-                         page_num_load += 1;
+    //                      all_feeturres = feeturres.data;
+    //                      flag += 8;
+    //                      page_num_load += 1;
                           
-                         $update(); 
-                    }
+    //                      $update(); 
+    //                 }
      
-                },  
-            })
+    //             },  
+    //         })
         
 
 }
@@ -228,29 +258,63 @@ const filterArtistData = () => {
 //Get all Artist
 const get_feeturres = ( page ) => {
 
-$f7.request({
-                url: api_url+'feeturre-list',
-                method : "GET",
-                timeout: 0,
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+  var apiUrl = api_url+"feeturre-list";
 
-                    var feeturres = JSON.parse(data);
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var feeturres = data;   
+      if(feeturres.success == true)
+      {
 
-
-                    if(feeturres.success == true)
-                    {
-
-                         all_feeturres = feeturres.data;
+        all_feeturres = feeturres.data;
                          flag += 8;
                          page_num_load += 1;
                           
                          $update(); 
-                    }
+      }
+      $update();
+
+
+  })
+
+// $f7.request({
+//                 url: api_url+'feeturre-list',
+//                 method : "GET",
+//                 timeout: 0,
+//                 //crossDomain: false,
+//                 headers: header,
+//                 success: function(data) {
+
+//                     var feeturres = JSON.parse(data);
+
+
+//                     if(feeturres.success == true)
+//                     {
+
+//                          all_feeturres = feeturres.data;
+//                          flag += 8;
+//                          page_num_load += 1;
+                          
+//                          $update(); 
+//                     }
      
-                },  
-            })
+//                 },  
+//             })
 
 
 }
@@ -278,57 +342,88 @@ const loadMore = () => {
       setTimeout(function () {
          
 
+        var apiUrl = api_url+"feeturre-list";
+
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+data:newFilterby,
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var artist = data;   
+      if(artist.success == true)
+      {
+
+        all_artists = artist.data;
+        $update(); 
         
+      }
+      $update();
 
 
-        $f7.request({
-                url: api_url+'feeturre-list',
-                method : "GET",
-                //data: {'offset': flag,'limit': 8, page: page_num_load, 'action':'loadmore' },
-                data:newFilterby,
-                timeout: 0,
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+  })
 
 
-                    var response = JSON.parse(data);
+        // $f7.request({
+        //         url: api_url+'feeturre-list',
+        //         method : "GET",
+        //         //data: {'offset': flag,'limit': 8, page: page_num_load, 'action':'loadmore' },
+        //         data:newFilterby,
+        //         timeout: 0,
+        //         //crossDomain: false,
+        //         headers: header,
+        //         success: function(data) {
 
-                    //console.log(response);
+
+        //             var response = JSON.parse(data);
+
+        //             //console.log(response);
 
 
-                setTimeout(function() {
+        //         setTimeout(function() {
      
                       
-                     if(response.last_page <= page_num_load ){
-                          hasMoreItems = false;
-                          $update();
-                          return;
-                        }
-                     else {
+        //              if(response.last_page <= page_num_load ){
+        //                   hasMoreItems = false;
+        //                   $update();
+        //                   return;
+        //                 }
+        //              else {
 
                        
 
-                     }
+        //              }
 
 
-                    $$('.artistitems').append(response.data);
-                    //$("#load-more-click").prop('disabled',false);
+        //             $$('.artistitems').append(response.data);
+        //             //$("#load-more-click").prop('disabled',false);
 
-                     flag += 8;
-                     page_num_load += 1;
+        //              flag += 8;
+        //              page_num_load += 1;
                          
                     
-                    }, 1000);
+        //             }, 1000);
 
-                $update(); 
+        //         $update(); 
                 
 
    
                      
      
-                },  
-            })
+        //         },  
+        //     })
 
 
 
@@ -362,29 +457,58 @@ const pageRefresh = (e, done) => {
 
 const get_filter_optioms = ( page ) => {    
 
-$f7.request({
-                url: api_url+'feeturre-filter',
-                method : "GET",
-                timeout: 0,
+  var apiUrl = api_url+"feeturre-filter";
+
+fetch(apiUrl, {
+method: 'GET',
+headers: {
+  'Content-Type': 'application/json',
+},
+// body: JSON.stringify(data), // Pass your data directly to the data option
+})
+  .then(function (response) {
+    if (response.status === 200) {
+      return response.json(); // Parse the JSON response
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+  .then(function (data) {
+    // Handle the API response data
+   
+    var artist = data;   
+      if(artist.success == true)
+      {
+
+        
+      }
+      $update();
+
+
+  })
+// $f7.request({
+//                 url: api_url+'feeturre-filter',
+//                 method : "GET",
+//                 timeout: 0,
                 
-                //crossDomain: false,
-                headers: header,
-                success: function(data) {
+//                 //crossDomain: false,
+//                 headers: header,
+//                 success: function(data) {
 
                     
-                if(data)
-                {
-                   filterOptions = data;
-                }
-                else
-                {
-                   filterOptions = 'Nothing Found';
-                }
+//                 if(data)
+//                 {
+//                    filterOptions = data;
+//                 }
+//                 else
+//                 {
+//                    filterOptions = 'Nothing Found';
+//                 }
 
                    
      
-                },  
-            })
+//                 },  
+//             })
 
 
 }
