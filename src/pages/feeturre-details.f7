@@ -1,182 +1,434 @@
 <template>
-<div class="page" data-name="feeturre-details">
-
-
-     <!-- Top Navbar -->
+  <div class="page" data-name="feeturre-details">
+    <!-- Top Navbar -->
     <div class="navbar navbar-small navbar-transparent">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
-          <div class="left">
-          <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
+        <div class="left">
+          <a href="#" class="link back"
+            ><i class="icons material-icons">west</i></a
+          >
         </div>
-        <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>
+        <div class="title">
+          <a href="/" class="link"
+            ><img src="./logo.svg" class="logo" height="40"
+          /></a>
+        </div>
         <div class="right">
-       <!--  <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
-          
+          <!--  <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
+          <a href="#" data-panel=".panel-left" class="panel-open link"
+            ><i class="icons material-icons">more_vert</i></a
+          >
         </div>
-         
       </div>
     </div>
 
-   
-
-
-
-  
-    <div class="page-content ptr-content no-padding" data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
-
- <div class="ptr-preloader">
+    <div
+      class="page-content ptr-content no-padding"
+      data-ptr-distance="65"
+      @ptr:refresh="${pageRefresh}"
+    >
+      <div class="ptr-preloader">
         <div class="preloader"></div>
         <div class="ptr-arrow"></div>
       </div>
-   
 
+      <div class="MainContent" innerHTML="${feetureDetail}">
+        <!-- Maincontent goes Here -->
 
-    <div class="MainContent" innerHTML=${feetureDetail} >
-      <!-- Maincontent goes Here -->
+        <main
+          class="main-content details-page bgGrey animate__animated animate__fadeIn"
+        >
+          <!-- Details Box -->
+          <section class="py-45">
+            <div class="container">
+              <div class="detailsBox mt-0">
+                <div class="detailsBox__left">
+                  <div class="detailsBox__left__profile">
+                    <div class="media media--verified align-items-center">
+                      <div class="media__img rounded-circle progressive">
+                        <img
+                          src="../assets/feeturre_02.png"
+                          alt="Profile"
+                          class="img-fluid progressive__img progressive--not-loaded"
+                          width="100%"
+                        />
+                      </div>
+                      <div class="media-body">
+                        <h2 class="font-hbold h-24">TRACKZ EL™</h2>
+                        <a
+                          class="btn btn-sm btn-primary ripple-effect text-uppercase"
+                          href="/artist-details/hearontrackzel/"
+                          >view profile</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="musicwrapper">
+                    <ul class="list-unstyled musicwrapper__feeturrelist">
+                      <li class="contentDetails__list__info">
+                        <a
+                          href="https://help.feeturre.com"
+                          class="theme-color font-med"
+                          target="_blank"
+                          >What’s This?
+                        </a>
+                      </li>
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-20">Feeturre Title</label>
+                        <span class="font-med h-18"
+                          >: Exclusive Beat License: Gotta Go 144 BPM</span
+                        >
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Art Upload On</label>
+                        <span class="font-med h-18">: October 2021</span>
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Art Type</label>
+                        <span class="font-med h-18"
+                          >: Guitar, Keyboard, Beat, Instrumental</span
+                        >
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Genres</label>
+                        <span class="font-med h-18">: All, HipHop, Drill</span>
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Feeturre Type</label>
+                        <span class="font-med h-18">: Lease</span>
+                      </li>
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Download Type</label>
+                        <span class="font-med h-18">: Instant Download</span>
+                      </li>
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Composition</label>
+                        <span class="font-med h-18">: Audio</span>
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Mood</label>
+                        <span class="font-med h-18"
+                          >: Flirty, Loved, Mellow</span
+                        >
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">BPM</label>
+                        <span class="font-med h-18">: 120</span>
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18"
+                          >Online Audio Stream</label
+                        >
+                        <span class="font-med h-18">: 50000</span>
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Distribute</label>
+                        <span class="font-med h-18">: 10000</span>
+                      </li>
+
+                      <li class="contentDetails__list__info">
+                        <label class="font-bold h-18">Gender</label>
+                        <span class="font-med h-18">: Male</span>
+                      </li>
+                    </ul>
+                    <div class="d-flex musicwrapper__Icon">
+                      <ul class="socialList list-inline mb-0 text-center">
+                        <li class="list-inline-item">
+                          <a
+                            href="https://twitter.com/hearontrackz"
+                            target="_blank"
+                            class="ripple-effect position-relative d-inline-block"
+                            ><span class="icon icon-twitter twitter"></span
+                          ></a>
+                        </li>
+                        <li class="list-inline-item active">
+                          <a
+                            href="https://www.facebook.com/HearonTrackz"
+                            target="_blank"
+                            class="ripple-effect position-relative d-inline-block"
+                            ><span class="icon icon-facebook facebook"></span
+                          ></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a
+                            href="https://www.instagram.com/hearontrackz"
+                            target="_blank"
+                            class="ripple-effect position-relative d-inline-block"
+                            ><span class="icon icon-instagram instagram"></span
+                          ></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a
+                            href="https://soundcloud.com/hearontrackz"
+                            target="_blank"
+                            class="ripple-effect position-relative d-inline-block"
+                            ><span
+                              class="icon icon-soundcloud soundcloud"
+                            ></span
+                          ></a>
+                        </li>
+                        <li class="list-inline-item active">
+                          <a
+                            href="https://tiktok.com/hearontrackz"
+                            target="_blank"
+                            class="ripple-effect position-relative d-inline-block"
+                            ><span class="icon icon-tiktok tiktok"></span
+                          ></a>
+                        </li>
+                        <!--                                     <li class="list-inline-item">
+                                        <a href="https://www.instagram.com/hearontrackz" target="_blank" class="ripple-effect position-relative d-inline-block"><span class="icon icon-instagram instagram"></span></a>
+                                        </li>
+                                                                                                        <li class="list-inline-item">
+                                        <a href="https://soundcloud.com/hearontrackz" target="_blank" class="ripple-effect position-relative d-inline-block"><span class="icon icon-soundcloud soundcloud"></span></a>
+                                        </li>
+                                                      -->
+                      </ul>
+                      <div class="ml-auto">
+                        <ul class="socialList list-inline mb-0 text-center">
+                          <li class="list-inline-item">
+                            <a
+                              href="javascript:void(0);"
+                              onclick="sharePopup(174)"
+                              class="ripple-effect position-relative d-inline-block"
+                              ><span class="icon icon-share share"></span
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="d-flex musicwrapper__price">
+                      <h4 class="h-18 font-bold mb-0">Feeturre Price</h4>
+                      <div class="ml-auto">
+                        <h4 class="h-18 font-bold mb-0">$18,080</h4>
+                      </div>
+                    </div>
+
+                    <div class="musicwrapper__collaborators"></div>
+
+                    <ul
+                      class="list-inline musicInfo"
+                      id="musicInfo"
+                      data-mcs-theme="dark"
+                    >
+                      <li class="list-inline-items musicInfo__List">
+                        <h4 class="font-hbold h-20 black-color">Keywords</h4>
+                        <div class="badgewrapper">
+                          <span class="badgewrapper__list font-med"
+                            >120 bpm</span
+                          >
+                          <span class="badgewrapper__list font-med"
+                            >classy</span
+                          >
+                          <span class="badgewrapper__list font-med"
+                            >guitar</span
+                          >
+                          <span class="badgewrapper__list font-med"
+                            >yf betz</span
+                          >
+                          <span class="badgewrapper__list font-med"
+                            >hearontrackz el</span
+                          >
+                          <span class="badgewrapper__list font-med">beats</span>
+                          <span class="badgewrapper__list font-med">dope</span>
+                          <span class="badgewrapper__list font-med">clean</span>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="row customGutter mt-3">
+                      <!--  <div class="col-6">
+                                    <a href="javascript:void(0);" onclick="event.preventDefault(); showLoginMessage();" class="btn btn-primary ripple-effect text-uppercase w-100 px-2" data-toggle="tooltip" data-placement="top" title="$18,080-Buy">buy</a>
+                                </div> -->
+                      <!--  <div class="col-6">
+                                    <a href="javascript:void(0);" class="btn btn-outline-secondary ripple-effect text-uppercase w-100 px-2"  onclick="event.preventDefault(); showLoginMessage();">Add to cart</a>
+                                </div> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="detailsBox__right">
+                  <div class="video__videoBox" oncontextmenu="return false;">
+                    <div class="block">
+                      <audio
+                        class="audioPlayer u"
+                        style="width: 100%"
+                        controls=""
+                      >
+                        <source
+                          src="https://d3gsffvv7iizq6.feeturre.com/Watermarked/FeeturreContent/LongerV2YFMaryJAll120bpm_1634205172.mp3?Expires=1706926619&amp;Signature=SfrpkeuW6hTJ0Z68dyLh6cFbWhyzHpznWWpuO2CbNmjMGxjJJ7d0Ohj6o1h2BeMXZGmrhU2yKBWeZRSKketqEHjwX7AmVFICaacnsVWQlmJC5uBWwNIrr5cQBghNaLhhkxBdOfJkqi5aiWbE66C-dSPb6LAOu5kOYEJJyC596I0L1g0N~sngUobYytx7f3lStP8RWfIs6iO-wftvlhKNY-oHLc9wPCaPZ5amIj3VxzjN~8p8n8NI~pE05EObryVF7eQBBLGsk0Or3GxJl1anc0De65l5-QxgYg0B6oVxmtdSZwSMx0lDU4W6YKOMdpNuO-RzhoVU-EB1nRElisUzUA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                          type="audio/mpeg"
+                        />
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+
+                    <div class="playBtn" id="play-button" onclick="playVideo()">
+                      <span class="icon-play"></span>
+                    </div>
+                  </div>
+                  <div class="contentDetails" style="margin-bottom: 100px">
+                    <div class="heading d-flex align-items-center mt-3 mt-md-4">
+                      <div class="heading__detailArtist">
+                        <h2 class="font-hbold h-37 mb-0">
+                          Feeturre Description
+                        </h2>
+                      </div>
+                    </div>
+                    <p class="h-18 font-semi">
+                      R&amp;B Banger w/ Live Guitar By Beatz.Shop VIP Musician
+                      D. Cotts Produced by HearonTrackz EL x YF Beatz
+                    </p>
+
+                    <div class="heading pt-0 py-40 pb-0">
+                      <div class="heading__detailArtist">
+                        <h2 class="font-hbold h-37 mb-0">
+                          Terms &amp; Condition
+                        </h2>
+                      </div>
+                    </div>
+                    <p class="h-18">
+                      Beat License 2yr term with Hook. 50 / 50 split publishing,
+                      50% split authors (adv. buyer), 50% Melody (HearonTrackz
+                      EL / YF Beatz / D. Cotts) Cancellation or Renewal Fee Due
+                      After Term Completion.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <input
+            type="hidden"
+            value="https://d3gsffvv7iizq6.feeturre.com/Watermarked/FeeturreContent/LongerV2YFMaryJAll120bpm_1634205172.mp3?Expires=1706926619&amp;Signature=SfrpkeuW6hTJ0Z68dyLh6cFbWhyzHpznWWpuO2CbNmjMGxjJJ7d0Ohj6o1h2BeMXZGmrhU2yKBWeZRSKketqEHjwX7AmVFICaacnsVWQlmJC5uBWwNIrr5cQBghNaLhhkxBdOfJkqi5aiWbE66C-dSPb6LAOu5kOYEJJyC596I0L1g0N~sngUobYytx7f3lStP8RWfIs6iO-wftvlhKNY-oHLc9wPCaPZ5amIj3VxzjN~8p8n8NI~pE05EObryVF7eQBBLGsk0Or3GxJl1anc0De65l5-QxgYg0B6oVxmtdSZwSMx0lDU4W6YKOMdpNuO-RzhoVU-EB1nRElisUzUA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+            id="feetureUrl"
+          />
+        </main>
+      </div>
     </div>
-    
-
-
-
   </div>
-</div>
 </template>
 <script>
-export default function (props, {$store, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted, $update }) {
-
-
-
-const api_url = 'https://feeturre.com/api/';
-const header = { "Authorization": "Basic VGFsZW50OkZlZQ=="} ;
-
-
-  const feeturreName = props.feeturreName;
-  let feetureDetail = '';
-
-
-
-const go_to_signup = ( ) => {
-
-    
-       var url = 'https://feeturre.com/login';
-       var target = '_blank';
-       var options = "location = yes"
-       var ref = cordova.InAppBrowser.open(url, target, options);
-       
-       ref.addEventListener('loadstart', loadstartCallback);
-       ref.addEventListener('loadstop', loadstopCallback);
-       ref.addEventListener('loaderror', loaderrorCallback);
-       ref.addEventListener('exit', exitCallback);
-
-       function loadstartCallback(event) {
-          //console.log('Loading started: '  + event.url)
-       }
-
-       function loadstopCallback(event) {
-          //console.log('Loading finished: ' + event.url)
-       }
-
-       function loaderrorCallback(error) {
-          //console.log('Loading error: ' + error.message)
-       }
-
-       function exitCallback() {
-          //console.log('Browser is closed...')
-       }
-   
-
-}
-
-//Get Feeturre Details
-const getFeeturreDetails = ( userName ) => {
-
-
-  var apiUrl = api_url+"feeturre-detail/"+feeturreName;
-
-fetch(apiUrl, {
-method: 'GET',
-headers: {
-  'Content-Type': 'application/json',
-},
-// body: JSON.stringify(data), // Pass your data directly to the data option
-})
-  .then(function (response) {
-    if (response.status === 200) {
-      return response.json(); // Parse the JSON response
-    } else {
-      throw new Error('Failed to fetch data');
+  export default function (
+    props,
+    {
+      $store,
+      $f7,
+      $on,
+      $onBeforeMount,
+      $onMounted,
+      $onBeforeUnmount,
+      $onUnmounted,
+      $update,
     }
-  })
-  .then(function (data) {
-    // Handle the API response data
-   
-    var feeturres = data;   
-      if(feeturres.success == true)
-      {
+  ) {
+    const api_url = "https://feeturre.com/api/";
+    const header = { Authorization: "Basic VGFsZW50OkZlZQ==" };
 
-        feetureDetail = feeturres.data;
-        $update();
+    const feeturreName = props.feeturreName;
+    let feetureDetail = "";
 
+    const go_to_signup = () => {
+      var url = "https://feeturre.com/login";
+      var target = "_blank";
+      var options = "location = yes";
+      var ref = cordova.InAppBrowser.open(url, target, options);
+
+      ref.addEventListener("loadstart", loadstartCallback);
+      ref.addEventListener("loadstop", loadstopCallback);
+      ref.addEventListener("loaderror", loaderrorCallback);
+      ref.addEventListener("exit", exitCallback);
+
+      function loadstartCallback(event) {
+        //console.log('Loading started: '  + event.url)
       }
-      $update();
 
+      function loadstopCallback(event) {
+        //console.log('Loading finished: ' + event.url)
+      }
 
-  })
-// $f7.request({
-//                 url: api_url+'feeturre-detail/'+feeturreName,
-//                 method : "GET",
-//                 timeout: 0,
-//                 //crossDomain: false,
-//                 headers: header,
-//                 success: function(data) {
-                    
-                    
+      function loaderrorCallback(error) {
+        //console.log('Loading error: ' + error.message)
+      }
 
-//                     //console.log(data);
+      function exitCallback() {
+        //console.log('Browser is closed...')
+      }
+    };
 
-//                     //var artist_detail = JSON.parse(data);
+    //Get Feeturre Details
+    const getFeeturreDetails = (userName) => {
+      var apiUrl = api_url + "feeturre-detail/" + feeturreName;
 
-//                     //console.log(artist_detail);
+      fetch(apiUrl, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // body: JSON.stringify(data), // Pass your data directly to the data option
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json(); // Parse the JSON response
+          } else {
+            throw new Error("Failed to fetch data");
+          }
+        })
+        .then(function (data) {
+          // Handle the API response data
 
-//                     feetureDetail = data;
-//                     $update();
+          var feeturres = data;
+          if (feeturres.success == true) {
+            feetureDetail = feeturres.data;
+            $update();
+          }
+          $update();
+        });
+      // $f7.request({
+      //                 url: api_url+'feeturre-detail/'+feeturreName,
+      //                 method : "GET",
+      //                 timeout: 0,
+      //                 //crossDomain: false,
+      //                 headers: header,
+      //                 success: function(data) {
 
-//                 },  
-//             })
+      //                     //console.log(data);
 
+      //                     //var artist_detail = JSON.parse(data);
 
-}
+      //                     //console.log(artist_detail);
 
-const pageRefresh = (e, done) => {
+      //                     feetureDetail = data;
+      //                     $update();
 
-     setTimeout(() => { 
-     
+      //                 },
+      //             })
+    };
 
-      getFeeturreDetails(feeturreName);
+    const pageRefresh = (e, done) => {
+      setTimeout(() => {
+        getFeeturreDetails(feeturreName);
 
-      // Update state to rerender
+        // Update state to rerender
         $update();
 
         // When loading done, we need to reset it
         done();
       }, 2000);
+    };
 
-}
+    $on("pageInit", (e, page) => {
+      getFeeturreDetails(feeturreName);
+    });
 
-
-$on('pageInit', (e, page) => {
-
-    getFeeturreDetails(feeturreName);
-       
-});
-
-
-
-
-
-
-  return $render;
-};
+    return $render;
+  }
 </script>

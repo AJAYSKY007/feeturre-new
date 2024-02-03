@@ -1,380 +1,1136 @@
 <template>
-<div class="page" data-name="feeturres">
-
+  <div class="page" data-name="feeturres">
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
-          <div class="left">
-          <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
+        <div class="left">
+          <a href="#" class="link back"><i class="icons material-icons">west</i></a>
         </div>
         <!-- <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div> -->
         <div class="right">
-            <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-            <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
+          <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
+          <a href="#" data-panel=".panel-left" class="panel-open link"><span
+              class="material-symbols-outlined">segment</span></a>
         </div>
-             
-  </div>
+      </div>
     </div>
 
-
-
-  
-  <div class="page-content infinite-scroll-content ptr-content" @infinite=${loadMore}  data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
-  
-<div class="ptr-preloader">
+    <div class="page-content infinite-scroll-content ptr-content" @infinite="${loadMore}" data-ptr-distance="65"
+      @ptr:refresh="${pageRefresh}">
+      <div class="ptr-preloader">
         <div class="preloader"></div>
         <div class="ptr-arrow"></div>
       </div>
 
-<!--   <div class="block">
-  
-  <div class="searchbar searchbar-inline">
-    <div class="searchbar-input-wrap">
-      <input type="search" placeholder="Search" class="searchbox" />
-      <i class="searchbar-icon"></i>
-      <span class="input-clear-button"></span>
-    </div>
-  </div>
-
-</div> -->
- 
-    <div class="block secTitle">
-  <div class="row">
-<h2>Browse Marketplace</h2>
-<a href="#" data-popup=".popup-push" class="popup-open link" ><span class="material-symbols-outlined"> filter_alt </span></a>
-
-</div>
-
-</div> 
- 
-
-<div class="block ArtistList feeturresList">
- 
-<div class="artistitems" innerHTML=${all_feeturres}> </div>
-
-${hasMoreItems && $h`
-      <div class="preloader infinite-scroll-preloader"></div>
-`}
-
-</div>
-
-
-
-  </div>
-
-
-<div class="popup popup-push filterPopup">
- <div class="navbar navbar-small">
-     <div class="navbar-inner">
-        <div class="right">
-          <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">close</i></a>
+      <!--   <div class="block">
+        
+        <div class="searchbar searchbar-inline">
+          <div class="searchbar-input-wrap">
+            <input type="search" placeholder="Search" class="searchbox" />
+            <i class="searchbar-icon"></i>
+            <span class="input-clear-button"></span>
+          </div>
         </div>
 
+      </div> -->
+
+      <div class="block secTitle">
+        <div class="row">
+          <h2>Browse Marketplace</h2>
+          <a href="#" data-popup=".popup-push" class="popup-open link"><span class="material-symbols-outlined">
+              filter_alt </span></a>
+        </div>
+      </div>
+
+      <div class="block ArtistList feeturresList">
+        <div class="artistitems" innerHTML="${all_feeturres}"></div>
+
+        ${hasMoreItems && $h`
+        <div class="preloader infinite-scroll-preloader"></div>
+        `}
+      </div>
     </div>
-</div>
 
-    
-    <div class="page-content no-padding">
-    <div class="block">
-     
-        <input type="hidden" name="name" />
-     <div class="filterOuter" innerHTML=${filterOptions} ></div>
+    <div class="popup popup-push filterPopup">
+      <div class="navbar navbar-small">
+        <div class="navbar-inner">
+           <div class="right">
+             <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">close</i></a>
+           </div>
+       </div>
+   </div>
 
-<button type="button" @click="${filterArtistData}" class="btn btn-primary ripple-effect filterbtn clickbtn popup-close" id="artist-filter-click" value="Apply Filter" >Apply Filter</button>
+      <div class="page-content no-padding">
+        <div class="block">
+          <input type="hidden" name="name" />
+          <div class="filterOuter" innerHTML="${filterOptions}">
+            <main class="main-content feeturre-page bgGrey">
+              <div class="container">
+                <div class="py-45 pb-0">
+                    <ul class="row feeturreFilterTab">
+                      <li class="col">
+                        <a href="#audio" class="tab-link tab-link-active">Audio</a>
+                      </li>
+                      <li class="col"><a href="#video" class="tab-link">Video</a></li>
+                      <li class="col">
+                        <a href="#influence" class="tab-link">INFLUENCE</a>
+                      </li>
+                    </ul>
+                  
+                  <div class="tabs-animated-wrap">
+                    <div class="tabs test">
+                      <div id="audio" class="tab tab-active">
+                        <div class="list">
+                          <form id="audio_search">
+                            <input type="hidden" name="filter_type" value="Audio" />
+                            <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="feeturre_type"
+                                    data-size="5"
+                                    title="Exclusivity"
+                                  >
+                                    <option value="">Both</option>
+                                    <option value="Exclusive">Exclusive</option>
+                                    <option value="Lease">Lease</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Exclusivity</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="item-content item-input">
+                                <div class="item-inner">
+                                  <div class="item-input-wrap">
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      name="beat_per_min_tempo"
+                                      placeholder="Beats Per
+                                Minute"
+                                      min="0"
+                                      max="999"
+                                      step="1"
+                                    />
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="item-content item-input">
+                                <div class="item-inner">
+                                  <div class="item-input-wrap">
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      name="bars_measurement"
+                                      placeholder="Counts Or
+                                Measures"
+                                      min="0"
+                                      max="999"
+                                      step="1"
+                                    />
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </li>
+        
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="user_type"
+                                    data-size="5"
+                                    title="Verification"
+                                  >
+                                    <option value="Both">Both</option>
+                                    <option value="Verified">Verified</option>
+                                    <option value="Non-Verified">Non-Verified</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Verification</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    multiple=""
+                                    data-size="5"
+                                    name="genre"
+                                    title="Genre"
+                                    data-max-options="3"
+                                  >
+                                    <option value="50">All</option>
+                                    <option value="51">HipHop</option>
+                                    <option value="52">Rap</option>
+                                    <option value="53">Trap</option>
+                                    <option value="54">Drill</option>
+                                    <option value="55">Pop</option>
+                                    <option value="56">RnB</option>
+                                    <option value="57">Electronic</option>
+                                    <option value="58">Soul</option>
+                                    <option value="59">Country</option>
+                                    <option value="60">Rock</option>
+                                    <option value="63">Alternative</option>
+                                    <option value="64">Punk</option>
+                                    <option value="65">Reggae</option>
+                                    <option value="66">Metal</option>
+                                    <option value="67">Emo</option>
+                                    <option value="68">Blues</option>
+                                    <option value="69">Classical</option>
+                                    <option value="70">Latin</option>
+                                    <option value="71">World</option>
+                                    <option value="72">Jazz</option>
+                                    <option value="73">New Age</option>
+                                    <option value="74">Opera</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Genre</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    data-size="5"
+                                    name="mood"
+                                    title="Mood"
+                                    multiple=""
+                                    data-max-options="3"
+                                  >
+                                    <option value="45">Any</option>
+                                    <option value="42">Abstract</option>
+                                    <option value="1">Accomplished</option>
+                                    <option value="2">Adored</option>
+                                    <option value="3">Angry</option>
+                                    <option value="4">Annoyed</option>
+                                    <option value="5">Anxious</option>
+                                    <option value="6">Bouncy</option>
+                                    <option value="7">Clam</option>
+                                    <option value="9">Confident</option>
+                                    <option value="41">Conspiracy</option>
+                                    <option value="10">Crazy</option>
+                                    <option value="11">Crunk</option>
+                                    <option value="12">Dark</option>
+                                    <option value="13">Depressed</option>
+                                    <option value="14">Determined</option>
+                                    <option value="15">Dirty</option>
+                                    <option value="16">Disappointed</option>
+                                    <option value="17">Eccentric</option>
+                                    <option value="18">Enraged</option>
+                                    <option value="19">Epic</option>
+                                    <option value="20">Evil</option>
+                                    <option value="21">Flirty</option>
+                                    <option value="22">Frantic</option>
+                                    <option value="23">Giddy</option>
+                                    <option value="24">Gloomy</option>
+                                    <option value="25">Grateful</option>
+                                    <option value="26">Happy</option>
+                                    <option value="27">Hyper</option>
+                                    <option value="28">Inspiring</option>
+                                    <option value="44">Intelligent</option>
+                                    <option value="29">Intense</option>
+                                    <option value="30">Lazy</option>
+                                    <option value="31">Lonely</option>
+                                    <option value="32">Loved</option>
+                                    <option value="33">Mellow</option>
+                                    <option value="34">Peaceful</option>
+                                    <option value="40">Political</option>
+                                    <option value="43">Profound</option>
+                                    <option value="35">Rebellious</option>
+                                    <option value="36">Relaxed</option>
+                                    <option value="37">Sad</option>
+                                    <option value="38">Scared</option>
+                                    <option value="39">Silly</option>
+                                    <option value="8">Soulful</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Mood</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="format_type"
+                                    data-size="5"
+                                    title="Format Type"
+                                  >
+                                    <option value="">All of the above</option>
+                                    <option value="WAV">WAV</option>
+                                    <option value="AIFF">AIFF</option>
+                                    <option value="MP3">MP3</option>
+                                    <option value="Stems">Stems</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Format Type</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="width33">
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    data-size="5"
+                                    name="structure"
+                                    title="Structure"
+                                    multiple=""
+                                    data-max-options="3"
+                                  >
+                                    <option value="1">Intro</option>
+                                    <option value="2">Outro</option>
+                                    <option value="3">Hook</option>
+                                    <option value="4">Verse</option>
+                                    <option value="5">Chorus</option>
+                                    <option value="6">Pre-chorus</option>
+                                    <option value="7">Bridge</option>
+                                    <option value="8">Melody</option>
+                                    <option value="9">Add Libs</option>
+                                    <option value="10">Entire Song</option>
+                                    <option value="11">Beat</option>
+                                    <option value="12">Break</option>
+                                    <option value="13">Scratch</option>
+                                    <option value="14">Mix</option>
+                                    <option value="15">Master</option>
+                                    <option value="16">Song Reference</option>
+                                    <option value="17">Sound Kit</option>
+                                    <option value="18">Sample</option>
+                                    <option value="19">Skit</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Structure</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="width33">
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="price"
+                                    data-size="5"
+                                    title="Price"
+                                  >
+                                    <option value="">None</option>
+                                    <option value="Low_to_high">Low to high</option>
+                                    <option value="High_to_low">High to low</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Price</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="width33">
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    data-size="5"
+                                    name="key"
+                                    title="Key"
+                                    multiple=""
+                                    data-max-options="3"
+                                  >
+                                    <option value="1">E Major</option>
+                                    <option value="2">D Flat Minor</option>
+                                    <option value="3">B Major</option>
+                                    <option value="4">A Flat Minor</option>
+                                    <option value="5">F Sharp Major</option>
+                                    <option value="6">E Flat Minor</option>
+                                    <option value="7">B Flat Minor</option>
+                                    <option value="8">D Flat Major</option>
+                                    <option value="9">F Minor</option>
+                                    <option value="10">A Flat Major</option>
+                                    <option value="11">C Minor</option>
+                                    <option value="12">E Flat Major</option>
+                                    <option value="13">G Minor</option>
+                                    <option value="14">B Flat Major</option>
+                                    <option value="15">D Minor</option>
+                                    <option value="16">F Major</option>
+                                    <option value="17">A minor</option>
+                                    <option value="18">C Major</option>
+                                    <option value="19">E minor</option>
+                                    <option value="20">G Major</option>
+                                    <option value="21">B Minor</option>
+                                    <option value="22">D Major</option>
+                                    <option value="23">F Sharp Minor</option>
+                                    <option value="24">A Major</option>
+                                    <option value="25">Any</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Key</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="item-content item-input">
+                                <div class="item-inner">
+                                  <div class="item-input-wrap">
+                                    <input
+                                      multiple=""
+                                      data-role="tagsinput"
+                                      class="form-control tagsinputplaceholder"
+                                      id="keyword"
+                                      name="keyword"
+                                      placeholder="Keywords"
+                                    />
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </form>
+                        </div>
+                      </div>
+                      <div id="video" class="tab">
+                        <div class="list">
+                          <form id="video_search">
+                            <input type="hidden" name="filter_type" value="Video" />
+                            <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="art_type"
+                                    data-size="5"
+                                    title="Art Type"
+                                  >
+                                    <option value="">All</option>
+                                    <option value="34">Dance</option>
+                                    <option value="35">Movement</option>
+                                    <option value="36">Motion Art</option>
+                                    <option value="37">Promo</option>
+                                    <option value="38">Freestyle</option>
+                                    <option value="39">Challenge</option>
+                                    <option value="40">Groove</option>
+                                    <option value="41">Background</option>
+                                    <option value="42">Commercial</option>
+                                    <option value="43">Skit</option>
+                                    <option value="44">Advertisement</option>
+                                    <option value="45">Stingers</option>
+                                    <option value="46">Overlays</option>
+                                    <option value="47">Footage</option>
+                                    <option value="48">Stock Footage</option>
+                                    <option value="49">Story Post</option>
+                                    <option value="50">Post Production</option>
+                                    <option value="51">Editing</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Art Type</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="feeturre_type"
+                                    data-size="5"
+                                    title="Exclusivity"
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="Both">Both</option>
+                                    <option value="Exclusive">Exclusive</option>
+                                    <option value="Lease">Lease</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Exclusivity</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="item-content item-input">
+                                <div class="item-inner">
+                                  <div class="item-input-wrap">
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      name="beat_per_min_tempo"
+                                      placeholder="Beats Per Minute"
+                                      min="0"
+                                      max="999"
+                                      step="1"
+                                    />
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="item-content item-input">
+                                <div class="item-inner">
+                                  <div class="item-input-wrap">
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      name="bars_measurement"
+                                      placeholder="Counts or Measures"
+                                      min="0"
+                                      max="999"
+                                      step="1"
+                                    />
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </li>
+        
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="user_type"
+                                    data-size="5"
+                                    title="Verification"
+                                  >
+                                    <option value="">Both</option>
+                                    <option value="Verified">Verified</option>
+                                    <option value="Non-Verified">Non-Verified</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Verification</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    multiple=""
+                                    data-size="5"
+                                    name="genre"
+                                    title="Genre"
+                                    data-max-options="3"
+                                  >
+                                    <option value="38">Any</option>
+                                    <option value="39">Hip Hop</option>
+                                    <option value="40">Freestyle</option>
+                                    <option value="41">Latin</option>
+                                    <option value="42">Disco</option>
+                                    <option value="43">Ballet</option>
+                                    <option value="44">Swing</option>
+                                    <option value="45">Historical</option>
+                                    <option value="46">Ceremonial</option>
+                                    <option value="47">Novelty</option>
+                                    <option value="48">Social</option>
+                                    <option value="75">Modern</option>
+                                    <option value="76">Trap</option>
+                                    <option value="77">Trending</option>
+                                    <option value="78">Viral</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Genre</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    data-size="5"
+                                    name="mood"
+                                    title="Mood"
+                                    multiple=""
+                                    data-max-options="3"
+                                  >
+                                    <option value="45">Any</option>
+                                    <option value="42">Abstract</option>
+                                    <option value="1">Accomplished</option>
+                                    <option value="2">Adored</option>
+                                    <option value="3">Angry</option>
+                                    <option value="4">Annoyed</option>
+                                    <option value="5">Anxious</option>
+                                    <option value="6">Bouncy</option>
+                                    <option value="7">Clam</option>
+                                    <option value="9">Confident</option>
+                                    <option value="41">Conspiracy</option>
+                                    <option value="10">Crazy</option>
+                                    <option value="11">Crunk</option>
+                                    <option value="12">Dark</option>
+                                    <option value="13">Depressed</option>
+                                    <option value="14">Determined</option>
+                                    <option value="15">Dirty</option>
+                                    <option value="16">Disappointed</option>
+                                    <option value="17">Eccentric</option>
+                                    <option value="18">Enraged</option>
+                                    <option value="19">Epic</option>
+                                    <option value="20">Evil</option>
+                                    <option value="21">Flirty</option>
+                                    <option value="22">Frantic</option>
+                                    <option value="23">Giddy</option>
+                                    <option value="24">Gloomy</option>
+                                    <option value="25">Grateful</option>
+                                    <option value="26">Happy</option>
+                                    <option value="27">Hyper</option>
+                                    <option value="28">Inspiring</option>
+                                    <option value="44">Intelligent</option>
+                                    <option value="29">Intense</option>
+                                    <option value="30">Lazy</option>
+                                    <option value="31">Lonely</option>
+                                    <option value="32">Loved</option>
+                                    <option value="33">Mellow</option>
+                                    <option value="34">Peaceful</option>
+                                    <option value="40">Political</option>
+                                    <option value="43">Profound</option>
+                                    <option value="35">Rebellious</option>
+                                    <option value="36">Relaxed</option>
+                                    <option value="37">Sad</option>
+                                    <option value="38">Scared</option>
+                                    <option value="39">Silly</option>
+                                    <option value="8">Soulful</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Mood</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    data-size="5"
+                                    name="format_type"
+                                    title="Format Type"
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="MP4">MP4</option>
+                                    <option value="MOV">MOV</option>
+                                    <option value="MPG">MPG</option>
+                                    <option value="RAW">RAW</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Format type</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+        
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="price"
+                                    data-size="5"
+                                    title="Price"
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="Low_to_high">Low to high</option>
+                                    <option value="High_to_low">High to low</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Price</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+        
+                              <li class="keywords">
+                                <div class="form-group tagsInput">
+                                  <input
+                                    type="text"
+                                    name="keyword"
+                                    placeholder="Keywords"
+                                    id="video-keyword"
+                                  />
+                                </div>
+                              </li>
+                            </ul>
+                          </form>
+                        </div>
+                      </div>
+                      <div id="influence" class="tab">
+                        <div class="list">
+                          <form id="influence_search">
+                            <input type="hidden" name="filter_type" value="Influence" />
+                            <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="influence_type"
+                                    data-size="5"
+                                    title="influence_type"
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="Share">Share</option>
+                                    <option value="Shoutout">Shoutout</option>
+                                    <option value="Promote">Promote</option>
+                                    <option value="Engage">Engage</option>
+                                    <option value="Review">Review</option>
+                                    <option value="Comment">Comment</option>
+                                    <option value="Like">Like</option>
+                                    <option value="Follow">Follow</option>
+                                    <option value="Consult">Consult</option>
+                                    <option value="Advise">Advise</option>
+                                    <option value="Discuss">Discuss</option>
+                                    <option value="Connect">Connect</option>
+                                    <option value="Repost">Repost</option>
+                                    <option value="Live Stream">Live Stream</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Influence Type</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+        
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="feeturre_type"
+                                    data-size="5"
+                                    title="Exclusivity"
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="Exclusive">Exclusive</option>
+                                    <option value="Lease">Lease</option>
+                                    <option value="Both">Both</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Exclusivity</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+        
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="user_type"
+                                    data-size="5"
+                                    title="Verification"
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="Verified">Verified</option>
+                                    <option value="Non-Verified">Non-Verified</option>
+                                    <option value="Both">Both</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Verification</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+        
+                              <!-- <li>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" name="format_type" data-size="5" title="">
+                                    <option value="SCREENSHOT_PROOF">Screenshot Proof</option>
+                                    <option value="WAV">WAV</option>
+                                    <option value="AIFF">AIFF </option>
+                                    <option value="MP3">MP3 </option>
+                                    <option value="Stems">Stems</option>
+                                    <option value="MP4">MP4</option>
+                                    <option value="MOV">MOV</option>
+                                    <option value="MPG">MPG</option>
+                                    <option value="RAW">RAW</option>
+                                </select>
+                            </div>
+                        </li> -->
+        
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    data-size="5"
+                                    name="promotional_platform"
+                                    title="Promotional Platform"
+                                    multiple=""
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="1">Instagram</option>
+                                    <option value="2">Facebook</option>
+                                    <option value="3">TikTok</option>
+                                    <option value="4">Twitter</option>
+                                    <option value="5">Soundcloud</option>
+                                    <option value="6">Youtube</option>
+                                    <option value="7">Twitch</option>
+                                    <option value="8">Use On All Platforms</option>
+                                    <option value="9">Zoom</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Promotional Platform</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  class="item-link smart-select smart-select-init"
+                                  data-open-in="sheet"
+                                >
+                                  <select
+                                    class="form-control selectpicker"
+                                    name="price"
+                                    data-size="5"
+                                    title="price"
+                                  >
+                                    <option value="">Any</option>
+                                    <option value="Low_to_high">Low to high</option>
+                                    <option value="High_to_low">High to low</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <div class="item-title">Price</div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+        
+                              <!--  <li class="">
+                            <div class="form-group tagsInput">
+                                <select multiple data-role="tagsinput" class="form-control" id="influence-keyword" name="keyword" placeholder="Keywords"></select>
+                            </div>
+                        </li> -->
+                            </ul>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-    
+                </div>
+              </div>
+            </main>
+          </div>
+          <button type="button" @click="${filterArtistData}" class="btn btn-primary ripple-effect filterbtn clickbtn popup-close" id="artist-filter-click" value="Apply Filter" >Apply Filter</button>
+
+        </div>
+        
+      </div>
+    </div>
   </div>
-</div>
-</div>
-
-
-
-</div>
 </template>
 <script>
+  import $$ from "dom7";
 
-import $$ from 'dom7';
+  export default function (
+    props,
+    {
+      $store,
+      $f7,
+      $,
+      $on,
+      $onBeforeMount,
+      $onMounted,
+      $onBeforeUnmount,
+      $onUnmounted,
+      $update,
+    }
+  ) {
+    const api_url = "https://feeturre.com/api/";
+    //const api_url = 'http://localhost/feeturre/api/';
+    const header = { Authorization: "Basic VGFsZW50OkZlZQ==" };
 
+    let all_feeturres = "";
+    let filterOptions = "";
 
-export default function (props, {$store, $f7, $, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted, $update }) {
+    let flag = 0;
+    let page_num_load = 1;
 
+    let filterSet = false;
+    let page_num = 1;
+    let filter_flag = 0;
 
-const api_url = 'https://feeturre.com/api/';
-//const api_url = 'http://localhost/feeturre/api/';
-const header = { "Authorization": "Basic VGFsZW50OkZlZQ=="} ;
+    let allowInfinite = true;
+    let hasMoreItems = true;
+    let lastItem = 20;
 
-let all_feeturres = '';
-let filterOptions = '';
+    const go_to_signup = () => {
+      var url = "https://feeturre.com/login";
+      var target = "_blank";
+      var options = "location = yes";
+      var ref = cordova.InAppBrowser.open(url, target, options);
 
-let flag=0;
-let page_num_load=1;
+      ref.addEventListener("loadstart", loadstartCallback);
+      ref.addEventListener("loadstop", loadstopCallback);
+      ref.addEventListener("loaderror", loaderrorCallback);
+      ref.addEventListener("exit", exitCallback);
 
-let filterSet = false;
-let page_num=1;
-let filter_flag =0;
+      function loadstartCallback(event) {
+        //console.log('Loading started: '  + event.url)
+      }
 
-let allowInfinite = true;
-let hasMoreItems = true;
-let lastItem = 20;
+      function loadstopCallback(event) {
+        //console.log('Loading finished: ' + event.url)
+      }
 
+      function loaderrorCallback(error) {
+        //console.log('Loading error: ' + error.message)
+      }
 
+      function exitCallback() {
+        //console.log('Browser is closed...')
+      }
+    };
 
-const go_to_signup = ( ) => {
+    const filterArtistData = () => {
+      filterSet = true;
+      page_num_load = 1;
+      filter_flag = 0;
 
-    
-       var url = 'https://feeturre.com/login';
-       var target = '_blank';
-       var options = "location = yes"
-       var ref = cordova.InAppBrowser.open(url, target, options);
-       
-       ref.addEventListener('loadstart', loadstartCallback);
-       ref.addEventListener('loadstop', loadstopCallback);
-       ref.addEventListener('loaderror', loaderrorCallback);
-       ref.addEventListener('exit', exitCallback);
+      var form_id = $$(".tab-active form").attr("id");
+      var formData = $f7.form.convertToData("#" + form_id);
 
-       function loadstartCallback(event) {
-          //console.log('Loading started: '  + event.url)
-       }
+      var formSerialized = $f7.utils.serializeObject(formData);
 
-       function loadstopCallback(event) {
-          //console.log('Loading finished: ' + event.url)
-       }
-
-       function loaderrorCallback(error) {
-          //console.log('Loading error: ' + error.message)
-       }
-
-       function exitCallback() {
-          //console.log('Browser is closed...')
-       }
-   
-
-}
-
-const filterArtistData = () => {
-
-
-        filterSet = true;
-        page_num_load = 1;
-        filter_flag = 0;
-
-     
-     var form_id =  $$('.tab-active form').attr('id');
-     var formData = $f7.form.convertToData('#'+form_id);
-      
-
-
-     var formSerialized = $f7.utils.serializeObject(formData);
-    
-
-     var moodId = []; 
-     if(formData.mood != undefined)
-     {
-      
-      if(formData.mood.length)
-        { 
-
-             for (let i = 0; i < formData.mood.length; i++) {
-                moodId += formData.mood[i] + ",";
-             }
-
-             
-       
+      var moodId = [];
+      if (formData.mood != undefined) {
+        if (formData.mood.length) {
+          for (let i = 0; i < formData.mood.length; i++) {
+            moodId += formData.mood[i] + ",";
+          }
         }
-     }
-
-
-
-     var apiUrl = api_url+"feeturre-list";
-
-fetch(apiUrl, {
-method: 'GET',
-headers: {
-  'Content-Type': 'application/json',
-},
-data: formData,
-// body: JSON.stringify(data), // Pass your data directly to the data option
-})
-  .then(function (response) {
-    if (response.status === 200) {
-      return response.json(); // Parse the JSON response
-    } else {
-      throw new Error('Failed to fetch data');
-    }
-  })
-  .then(function (data) {
-    // Handle the API response data
-   
-    var feeturres = data;   
-      if(feeturres.success == true)
-      {
-
-        all_feeturres = feeturres.data;
-        flag += 8;
-        page_num_load += 1;
-        $update(); 
       }
-      $update();
 
+      var apiUrl = api_url + "feeturre-list";
 
-  })
-     
+      fetch(apiUrl, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: formData,
+        // body: JSON.stringify(data), // Pass your data directly to the data option
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json(); // Parse the JSON response
+          } else {
+            throw new Error("Failed to fetch data");
+          }
+        })
+        .then(function (data) {
+          // Handle the API response data
 
-    //  $f7.request({
-    //             url: api_url+'feeturre-list',
-    //             method : "GET",
-    //             data: formData,
-    //             timeout: 0,
-    //             //crossDomain: false,
-    //             headers: header,
-    //             success: function(data) {
+          var feeturres = data;
+          if (feeturres.success == true) {
+            all_feeturres = feeturres.data;
+            flag += 8;
+            page_num_load += 1;
+            $update();
+          }
+          $update();
+        });
 
-                 
+      //  $f7.request({
+      //             url: api_url+'feeturre-list',
+      //             method : "GET",
+      //             data: formData,
+      //             timeout: 0,
+      //             //crossDomain: false,
+      //             headers: header,
+      //             success: function(data) {
 
-    //                 var feeturres = JSON.parse(data);
+      //                 var feeturres = JSON.parse(data);
 
+      //                 if(feeturres.success == true)
+      //                 {
 
-    //                 if(feeturres.success == true)
-    //                 {
+      //                   //console.log(feeturres.data);
 
-    //                   //console.log(feeturres.data);
+      //                      all_feeturres = feeturres.data;
+      //                      flag += 8;
+      //                      page_num_load += 1;
 
-    //                      all_feeturres = feeturres.data;
-    //                      flag += 8;
-    //                      page_num_load += 1;
-                          
-    //                      $update(); 
-    //                 }
-     
-    //             },  
-    //         })
-        
+      //                      $update();
+      //                 }
 
-}
+      //             },
+      //         })
+    };
 
+    //Get all Artist
+    const get_feeturres = (page) => {
+      var apiUrl = api_url + "feeturre-list";
 
+      fetch(apiUrl, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // body: JSON.stringify(data), // Pass your data directly to the data option
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json(); // Parse the JSON response
+          } else {
+            throw new Error("Failed to fetch data");
+          }
+        })
+        .then(function (data) {
+          // Handle the API response data
 
-//Get all Artist
-const get_feeturres = ( page ) => {
+          var feeturres = data;
+          if (feeturres.success == true) {
+            all_feeturres = feeturres.data;
+            flag += 8;
+            page_num_load += 1;
 
-  var apiUrl = api_url+"feeturre-list";
+            $update();
+          }
+          $update();
+        });
 
-fetch(apiUrl, {
-method: 'GET',
-headers: {
-  'Content-Type': 'application/json',
-},
-// body: JSON.stringify(data), // Pass your data directly to the data option
-})
-  .then(function (response) {
-    if (response.status === 200) {
-      return response.json(); // Parse the JSON response
-    } else {
-      throw new Error('Failed to fetch data');
-    }
-  })
-  .then(function (data) {
-    // Handle the API response data
-   
-    var feeturres = data;   
-      if(feeturres.success == true)
-      {
+      // $f7.request({
+      //                 url: api_url+'feeturre-list',
+      //                 method : "GET",
+      //                 timeout: 0,
+      //                 //crossDomain: false,
+      //                 headers: header,
+      //                 success: function(data) {
 
-        all_feeturres = feeturres.data;
-                         flag += 8;
-                         page_num_load += 1;
-                          
-                         $update(); 
-      }
-      $update();
+      //                     var feeturres = JSON.parse(data);
 
+      //                     if(feeturres.success == true)
+      //                     {
 
-  })
+      //                          all_feeturres = feeturres.data;
+      //                          flag += 8;
+      //                          page_num_load += 1;
 
-// $f7.request({
-//                 url: api_url+'feeturre-list',
-//                 method : "GET",
-//                 timeout: 0,
-//                 //crossDomain: false,
-//                 headers: header,
-//                 success: function(data) {
+      //                          $update();
+      //                     }
 
-//                     var feeturres = JSON.parse(data);
+      //                 },
+      //             })
+    };
 
-
-//                     if(feeturres.success == true)
-//                     {
-
-//                          all_feeturres = feeturres.data;
-//                          flag += 8;
-//                          page_num_load += 1;
-                          
-//                          $update(); 
-//                     }
-     
-//                 },  
-//             })
-
-
-}
-
-
-const loadMore = () => {
+    const loadMore = () => {
       if (!allowInfinite) return;
       allowInfinite = false;
 
-
-      var form_id =  $$('.tab-active form').attr('id');
-      var formData = $f7.form.convertToData('#'+form_id);
-
-      
+      var form_id = $$(".tab-active form").attr("id");
+      var formData = $f7.form.convertToData("#" + form_id);
 
       var formSerialized = $f7.utils.serializeObject(formData);
-       
 
-      var newFilterby = formSerialized+'&offset='+flag+'&limit=8&page='+page_num_load+'&action=loadmore';
-
-       
-
-
+      var newFilterby =
+        formSerialized +
+        "&offset=" +
+        flag +
+        "&limit=8&page=" +
+        page_num_load +
+        "&action=loadmore";
 
       setTimeout(function () {
-         
+        var apiUrl = api_url + "feeturre-list";
 
-        var apiUrl = api_url+"feeturre-list";
+        fetch(apiUrl, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: newFilterby,
+          // body: JSON.stringify(data), // Pass your data directly to the data option
+        })
+          .then(function (response) {
+            if (response.status === 200) {
+              return response.json(); // Parse the JSON response
+            } else {
+              throw new Error("Failed to fetch data");
+            }
+          })
+          .then(function (data) {
+            // Handle the API response data
 
-fetch(apiUrl, {
-method: 'GET',
-headers: {
-  'Content-Type': 'application/json',
-},
-data:newFilterby,
-// body: JSON.stringify(data), // Pass your data directly to the data option
-})
-  .then(function (response) {
-    if (response.status === 200) {
-      return response.json(); // Parse the JSON response
-    } else {
-      throw new Error('Failed to fetch data');
-    }
-  })
-  .then(function (data) {
-    // Handle the API response data
-   
-    var artist = data;   
-      if(artist.success == true)
-      {
-
-        all_artists = artist.data;
-        $update(); 
-        
-      }
-      $update();
-
-
-  })
-
+            var artist = data;
+            if (artist.success == true) {
+              all_artists = artist.data;
+              $update();
+            }
+            $update();
+          });
 
         // $f7.request({
         //         url: api_url+'feeturre-list',
@@ -386,15 +1142,12 @@ data:newFilterby,
         //         headers: header,
         //         success: function(data) {
 
-
         //             var response = JSON.parse(data);
 
         //             //console.log(response);
 
-
         //         setTimeout(function() {
-     
-                      
+
         //              if(response.last_page <= page_num_load ){
         //                   hasMoreItems = false;
         //                   $update();
@@ -402,130 +1155,92 @@ data:newFilterby,
         //                 }
         //              else {
 
-                       
-
         //              }
-
 
         //             $$('.artistitems').append(response.data);
         //             //$("#load-more-click").prop('disabled',false);
 
         //              flag += 8;
         //              page_num_load += 1;
-                         
-                    
+
         //             }, 1000);
 
-        //         $update(); 
-                
+        //         $update();
 
-   
-                     
-     
-        //         },  
+        //         },
         //     })
-
-
-
-
-   
 
         allowInfinite = true;
         lastItem += 20;
 
         $update();
       }, 1000);
-}
+    };
 
+    const pageRefresh = (e, done) => {
+      setTimeout(() => {
+        get_feeturres();
 
-const pageRefresh = (e, done) => {
-
-     setTimeout(() => { 
-     
-
-      get_feeturres();
-
-      // Update state to rerender
+        // Update state to rerender
         $update();
 
         // When loading done, we need to reset it
         done();
       }, 2000);
+    };
 
-}
+    const get_filter_optioms = (page) => {
+      var apiUrl = api_url + "feeturre-filter";
 
+      fetch(apiUrl, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // body: JSON.stringify(data), // Pass your data directly to the data option
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json(); // Parse the JSON response
+          } else {
+            throw new Error("Failed to fetch data");
+          }
+        })
+        .then(function (data) {
+          // Handle the API response data
 
-const get_filter_optioms = ( page ) => {    
+          var artist = data;
+          if (artist.success == true) {
+          }
+          $update();
+        });
+      // $f7.request({
+      //                 url: api_url+'feeturre-filter',
+      //                 method : "GET",
+      //                 timeout: 0,
 
-  var apiUrl = api_url+"feeturre-filter";
+      //                 //crossDomain: false,
+      //                 headers: header,
+      //                 success: function(data) {
 
-fetch(apiUrl, {
-method: 'GET',
-headers: {
-  'Content-Type': 'application/json',
-},
-// body: JSON.stringify(data), // Pass your data directly to the data option
-})
-  .then(function (response) {
-    if (response.status === 200) {
-      return response.json(); // Parse the JSON response
-    } else {
-      throw new Error('Failed to fetch data');
-    }
-  })
-  .then(function (data) {
-    // Handle the API response data
-   
-    var artist = data;   
-      if(artist.success == true)
-      {
+      //                 if(data)
+      //                 {
+      //                    filterOptions = data;
+      //                 }
+      //                 else
+      //                 {
+      //                    filterOptions = 'Nothing Found';
+      //                 }
 
-        
-      }
-      $update();
+      //                 },
+      //             })
+    };
 
+    $on("pageInit", (e, page) => {
+      get_feeturres();
+      get_filter_optioms(); //filter form popup
+    });
 
-  })
-// $f7.request({
-//                 url: api_url+'feeturre-filter',
-//                 method : "GET",
-//                 timeout: 0,
-                
-//                 //crossDomain: false,
-//                 headers: header,
-//                 success: function(data) {
-
-                    
-//                 if(data)
-//                 {
-//                    filterOptions = data;
-//                 }
-//                 else
-//                 {
-//                    filterOptions = 'Nothing Found';
-//                 }
-
-                   
-     
-//                 },  
-//             })
-
-
-}
-
-
-$on('pageInit', (e, page) => {
-
-    get_feeturres();
-    get_filter_optioms(); //filter form popup
-       
-});
-
-
-
-
-
-
-  return $render;
-};
+    return $render;
+  }
 </script>

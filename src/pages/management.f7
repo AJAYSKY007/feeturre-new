@@ -71,9 +71,72 @@ ${hasMoreItems && $h`
     <div class="block">
      
         <input type="hidden" name="name" />
-     <div class="filterOuter" innerHTML=${filterOptions} ></div>
+     <div class="filterOuter" innerHTML=${filterOptions} >
 
-<button type="button" @click="${filterArtistData}" class="btn btn-primary ripple-effect filterbtn clickbtn popup-close" id="artist-filter-click" value="Apply Filter" >Apply Filter</button>
+
+      <main class="main-content feeturre-page bgGrey">
+        <div class="container">
+          <div class="py-45 pb-0">
+            <div class="filterSection" id="searchFilter">
+              <div class="filterHead d-block d-xl-none align-items-center">
+                <h3 class="h-27 font-med mb-0">Filter</h3>
+                <a href="javascript:void(0);" id="filterClose" class="filterClose"
+                  ><em class="icon-close"></em
+                ></a>
+              </div>
+              <div class="list">
+                <form id="mgmt_form">
+                  <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
+                    <li>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search"
+                          name="searchValue"
+                          id="searchValue"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        class="item-link smart-select smart-select-init"
+                        data-open-in="sheet"
+                      >
+                        <select
+                          class="form-control selectpicker"
+                          name="managementType"
+                          data-size="5"
+                          title="Management Type"
+                        >
+                          <option value="">All</option>
+                          <option value="Management">Management</option>
+                          <!-- <option value="Manager">Manager</option> -->
+                          <option value="Agency">Agency</option>
+                          <!-- <option value="Executive">Executive</option> -->
+                          <option value="A&amp;R">A&amp;R</option>
+                          <option value="Record_Label">Record Label</option>
+                          <option value="Studio_Owner">Studio Owner</option>
+                        </select>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Verification</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+     </div>
+
+     <button type="button" @click="${filterArtistData}" class="btn btn-primary ripple-effect filterbtn clickbtn popup-close" id="artist-filter-click" value="Apply Filter" >Apply Filter</button>
+
+
 
     
   </div>

@@ -93,7 +93,7 @@ Artistry</h1>
 
 <div class="row">
 <div><a href="/artists/" class=" button button-large button-fill">Artists</a></div>
-<div><a href="/feeturres/" class=" button button-large button-fill-border">Feeturres</a></div>
+<div><a href="/test/" class=" button button-large button-fill-border">Feeturres</a></div>
 
 </div>
 
