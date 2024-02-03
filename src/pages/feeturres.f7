@@ -186,7 +186,7 @@ const filterArtistData = () => {
 
 
 
-     var apiUrl = api_url+"gfeeturre-list";
+     var apiUrl = api_url+"feeturre-list";
 
 fetch(apiUrl, {
 method: 'GET',

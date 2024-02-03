@@ -76,9 +76,18 @@ ${hasMoreItems && $h`
 
 <div class="popup popup-push filterPopup">
     
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-100 text-right popClose"><a class="link popup-close">Close</a></div>
+    </div> -->
+    <div class="navbar navbar-small">
+      <div class="navbar-inner">
+         <div class="right">
+           <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">close</i></a>
+         </div>
+ 
+     </div>
     </div>
+    
      <div class="page-content">
     <div class="block">
       <form id="browse-form">
