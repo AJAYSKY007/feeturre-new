@@ -33,6 +33,882 @@
 
     <div class="MainContent" innerHTML=${companyDetail} >
       <!-- Maincontent goes Here -->
+
+      <main
+    class="main-content details-page bgGrey animate__animated animate__fadeIn"
+  >
+    <section>
+      <div class="container">
+        <div class="detailsBox detailsComments">
+          <div class="detailsBox__left">
+            <div class="userInfo userInfo--verified">
+              <div class="userInfo__img progressive">
+                <img
+                  src="../assets/feeturre_02.png"
+                  alt="Company Info"
+                  class="img-fluid progressive__img progressive--not-loaded"
+                />
+              </div>
+              <div class="userInfo__details">
+                <h2 class="font-hbold white-color">Alist Global Marketing</h2>
+                <h3 class="mb-0 white-color font-med">
+                  Illinois, United States
+                </h3>
+              </div>
+            </div>
+            <div class="totalFigure">
+              <div class="row">
+                <div class="totalFigure__box">
+                  <div class="totalFigure__info">
+                    <h5 class="font-hbold h-24 black-color">21</h5>
+                    <span class="font-med">Total Artist</span>
+                  </div>
+                </div>
+                <div class="totalFigure__box">
+                  <div class="totalFigure__info totalFigure__info-pink">
+                    <h5 class="font-hbold h-24 black-color">19</h5>
+                    <span class="font-med">Total Feeturre</span>
+                  </div>
+                </div>
+                <div class="totalFigure__box">
+                  <div class="totalFigure__info totalFigure__info-pink">
+                    <h5 class="font-hbold h-24 black-color">$0</h5>
+                    <span class="font-med">Total Earning</span>
+                  </div>
+                </div>
+                <div class="totalFigure__box">
+                  <div class="totalFigure__info">
+                    <h5 class="font-hbold h-24 black-color">17</h5>
+                    <span class="font-med">Exclusives</span>
+                  </div>
+                </div>
+                <div class="totalFigure__box">
+                  <div class="totalFigure__info totalFigure__info-pink">
+                    <h5 class="font-hbold h-24 black-color">2</h5>
+                    <span class="font-med">Leases</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="musicwrapper">
+              <ul
+                class="list-inline musicInfo"
+                id="musicInfo"
+                data-mcs-theme="dark"
+              >
+                <li class="list-inline-items musicInfo__List">
+                  <h4 class="font-hbold h-20 black-color">Management Type</h4>
+                  <div class="badgewrapper">
+                    <span class="badgewrapper__list font-med">Agency</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="detailsBox__right">
+            <div class="contentDetails">
+              <div
+                class="heading d-flex align-items-center listBox listBox--verified"
+              >
+                <div class="listBox__detailArtist">
+                  <h2 class="font-hbold h-37">Alist Global Marketing</h2>
+                  <p class="mb-0 h-16">@AList</p>
+                </div>
+              </div>
+              <p class="h-18 font-semi">
+                A-list global marketing is a multicultural, melanin-owned,
+                family operated global agency whose sole mission is to produce
+                quality products and help brands better connect directly with
+                the communities they serve through authentic messages, cultural
+                awareness, customer engagement, and real life experiences.
+              </p>
+
+              <ul class="list-unstyled contentDetails__list">
+                <li class="contentDetails__list__info">
+                  <label class="font-bold h-18">Located In</label>
+                  <span class="font-med h-18">: Illinois, United States</span>
+                </li>
+                <li class="contentDetails__list__info">
+                  <label class="font-bold h-18">Joined</label>
+                  <span class="font-med h-18">: 08-08-2021</span>
+                </li>
+                <li class="contentDetails__list__info">
+                  <label class="font-bold h-18">Languages</label>
+                  <span class="font-med h-18">: English</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Details Intro -->
+    <!-- Feeturre -->
+    <section class="feeturre py-45 pt-0">
+      <div class="container">
+        <div class="commonSection__heading text-center">
+          <h2 class="h-37 font-hbold">Our Artists</h2>
+        </div>
+        <div class="feeturre__videoBox">
+          <div class="row listRow">
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/FlexMason/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/hBiw2MMrIdzv3aWbtGDcoalOsOmLaD1628466346.png?Expires=1706926649&amp;Signature=iBPVghcfREDeJ~l6tj3gMxA8ONiimAB-S81bf74OLRsldTeyY~I0AX~WlahIm4HoMmqdMtshBfB6Yq-uJXV5Hnk4p6KSiHGbjA-xsixRjlLl9C015uvtzxyRhm6C0mTcuDxJtM8MUxdJUQEqfMschQaRcIIN6xLNPL3DPhy5KDZsmn0Zd90s0AaOstwIWPDop7a4aLrCuORvF6vDq~0gz5m-FGkfdF09pwk1OS~YFoJ8SdH988pRAXZfFQCRuU0QuNjBYa3VfOIy4I7-GcDKQ9FMgSTd4ifJe0t57Z8MMAfD6EoEMHkcPjES1GtxiA4AO6orHhB-t3dB~bFOlscJyg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Flex Mason</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">FlexMason</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/Mr.MANHATTAN/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/226Y29UoTiagigzizTtuzHo6TSsZRr1628532293.png?Expires=1706926649&amp;Signature=FE0B5G4xhuKDU~~TOAMM2YmkuXjHkT7T944ATJAU-6eyCXhu2wnkP2-5B5K7eQcdw9Rt~qiLMdR5lVMiLlIbZa09Cb-xWTi4D07kAn-mSOshjqN~DEqZqZHgmeGJn-nRMNeZyjiSTXdjJccfjVxGsfPyiwz5~3AUyLevphd4kaBRdZJ24ywYQkQDur2zizSiSQZNHm43TZxKeiY4jikShdPoRcJVpv-~PaTyujHjGdvDrb2jYfxyhM2c2zBYxo9iYKBuXjsB~kgx4DgkwKxIpA-YznUVp88-m6Juoim8~p-n32OwEtRPrQwwKNn1R5ZzmKQmc2oWvsP49zz95Ovd-g__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Mr.MANHATTAN</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">Mr.MANHATTAN</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/alister/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/xh2neT3RJ4AeBubTWm2SQkGEI0QPGR1642673719.png?Expires=1706926649&amp;Signature=EoGoZ9PLzixuOVxYKpfSYWJimQMOmDslUgeGEzuSFUpnuA70LC433P9twyd3eINe22nPDoFbKdICisqUZ13NyZSv-NkNyGD2bsssiwZcJ9xves3z--FhRbYAGwAOKgX9Ynn17-Jn1Tn8justbtkBwJQQgnxNqwURyjOpqxZ9DH9Z3M63PGQ9Pr1-hBzSOsJNbHmsGpRLsUTdt~-XwZ-UKKipeE~NIIaDcAjjmTdPGLzS8RuDWXX62t7v3fa1AArcSvGQx50-1864Z27giQkPY02CpTqWGl0a-bQym-z8IGh3khgm~62L3xTYUOuufCdP9-eegMUsukFY9OrVAJjbyQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Austin Hood</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">alister</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/johnmonopoly/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ujV02kAdKX5jA3NruD0TkD0ElBqlUl1634527486.png?Expires=1706926649&amp;Signature=J0EqTrWALdH8qi6d3wmA-UFhj1ZFWaeZ8a1Kya9R7HAmFOr4kC2yJVtPdsDlcxQ-mgyIQqF2Wk1KQncMVRhaU5h5NuqGm57iojdi7~7Qn4bzBsW7Gt59QyWH90InzSKPu~qH9~YTDrQLNfiri1vhFyti3ktNKZ6o9I0G8j0wJibu~protphwljo1o9kYUdgwy0MmdByfx6rEBXzwdfVm4UHr568jZp~dqd9p9ZUl-RaOPciJTAL9UOss~3QskYLSBsoc-yGvku6fnoBm0Wg0U1oj5ckSMkbEZWm6zKzwsmSLphfAgePIaLrDLQPy0pGcSVFjp6lXN1I7Lj8YMYRq8Q__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">John Monopoly</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">johnmonopoly</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/MikeShine/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/BlkCVxP13ZkFjkh4cLiG98h1BDAdmM1628978391.png?Expires=1706926649&amp;Signature=lF-SSTS49-CYcx6CDfTI9yYoIcbXymrAbyjghvqHktyJDLCIS4979Ds3xwPqn8gEVhMtp30UUkw8vvkI58eJB5828nawQe6RjHqAgCATmzJ4KriWdyp9fZtkjfUEha1JQEuhvm4kgqQO5zTkf7oOnnmTXGqGeITi775QrRTB-dD9GDmuLwLAVFGGaWLPqKX-TzvHjjxdZ93UPvt-zDyEsupFfQR41nhX~ZJDvrOJbI~PlsWPYZHC9XmCEVKTQaYj~voiNqZSmzUN7UfRglQ96JR3i6101tkIdtGWpvI2nHLvNy-pAWU92NV98rtQU60N9f0inIdKSwMQieJ1IILrvg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Mike Shine</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">MikeShine</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/caliwoods_v/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/hHd6pzXvnZUrbPfPAoh71kCU1fXp4e1629224182.png?Expires=1706926649&amp;Signature=QPRCBp9HpQXk4XkuPq1Wma3uz-3tXc5CJ6zoz6i3vytvstmcBQyopKQOecWsquRMunE3nOxsvXAJdt6DgSpvn6jC8CQ1Uhjl0iPclBbgFi0Hk68LdG3MQaxxKSEnyp0Ce-9kl6rlYqlFXhIAG8yK11jZt8EWo1a1fNQQa69BvbcgXMM2wFjbWgjx70sFUCcBqopbL39n~Z4Z~4Xlav3khwq5mqptsMJJql8JJ1FYoSUA1580WIrl0TIvgb4JvvdlXxa6uH9XL5YS8x36vtp4M72rD24eDE6OljeaJKsdWEtQ2TKh8QSh8hRfV3JQSBOW2WCKkPlC-sCONbd0nbMUDg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Caliwoods V</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">caliwoods_v</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/skeen_bean/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ywY9qr2Fc1sLiF0sUeVWmZZzOAHCqI1629581305.png?Expires=1706926649&amp;Signature=WW0s~Id0iX6azlyUH60Af9nDo8dGpJ8KSVzNxnHMr-zv0qhysXL8BHbZ~DdgjbAGKkJzjCwSHl1xl8RiBk~VrNf3J50CDKnwY-tWc4xn~H4UP39o5bINZ83E-y9H0EFwYcQp0xexnZOS8OQrhq7Se8AAyrH92dOzlqjTdVpYlgc2IxQbhm8zquDkmK1mElqv9LnrIMFYpurUQe4sEowC0gpp6dJoVX8qxZkXWvmKNcqiI5v1QFftl5AjmR8db2D6MUJxtqjhw23mOzcE0pTuTcYeSIODqx17sKq668X87IWSltlpWhPtbDYrVISjiZEMIeQD04iq2hhdOukg6UaUhw__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Skeen Bean</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">skeen_bean</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/stunttaylor/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/hmP6ZX3xIDlHzwnr6pNIqhLmu1OGcY1636816681.png?Expires=1706926650&amp;Signature=N6al~HeIPkKpBCsXf9DyPJmWD69m5aR-UtFmzFNbzoVy72-woHvcCWuTm5Xw5Rgw~tWG2Uo9SK2FxymXzW1tT0Ilb4yuvOA43VxF3oiXOTareHiVuDQIDyDPcO~rQ0LLkoGTf-NZ~fpAM8r~Zlfzf3ruiOcW5-k~gMWUmRgL6te5~h~B8x1iGIS9lZAin1vtsiZWvO3YdkvNjF-smHK-OGFcrhQw7gIbYUBqVoat-mWd3OlHE2-Gvexxk~IQEtKTeZVdBBzSytLvFiaXLdXHEg7LKOsSyS3AnCpeblC~uQKLDn8zP9GI~3HxPvJzkSaz5LKWLKQKg0gk9lKDkZdWpQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Flee Amigo</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">stunttaylor</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/jhardy/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ylUyG4wyqmJQTB3NoMtk3WaKoY4pBp1630021114.png?Expires=1706926650&amp;Signature=P7wlMwCs7GkfUKyJXO090xkK5Lm6izpT1Wb5KmK48uMWacCX~k-JEAf8ZpiZ4AUpIK6D1AjBulpM9TdfjT2nmCiilMqZl8WgH1XFCcPmRHbcNtDVF5bkhgMJbPZiLpH89iUR3d1x6ZV8~7wYEN5tmWieqLGXntUWY2IfDV0LJVIPWeBk2Uw-egKPC5pGuZpEpd6eE7~p4Or4sK0EIqlxtNIjK2Ut9LJh2rioVyCFaIeRtKYETgwd3ApfYbtovpv8nsPyyRFAhRbfH~ySt7~wzercShx4SuX1T8VoNWZRmAwDBngMz890wloio~yfkOtaw6eUBl4cdu3deAxwiEqnIw__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Lux</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">jhardy</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/terrioglobal/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/1aJx83vCcRCA9AICzbFKu1jOQ7uKCf1630288620.png?Expires=1706926650&amp;Signature=invCqdBogwr3kYRx3baj5YmL0xFvWuUv1S2wqJeha3uluqQ3Lkqx21rlDSaPCUKvHi5fmGFxPRAosnJwpNANR0YKZsX0xdwzErRUA2jwz9HltjlG~pjVFTbY9ERclyJlMQnNrcT2LvksNn8XVbbUjpW-5gYrL13X6s-lZADNxt3dmNDccrGhCKm-3Ywem57YC7rmjT0oixIw4QGQRvlNbioR4bF~~r5cP~uQbu-yVBeS4QsXPN3mcib9lHXSGsIfTK8pnBmSez9N3K-IpzxTioShc8QZ1inp-e~SpXiGqzVCr1Q6s0moxKSL5o9Nkcclor~3OlgsZHiJb~miXOynyA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Monterrio Grant</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">terrioglobal</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/kapitolp/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/3F40u4x8FEApIPHBVAe7WE4MkTOZEn1630163293.png?Expires=1706926650&amp;Signature=NyV6BUaX6po2LsT-pPJq2CnjrPBur5iRnxcLlmI1-JY~0MRNjk9~WtX8AN87zph760FtAH--mUszxswH5um6ksRtCYG-HbDsajkuk-0RfqyPd2mOIxeZrDdl672973m3tHUvnMs06-XaPoH58pUd9VMCAvZB-UFyqXPbBhXgk9PhNYdsGCiUUZLyFbECA6GyTU20dRgUxY4bXQaLYuSHRJ9JDkZnkfuZ34l9r8dvelq5NKkMLqYK~ukRdXkCzKeUbsHdDwWOfhoeA~VvphMO7zbI~n4Pv32o4XM2PsP5U7ok~PBc8Jf4FdwKldBAhtjB306J90e5~1oL3pGyTrzO4g__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Kapitolp</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">kapitolp</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/frataudio/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ujXStB9lTfURugnJbbm3Y0SsG1Jtcg1630678923.png?Expires=1706926650&amp;Signature=R7ibOQxHPJHyFcSt02Nyc0fu8KJLBGPqXixXUlhELYEWYs4cQvMsBlxvbmhfaTGZmFFN1NiRcZWcGyVBE4vRkWrtaCT7NB67oq~Zv0UvPtFYahgGcOAOyxB1qODeReZBOousG1GEmdAbZy66ctNubgOGpmtStYzkw7XyJXjZW-dLHxUsrJH8cS12Lklb6NOGQB2ngU-TPsbfTq9tGvB0BMQiAPoB18XB~iB4kPiFGHaUtCiTSKS3DsZWByMiTxqk64E~9pMmJdrTDQNHATRo2no0umSMa3iyZD2UCZvNdmA8H5b6KbkJU4-QnGa1gdHgyR0RTRmhwWNBc8c-SnJf5g__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Kevin Richardson</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">frataudio</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/tariq9910/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/UfXbz25x5hGVqInFfGjBNcHrY5sRgc1634004487.png?Expires=1706926650&amp;Signature=LU4P8MVyZhCvQISoq0rQCaTabOux-G1~RDjpiI~8-SXAKhDxtfl8rDYAPseWUw~2OW~QegaAoqBFRZbNxaZHa1LC8eH17gYK~DxtoBfr3Ja0MGzXzzbXh7iZVeJgWlWsGk8bkUOsyWRxqwUb0jwSOzSRnIrIZ07Xo7ystMnZalT9sMVfcaX0sIBj7aCXCGxsyrekcIp-AjRmhh2mhYa9-xfLZRraOKoB7a-5rHKqYFtdx6Bt0FknfEGhul-1bqSMy27J81MteQO-weja99-f8rMb5T477zrQSd5jkc8EvLGvXM-ea292aZGXOUnrcHiWQ7ALGH9bAa-ZlW1vsvZ74Q__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Tariq</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">tariq9910</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a
+                  href="/artist-details/goodshooter42$/"
+                  class="stretched-link"
+                >
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ew28Sugm5goRRhHpKI8IOlp8xCG99J1634059690.png?Expires=1706926650&amp;Signature=QQt-mtpZgvBPqQ~BJQTs~0spkhhF65T0p-xPHEtjmXL4aX7J9~UXQGKG7ZQEQCxlk9Jm9jvB4qlceA359nUC8j1ghAacPZ3Wr25C1tj6U8N7MqGd1LA9f3x2n2JkRluDlL8fiajiKV1G-VCl7qeZ4UVqbDAk4oOZsnoIXuYxke0PzeCUiArxYRIp6TDKcbkGtxa0N0P6XxkqJID9k02Flsi3aLSc28p93vXIiJPjwksPFFriN~VKXaTXPJPHsn6e42t5T8mZ0VNsf~FuqazuPyhBvkVoRMDa0ohyBlw8SkxGw0UDKOGcZENGPI9vxJ3Oqh2rqpPpNI2e3ghHyBfcHA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Rodricous</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">goodshooter42$</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/iamdlow/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/pOf09rQodZMzP9SAmyN4aCw5bWGuHT1633713974.png?Expires=1706926650&amp;Signature=ZXUO8DnwRvYDo5P8u5jzA48DZzjCwDNqJFYVBi7ifrQT3bu1tbir2ejPQn7ScM708uVuBV4hEtrVW46vyQLsuS1ShX4X7h-28H-CF41jQwfO9l-whI~bv8O0fSDZAioPGSUA-1Y1iEbfxkaTBg2MjJjNfXAbje8DyY2dk3JloVFOM4FI5qhlzV95HwMMLGZpxcsWGDUwyp87WU0kxM48an44gh-QAetQPjxfvap6pya-2Wm~m-TOfEE4lEX2HDEISzCkbghrF9U5aNIIER9ec3J2qRcXboej3Ud7g1RlK1KOv5XW4qgY6IO1wDmTTrEcCNKxXad8JQmDiIFxPu~WMw__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Daryon Simmon</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">iamdlow</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/1way.suggs/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/omLcKjLRp1ycgloMqJwSU7lW3Pt72q1634847369.png?Expires=1706926650&amp;Signature=M926Bdv8eC9~nXYfZCqgLEImHxAWoVjd--tGyi4In5byK6uw87gNEWFW-zPvlqkjRXh3gTdK7lW0UMvJRo2hPa9YPpIomr0m5-VCDzdGBVu8pI0K2G~wYGs4uLauMicR4qF-RE7jw4qM9tChZTlv1VW204PgIySOM0ul46bAqWW8DGzgax44rxM4Hd8JTUhTPEOqeHMHCKtNPrx0rV478LD61tpngSyQaLBuMBk9cdA4nmvLEgdCmypxjtuqr3ZTO0zn4RkY329OzOnT08NfoXILSTYpY7pUIbqaAayIeMibzNZ6ij4S5o2gFjjPr0ShsS0YER5EF3csy~UoLqxiPQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Jordan Suggs</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">1way.suggs</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/gorjess/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ootbYEMaZ0DXj74580wIDbDhpQCn7c1638850985.png?Expires=1706926650&amp;Signature=eqZtf7sgJ1cSeb6GH0hoFCtpiB7CTPV8Pytn7CBtUs4sUPTnTWeVPw3pcexMkXnfADy6GDADdfZU1AsRGYkhbzDtHAI~CzMTRPvNgYfDnGROQpqSxgX6EE9peN9N2RUTXVjCzj1VZw9rHSlfHWv-539VwSYYLSJNKxvxPepCaoDEn2y6YpXoA~GIdk5q-TZBrGJ9nRXM7Pwg-PSq1pQXuOyks9q7PiyciWe60c56APg5vV3SgfAMa~z3fzLZZ8Qqtcfg86hONBlg4XbolIVglEc2qS5oxkAyFB~R-VdnY1F3YQC5Z18v~W81ASgm5zokSabQcUogsNX5wT1RhT1ecQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">GorJESS</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">gorjess</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/damonscott/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/9jxoPmY4rBW0vHxJQA1nzpguwQr55Y1636794938.png?Expires=1706926650&amp;Signature=Jdz3xOSUgME6PCMun91glPpPtcf9QgvVhJr2foPsYub43O2gQP9dTLh9AP7phS0aG63LBoaw0mlb~VRiA86ZQeRfVzG128hi8B-G1uf7aJK5~XuogDw94PekpbOuKCKDaKoxjWNMvcLkFQboexGBGjuv4kaiyWG90Sqh8ofeg23fytP7EPMPyjyxJLwyr6U8Qk5VqZJqDW~-XiIGr8PywL4NKnqgJUctyLDiksrHIrWESM1h4sE7uuKoZFceJ9fhFskjdr~8i2o~~43ZHmRW2~aGzfxoShVfhnIHEmfLQbupCMQpQeK190ZCX0U5ByVQ79bmKCFaS5WK065KLnFFDQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Damon Scott</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">damonscott</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a
+                  href="/artist-details/yaminiomar@gmail.com/"
+                  class="stretched-link"
+                >
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/sW4PP58kwVbhhPw76Tatug4enrnxfV1638308967.png?Expires=1706926650&amp;Signature=iwX7xUEZ-upLVjDFCUlK4pa9aqZjJSYiU7kKsau~kqx73xF1NaMBhqNRqJigDvTb8xO9LziObrW70QATxWKhECCAcQDToa0-MfRmKLC0Frb28jYBpHMujILQDpM47uyjPaPn9~6bvf~LjYuS93fY6WGo-BfNo9Z3zm2v71eSTWhuUJwtkuz2j3nEqyk-yAHqi~3E5XcDczr7N~TWRAycWbFmNcWL86Rpe6LGoEBXiTj7PXfCJGQeBl~rbab8ViM0e1yHbTLTRSuWXiFo7EQd60pNVIgGQLSC9svRwR1YllYjE9stQyd~jWYfjj3Sx2z84A~ekCD8kcUYGYbkVlGz1g__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Omar Yamini</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">yaminiomar@gmail.com</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a
+                  href="/artist-details/clevlandave_big/"
+                  class="stretched-link"
+                >
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/jT43AaRoUcuCmjhNrWDuDIuBNK9A1O1638479479.png?Expires=1706926650&amp;Signature=EvTVTm8W6PIL~HVb14en0rzw7xGdchC1ckZJa9lh7iHWL8jPBFBJxyvHM-BZmJjDh2WRfpKaMskeaQZbS98X5dfW7j-rB4LxK8Hhyb3dT92cOUvwAbPb2FHTPxWnOIkmysdOfJe~5HTYrcuTZj94pUPoB05jMLp2WfbA1R6y-q9vmeC4MnI6tMJZvQOhn2AATFKA0G-kIRmJC4t04peGLs7ya9aMlKagbhy6Srnv0GDToVflmxJanGu4nXh~RfSyYx9qSrkURLe6eNOrHTyHQhcaFxsOVNU1TAdBcG60~FdS52AiKdjgT54wzFazOCh2YZSdE9jNRA16lAMccfTdbA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Clevlandave_big</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">clevlandave_big</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="listBox listBox--verified">
+                <a href="/artist-details/iamtmagic/" class="stretched-link">
+                  <div class="listBox__img progressive">
+                    <img
+                      src="https://d3gsffvv7iizq6.feeturre.com/user_profile/q768g83kzEB8uhe3l5uwoxfbtHjGoV1641763521.png?Expires=1706926650&amp;Signature=VbaC~cgigBm1f33Z~a8CaCH3pohv0xqfQFjp28ZBcjfwlhavmkphO1TOUjUKubQleeFLCEwlro9fFXCMpwfjQqG9RfdDGlFDcAh~9oidpXB37hhD61cH9avzjJZduTCKiCQm~AcriokoR3jxsQ-PslYmFP9v4jSv~pM3PIRoZC6FHqvBVnCKSfKHLT2Cl8zGx1xNGIOXkkP2hHAZeXlGoFb3gtq5oy9mAyOIlEJz7mqnsK8MyiLRpKF9WeXGOUbMjjkufGT23NY39oY8vXqba-6ogEJKQu1SjrWYWcM8qY94Axj35~ycILOCOw~OfnGACQh~neXypdf26tWJCdbl7w__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                      alt="artist"
+                      class="img-fluid progressive__img progressive--not-loaded"
+                    />
+                  </div>
+                </a>
+                <div class="listBox__detailArtist">
+                  <h2 class="h-27 font-bold">Gregory Terrell Turner</h2>
+                  <div class="d-sm-flex justify-content-between">
+                    <p class="sub h-18 font-bold">iamtmagic</p>
+                    <ul class="list-inline rating mb-0">
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                      <li class="list-inline-item">
+                        <span class="icon-rating"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  <div class="btnRow text-center">
+                    <a  class="btn btn-primary btn-outline-secondary ripple-effect text-uppercase" href="https://feeturre.com/artists">VIEW ALL</a>
+                </div> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+
     </div>
     
 

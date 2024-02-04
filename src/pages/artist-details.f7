@@ -32,6 +32,450 @@
 
     <div class="MainContent" innerHTML=${artiseDetail} >
       <!-- Maincontent goes Here -->
+
+      <main
+      class="main-content details-page bgGrey animate__animated animate__fadeIn"
+    >
+      <!-- Banner Section -->
+      <!--  <section class="bannerSection bannerSection--dynamic progressive__bg progressive--not-loaded" data-progressive="https://d3gsffvv7iizq6.feeturre.com/user_banner_image/Cb3ynhbGfmVHoy6mbIkYHBng82DaIM1629944945.png?Expires=1706926560&amp;Signature=FIMEa9X8dFP35P5xW1QaneqvqeyoZbTQuZL2S~uZVc48reuHAxOZc-wTwhMJRo1O4zv8ZN1i2OndWWmHLRrh0iOvWaD3agwG0Tnli5Kim~bY-VPbxutGAUIfw-SFUPYpQJvguv33p5O0JgLeKyUvFq5PStYycXPRtYYZT8PRcijqSQEo8l3KNTApuO6A69hdRnU-s388RaaH2h6ggsnunlU2Q7ZkJUyxlOBWISXzkjwTFOV6xGVsia44nlG45iz~0acCTDsITkbRiKD1GJFFRUxwFCHUhtJZZj3UDEAl2kpm2Joy5JpXeNCFSitQprQpJWmMZQitHUPRNfz2iRat4A__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q">
+           <div class="container bannerSectionContainer">
+               <div class="bannerSection__content bannerSection__content--border text-center">
+                   <h3 class="font-hbold title">Sincerely Collins </h3>
+                   <ul class="socialList list-inline mb-0 text-center">
+                                                                                                                            </ul>
+               </div>
+           </div>
+           <div class="bannerOverlay"></div>
+       </section> -->
+      <!-- Details Box -->
+      <section>
+        <div class="container">
+          <div class="detailsBox detailsComments">
+            <div class="detailsBox__left">
+              <div class="userInfo userInfo--verified">
+                <div class="userInfo__img progressive">
+                  <img
+                    src="https://d3gsffvv7iizq6.feeturre.com/user_profile/A3mdCPy71tlatjBBkRg8DGQvgIISPC1629944945.png?Expires=1706926560&amp;Signature=eh1RMEEgIjwESB4IWZAusvnOc3VP5zI16wpB~nqPedqhaK~WopEep7d9Nfo0yX~tlUvw0mELZmKQONOguUaucEa99gTkFOeAkAhDG17SGTo3KWotTyt-7Vr87hHOv3u4v-nJjkHI0h3~HznhYyY~iAM0eLIrsRJNsRdvrc3vU5D33lNCxF-NrQYzHxCXp7ghmsbyup34yIMHpWOxeZyZSf~hwPbcZM70~hrzVqKDqVmjCAYXvVUuJMAd6sFWX-AAM5DQ5CT0l6ca6qKG3BewjkTnI7zjQoOOaFJtVBxz~j3XGGsFD15B8ooSGxdTbKKCFY4nKIzrNG-oRtbBFIkXbQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                    alt="Artist Info"
+                    width="100%"
+                    class="img-fluid progressive__img progressive--not-loaded"
+                  />
+                </div>
+                <div class="userInfo__details">
+                  <h2 class="font-hbold white-color">Sincerely Collins</h2>
+  
+                  <!--  <h3 class="mb-0 white-color font-med">
+                                                                    <span class="country">
+                                       Arizona, United States
+                                   </span>
+                                                                    <a class="follow theme-color" id="follow" href="javascript:void(0);">
+                                       FOLLOW
+                                   </a>
+                               </h3> -->
+                  <ul class="list-inline rating mb-0">
+                    <li class="list-inline-item">
+                      <span class="icon-rating"></span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="icon-rating"></span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="icon-rating"></span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="icon-rating"></span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="icon-rating"></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="totalFigure">
+                <div class="row">
+                  <div class="totalFigure__box">
+                    <div class="totalFigure__info">
+                      <h5 class="font-hbold h-24 black-color">3</h5>
+                      <span class="font-med">Total Feeturre</span>
+                    </div>
+                  </div>
+                  <div class="totalFigure__box">
+                    <div class="totalFigure__info totalFigure__info-pink">
+                      <h5 class="font-hbold h-24 black-color">$430</h5>
+                      <span class="font-med">Total Earning</span>
+                    </div>
+                  </div>
+                  <div class="totalFigure__box">
+                    <div class="totalFigure__info totalFigure__info-pink">
+                      <h5 class="font-hbold h-24 black-color">2</h5>
+                      <span class="font-med">Exclusives</span>
+                    </div>
+                  </div>
+                  <div class="totalFigure__box">
+                    <div class="totalFigure__info">
+                      <h5 class="font-hbold h-24 black-color">1</h5>
+                      <span class="font-med">Leases</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="musicwrapper">
+                <ul
+                  class="list-inline musicInfo musicInfo--first mCustomScrollbar"
+                  id="musicInfo"
+                  data-mcs-theme="dark"
+                >
+                  <li class="list-inline-items musicInfo__List">
+                    <h4 class="font-hbold h-20 black-color">Singer</h4>
+                    <div class="badgewrapper">
+                      <span class="badgewrapper__list font-med">Pop</span>
+                      <span class="badgewrapper__list font-med">Rock</span>
+                      <span class="badgewrapper__list font-med">Alternative</span>
+                    </div>
+                  </li>
+                  <li class="list-inline-items musicInfo__List">
+                    <h4 class="font-hbold h-20 black-color">Rapper</h4>
+                    <div class="badgewrapper">
+                      <span class="badgewrapper__list font-med">Hip Hop</span>
+                      <span class="badgewrapper__list font-med">Rap</span>
+                      <span class="badgewrapper__list font-med">Lyrical</span>
+                      <span class="badgewrapper__list font-med">Underground</span>
+                      <span class="badgewrapper__list font-med">Eastcoast</span>
+                    </div>
+                  </li>
+                  <li class="list-inline-items musicInfo__List">
+                    <h4 class="font-hbold h-20 black-color">Producer</h4>
+                    <div class="badgewrapper">
+                      <span class="badgewrapper__list font-med">Beat Maker</span>
+                      <span class="badgewrapper__list font-med"
+                        >Music Producer</span
+                      >
+                      <span class="badgewrapper__list font-med">Hip Hop</span>
+                    </div>
+                  </li>
+                  <li class="list-inline-items musicInfo__List">
+                    <h4 class="font-hbold h-20 black-color">Influencer</h4>
+                    <div class="badgewrapper">
+                      <span class="badgewrapper__list font-med"
+                        >Social Media</span
+                      >
+                      <span class="badgewrapper__list font-med">Fashion</span>
+                    </div>
+                  </li>
+                  <li class="list-inline-items musicInfo__List">
+                    <h4 class="font-hbold h-20 black-color">Engineer</h4>
+                    <div class="badgewrapper">
+                      <span class="badgewrapper__list font-med">Mixing</span>
+                    </div>
+                  </li>
+                </ul>
+                <ul
+                  class="list-inline musicInfo mCustomScrollbar"
+                  id="musicInfo"
+                  data-mcs-theme="dark"
+                >
+                  <li class="list-inline-items musicInfo__List">
+                    <h4 class="font-hbold h-20 black-color">Management</h4>
+                    <div class="badgewrapper">
+                      <span class="badgewrapper__list font-med">
+                        Independent</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+                <!-- <div class="buttonRow">
+                                  <a class="btn btn-primary ripple-effect text-uppercase" href="javascript:void(0);" data-toggle="modal" data-target="#requestFeeturre">Request Feeturre</a>
+                                  <a class="btn btn-outline-secondary ripple-effect text-uppercase" href="message.php">Send Message</a>
+                              </div> -->
+              </div>
+            </div>
+            <div class="detailsBox__right">
+              <div class="contentDetails">
+                <div
+                  class="heading heading--verified d d-flex align-items-center"
+                >
+                  <div class="heading__detailArtist">
+                    <h2 class="font-hbold h-37">Sincerely Collins</h2>
+                    <h3 class="mb-0 h-16">@ sincerelycollins</h3>
+                  </div>
+                  <!--  <div class="ml-auto">
+                                      <a class="btn btn-outline-secondary ripple-effect text-uppercase" href="https://feeturre.com/artist/edit-profile">Edit Profile</a>
+                                  </div> -->
+                </div>
+                <p class="h-18">Sincerely Collins</p>
+                <ul class="list-unstyled contentDetails__list">
+                  <li class="contentDetails__list__info">
+                    <label class="font-bold h-18">From</label>
+                    <span class="font-med h-18">: Arizona, United States</span>
+                  </li>
+                  <li class="contentDetails__list__info">
+                    <label class="font-bold h-18">Joined</label>
+                    <span class="font-med h-18">: 08-26-2021</span>
+                  </li>
+                  <li class="contentDetails__list__info">
+                    <label class="font-bold h-18">Gender</label>
+                    <span class="font-med h-18">: Male</span>
+                  </li>
+                  <li class="contentDetails__list__info">
+                    <label class="font-bold h-18">Languages</label>
+                    <span class="font-med h-18">: English</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Details Intro -->
+      <!-- Feeturre -->
+      <section class="feeturre" style="padding-bottom: 100px">
+        <div class="container">
+          <div class="commonSection__heading">
+            <h2 class="h-37 font-hbold">Artist Shop</h2>
+          </div>
+          <div class="feeturre__videoBox">
+            <div class="custom-tabs customCentertabs">
+              <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <!-- <li class="nav-item" role="presentation">
+                               <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="false" onclick="getFeeturreList('All');">ALL</a>
+                           </li> -->
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link tab-link tab-link-active"
+                    id="exclusives-tab"
+                    data-toggle="tab"
+                    href="#exclusives"
+                    role="tab"
+                    aria-controls="exclusives"
+                    aria-selected="true"
+                    >EXCLUSIVES</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link tab-link"
+                    id="leases-tab"
+                    data-toggle="tab"
+                    href="#leases"
+                    role="tab"
+                    aria-controls="leases"
+                    aria-selected="false"
+                    >LEASES</a
+                  >
+                </li>
+              </ul>
+              <div class="tabs-animated-wrap" id="myTabContent">
+                <!-- <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                               <div id="allList"></div>
+                           </div> -->
+  
+                <div class="tabs" style="transform: translate3d(0%, 0px, 0px)">
+                  <div
+                    class="tab-pane fade tab tab-active"
+                    id="exclusives"
+                    role="tabpanel"
+                    aria-labelledby="exclusives-tab"
+                  >
+                    <div id="exclusivesList">
+                      <div class="row listRow listRowdisable artistFeeture"></div>
+                      <div class="row listRow listRowdisable">
+                        <div class="col-lg-3 col-md-4 col-6 col-50">
+                          <div class="listBox listBox--verified">
+                            <!-- <div class="listBox__favorite">
+                          <label>
+                              <input type="checkbox" onclick="event.preventDefault(); showLoginMessage();">
+                              <span class="icon-favorite"></span>
+                          </label>
+                      </div> -->
+                            <a
+                              href="/feeturre-detail/song-reviews"
+                              class="stretched-link"
+                            >
+                              <div class="listBox__img progressive">
+                                <img
+                                  src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1635998553TfoGHRJG.png?Expires=1706926563&amp;Signature=JhApVyr5miBTVgIX-FOp0LBtzG8jjTBzOVOb1zzbFF5AzuiHykycopESoLPCnLu2ErQnfGFSkYro-WEIq0X5Z5e4H6w8CSu-JQFM-8Jcq2YbTsjJIh9fLjkkAn~3gmeWZrnkrBj0OsgI35BoKeS6U4ogPQaAyyqZIZRu0mWStiwX-HXj51GYX1kZ2Vu~XDY3mF~GMNIP~OuzbPm32LkADbSufppPVC~77ZwnwoEec7jvaEORzdjGZItdwwmwDrv7zdK6lkciYOlvopaNKSjftD9GD0G7Nx9Ap1g-3RxPbcn8dlbq1bMYRvYdZP0YE-UC7OA984Xqeghsfe4b5tTK6g__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                                  alt="artist"
+                                  class="img-fluid progressive__img progressive--not-loaded"
+                                />
+                                <div class="playBtn">
+                                  <span class="icon-magnifying"></span>
+                                </div>
+                              </div>
+                            </a>
+                            <div class="listBox__detailFeeturres">
+                              <!--   <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/A3mdCPy71tlatjBBkRg8DGQvgIISPC1629944945.png?Expires=1706926563&amp;Signature=lll63sjvQ~9f79v-tc7GjuZF~srnLIMtXS8QufrmnxI8V-N6-~Oe2ZpAf83jRi4OD6JyFGZF93xiUVZvIY3d8y5SAu2~92fXnQGL~J0y03mGt8Jz81Mx7Paw5idbFKv7SU4Dwcfd5ldS27H43q9JEb-d9fN8eyiyZG4VR-BBwCnTVv9iZP-KQgKm0BjfqcUNSUPBbuMfomPVRSBRZ4BcP4SrVdfdZiQvBgjZzYqpCm3wHylg2hiEJKWLnWMJnMR9GsEh6Lxg1swYwrS~aNkcWVCZ9OiCJKRY59FOPHjMMbdXI2X8j9STvnUczNylKvTvnGTYWKMvZzJEygrLH7Ki2A__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
+                              <div
+                                class="d-flex justify-content-between flex-wrap"
+                              >
+                                <h2 class="h-27 font-bold col-100">
+                                  Song Reviews
+                                </h2>
+                                <span class="amount font-bold">$20</span>
+                              </div>
+                              <p class="sub h-18 font-bold">Sincerely Collins</p>
+                              <span class="genres font-semi"
+                                >Influence<br
+                              /></span>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="col-lg-3 col-md-4 col-6 col-50">
+                          <div class="listBox listBox--verified">
+                            <!-- <div class="listBox__favorite">
+                          <label>
+                              <input type="checkbox" onclick="event.preventDefault(); showLoginMessage();">
+                              <span class="icon-favorite"></span>
+                          </label>
+                      </div> -->
+                            <a
+                              href="/feeturre-detail/custom-16-bar-featured-verse"
+                              class="stretched-link"
+                            >
+                              <div class="listBox__img progressive">
+                                <img
+                                  src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1635997885Hac4t6ru.png?Expires=1706926563&amp;Signature=Jkdd-JTBGUEnJMs7LmTnDzbno9qAU3mNrfzksS7UtYes6UZzWBRQpWuQVTs0xRtkFfIaSmsU~ksrua1YWFOv~ChRItFNfRSvxRFDLDUTEepfAesXXikwRb2WYs64HkVdIlhO9YaH8-nxdBxcqIQfMHofjUvBc38h87KahSbya2l688ZUd2rxzNIwH75xPWsBy0UHEMFMLk6jKxj4lAbhNfeb9sWCsyrreUztLyq79~p6FKLSGCFy5QmNxiZBUVSyVgyYe619nz9KI~~p0hoF30gDTNEYHUTfAwyuJsWMCE6UIQcdMTKfQUDZ7NyI6iYTLN9l1iIR-rpPyG~GsqvV7w__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                                  alt="artist"
+                                  class="img-fluid progressive__img progressive--not-loaded"
+                                />
+                                <div class="playBtn">
+                                  <span class="icon-magnifying"></span>
+                                </div>
+                              </div>
+                            </a>
+                            <div class="listBox__detailFeeturres">
+                              <!--   <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/A3mdCPy71tlatjBBkRg8DGQvgIISPC1629944945.png?Expires=1706926563&amp;Signature=lll63sjvQ~9f79v-tc7GjuZF~srnLIMtXS8QufrmnxI8V-N6-~Oe2ZpAf83jRi4OD6JyFGZF93xiUVZvIY3d8y5SAu2~92fXnQGL~J0y03mGt8Jz81Mx7Paw5idbFKv7SU4Dwcfd5ldS27H43q9JEb-d9fN8eyiyZG4VR-BBwCnTVv9iZP-KQgKm0BjfqcUNSUPBbuMfomPVRSBRZ4BcP4SrVdfdZiQvBgjZzYqpCm3wHylg2hiEJKWLnWMJnMR9GsEh6Lxg1swYwrS~aNkcWVCZ9OiCJKRY59FOPHjMMbdXI2X8j9STvnUczNylKvTvnGTYWKMvZzJEygrLH7Ki2A__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
+                              <div
+                                class="d-flex justify-content-between flex-wrap"
+                              >
+                                <h2 class="h-27 font-bold col-100">
+                                  Custom 16 Bar Featured Verse
+                                </h2>
+                                <span class="amount font-bold">$500</span>
+                              </div>
+                              <p class="sub h-18 font-bold">Sincerely Collins</p>
+                              <span class="genres font-semi"
+                                >Audio<br />HipHop, Rap, Pop</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <script>
+                        // play btn click
+                        $(".playBtn").click(function () {
+                          $(this).toggleClass("play");
+                        });
+                        // progressively initialization
+                        progressively.init({
+                          smBreakpoint: 1200,
+                          onLoadComplete: function () {},
+                        });
+                      </script>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade tab"
+                    id="leases"
+                    role="tabpanel"
+                    aria-labelledby="leases-tab"
+                  >
+                    <div id="leasesList">
+                      <div class="row listRow listRowdisable artistFeeture"></div>
+                      <div class="row listRow listRowdisable">
+                        <div class="col-lg-3 col-md-4 col-6 col-50">
+                          <div class="listBox listBox--verified">
+                            <!-- <div class="listBox__favorite">
+                          <label>
+                              <input type="checkbox" onclick="event.preventDefault(); showLoginMessage();">
+                              <span class="icon-favorite"></span>
+                          </label>
+                      </div> -->
+                            <a
+                              href="/feeturre-detail/dream-hook-1"
+                              class="stretched-link"
+                            >
+                              <div class="listBox__img progressive">
+                                <img
+                                  src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1635996966vwsuIUOJ.png?Expires=1706926563&amp;Signature=gw~q5nASUpjfUQ7x~IyTHRsB-VrT1uxkLsN55i3vRevc2kIFJiThIhkmG63-E~joov9VK~jfnyPfNjDeB~2767CMmucptzZFmG4XZsyuV5SOdeAZPiGKHAw~vD4q9-xfH51O~OaT47g4RRCFNTSC0lsTJnURfJhMNuXe4vToBnNgKvCL0KvknCYuMAtgpNEmz3kups-o-nX-kLZKCM4eiH3OhsFKtICJMp~cixX5fYmAjW5FI2BUofiD5-21HinHc03Pw3ItJ5sXoGH25X8XQlPPZATXPvoDvSbAj3d7pzoahnCkpScUW~0MsmvKRJ6-KbC5xNRKa72qOLc8XMnurw__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                                  alt="artist"
+                                  class="img-fluid progressive__img progressive--not-loaded"
+                                />
+                                <div class="playBtn">
+                                  <span class="icon-play"></span>
+                                </div>
+                              </div>
+                            </a>
+                            <div class="listBox__detailFeeturres">
+                              <!--   <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/A3mdCPy71tlatjBBkRg8DGQvgIISPC1629944945.png?Expires=1706926563&amp;Signature=lll63sjvQ~9f79v-tc7GjuZF~srnLIMtXS8QufrmnxI8V-N6-~Oe2ZpAf83jRi4OD6JyFGZF93xiUVZvIY3d8y5SAu2~92fXnQGL~J0y03mGt8Jz81Mx7Paw5idbFKv7SU4Dwcfd5ldS27H43q9JEb-d9fN8eyiyZG4VR-BBwCnTVv9iZP-KQgKm0BjfqcUNSUPBbuMfomPVRSBRZ4BcP4SrVdfdZiQvBgjZzYqpCm3wHylg2hiEJKWLnWMJnMR9GsEh6Lxg1swYwrS~aNkcWVCZ9OiCJKRY59FOPHjMMbdXI2X8j9STvnUczNylKvTvnGTYWKMvZzJEygrLH7Ki2A__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
+                              <div
+                                class="d-flex justify-content-between flex-wrap"
+                              >
+                                <h2 class="h-27 font-bold col-100">
+                                  Dream (Hook)
+                                </h2>
+                                <span class="amount font-bold">$500</span>
+                              </div>
+                              <p class="sub h-18 font-bold">Sincerely Collins</p>
+                              <span class="genres font-semi"
+                                >Audio<br />HipHop, Rap, RnB</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <script>
+                        // play btn click
+                        $(".playBtn").click(function () {
+                          $(this).toggleClass("play");
+                        });
+                        // progressively initialization
+                        progressively.init({
+                          smBreakpoint: 1200,
+                          onLoadComplete: function () {},
+                        });
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  <div class="btnRow text-center">
+                       <button type="button" id="load-more-feeturre-click" onclick="loadMoreFeeturre();" class="btn btn-primary btn-outline-secondary ripple-effect text-uppercase" disabled>load more</button>
+                   </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- Details Comments -->
+      <section class="detailsComments">
+        <div class="container" id="comment-div" style="display: none">
+          <div class="commonSection__heading text-center">
+            <h2 class="h-37 font-hbold">Comments</h2>
+          </div>
+          <div class="detailsComments__list">
+            <ul class="list-unstyled">
+              <div id="commentList"></div>
+            </ul>
+            <div class="btnRow text-center">
+              <button
+                id="load-more-comment-click"
+                onclick="loadMore()"
+                class="btn btn-primary btn-outline-secondary ripple-effect text-uppercase"
+                href="javascript:void(0);"
+                disabled=""
+              >
+                load more
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <input type="hidden" name="to_id" id="to_id" value="218" />
+    </main>
+
+
     </div>
     
 

@@ -43,7 +43,7 @@ body {
   overscroll-behavior: none;
   font-family: "Sora", sans-serif;
 }
-.sheet-modal .navbar .sheet-close {
+.sheet-modal .toolbar .sheet-close {
     color: #000000 !important;
 }
 .f7-icons{
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, a { font-family: "Sora", sans-serif;;
 .headingBlock strong { font-size: 20px; font-weight: normal; }
 
 
-.right a, .left a { color: #fff;  }
+/* .right a, .left a { color: #fff;  } */
 
 .btn-yellow { background: #fbb701; }
 .btn-pink { background: #faa0ac; }
@@ -338,13 +338,7 @@ margin-bottom: 0px; }
     background-color: #fff;
 }
 
-.details-page .detailsBox__left .userInfo__details {
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
-    z-index: 1;
-    width: calc(100% - 60px);
-}
+
 
 .details-page .detailsBox__left .userInfo__details h3 {
     font-size: 15px;
@@ -405,21 +399,20 @@ a.theme-color {
 .h-24 {
     font-size: 22px;
 }
-.totalFigure .row {
+/* .totalFigure .row {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px;
-}
+    margin-left: -15px; 
+
+} */
 .details-page .detailsBox__left .musicwrapper {
     padding: 20px;
 }
 
-.details-page .detailsBox__left .userInfo {
-    position: relative;
-}
+
 
 .details-page .detailsBox__left .musicwrapper .musicInfo--first {
     margin-bottom: 25px;
@@ -463,7 +456,7 @@ a.theme-color {
     margin-bottom: 5px;
     border-radius: 5px;
     border: 1px solid #00CB50;
-    background: linear-gradient( 45deg, rgba(24, 187, 212, 0.3) 0%, rgba(49, 182, 128, 0.3) 50%, rgba(128, 194, 66, 0.3) 100% );
+    background: linear-gradient( 45deg, rgba(24, 187, 212, 0.09) 0%, rgba(49, 182, 128, 0.09) 50%, rgba(128, 194, 66, 0.09) 100% );
 }
 .musicwrapper__price h4 {
     margin-bottom: 5px;
@@ -473,28 +466,24 @@ a.theme-color {
     margin-top: 0;
 }
 
-.details-page .detailsBox__left .userInfo__img::before {
-    position: absolute;
-    content: '';
-    z-index: 1;
-    width: 100%;
-    height: 50%;
-    left: 0;
-    bottom: 0;
-    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.99) 99%, #000 100%);
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.99) 99%, #000 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.99) 99%, #000 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 );
+
+
+
+.contentDetails__list, .musicwrapper__feeturrelist { 
+    margin: 0px ; 
+    list-style: none; 
+    line-height: 32px; 
+    background: #ededed;
+    padding: 17px;
+    border-radius: 10px;
 }
-
-
-.contentDetails__list, .musicwrapper__feeturrelist { margin: 0px ; padding: 0px; list-style: none; line-height: 32px; }
 .contentDetails__list label { font-weight:bold; color: #16d101;   }
 .video__videoBox video { width: 100%; } 
 
 .musicwrapper__Icon { display: none; }
 
-.contentDetails { padding: 20px; font-size: 16px; border-radius: 13px; margin: 20px; color: #fff; background-color: #2F2C2C; border: 1px solid #585858;  }
+.contentDetails { padding: 20px; font-size: 16px; border-radius: 13px; margin: 20px; color: #000000; background-color: #ededed; border: 1px solid #ededed;  }
+.contentDetails p { color: #8b8b8b;}
 .contentDetails h4 { font-size: 20px; text-transform: capitalize; margin: 0px; }
 .contentDetails h3 { font-size: 15px; color: #ccc;  }
 .custom-tabs.customCentertabs ul.nav-tabs li.nav-item a {
@@ -968,7 +957,10 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; }
 
 
 .musicwrapper { font-size: 18px;  }
-.musicwrapper li { line-height: 36px; }
+.musicwrapper li { 
+    line-height: 36px; 
+    font-size: 17px;
+}
 .musicwrapper li:first-child { font-size: 16px; font-weight: bold; margin-bottom: 20px; }
 
 /* .versionData, .versionData a { color: #ccccccbf; line-height: 25px; }
@@ -1058,6 +1050,69 @@ input[type="number"]::placeholder {
     padding-left: 7px;
 }
 
-.audioplayer {
+.audioPlayer {
     z-index: 1;
+}
+.audioPlayer::-webkit-media-controls-panel {
+    background: linear-gradient( 90deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% ) !important;
+}
+
+.popup .toolbar .sheet-close {
+    color: #000000 !important;
+}
+#musicInfo {
+    border-top: 1px solid #8b8b8b;
+    border-bottom: 1px solid #8b8b8b;
+    margin-top: 20px;
+}
+.detailsBox__right .video__videoBox .block {
+    margin: 0;
+}
+.media__img {
+    box-sizing: border-box;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: calc(var(--f7-block-padding-horizontal) + var(--f7-safe-area-left));
+    padding-right: calc(var(--f7-block-padding-horizontal) + var(--f7-safe-area-right));
+    margin-top: 100px;
+}
+.details-page .detailsBox__left .userInfo {
+    box-sizing: border-box;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: calc(var(--f7-block-padding-horizontal) + var(--f7-safe-area-left));
+    padding-right: calc(var(--f7-block-padding-horizontal) + var(--f7-safe-area-right));
+    margin-top: 20px;
+} 
+.details-page .detailsBox__left .userInfo__details {
+    margin-top: 20px;
+}
+.details-page .detailsBox__left .userInfo__details h3 {
+    color: #8b8b8b;
+    margin-top: 5px;
+}
+/* .details-page .detailsBox__left .userInfo__img::before {
+    position: absolute;
+    content: '';
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.99) 99%, #000 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.99) 99%, #000 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.99) 99%, #000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 );
+} */
+/* .details-page .detailsBox__left .userInfo__details {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    z-index: 1;
+    width: calc(100% - 60px);
+} */
+.navbar-small img {
+    display: none;
+    width: 0;
+    height: 0;
 }
