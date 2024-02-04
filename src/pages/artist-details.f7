@@ -55,7 +55,7 @@
               <div class="userInfo userInfo--verified">
                 <div class="userInfo__img progressive">
                   <img
-                    src="https://d3gsffvv7iizq6.feeturre.com/user_profile/A3mdCPy71tlatjBBkRg8DGQvgIISPC1629944945.png?Expires=1706926560&amp;Signature=eh1RMEEgIjwESB4IWZAusvnOc3VP5zI16wpB~nqPedqhaK~WopEep7d9Nfo0yX~tlUvw0mELZmKQONOguUaucEa99gTkFOeAkAhDG17SGTo3KWotTyt-7Vr87hHOv3u4v-nJjkHI0h3~HznhYyY~iAM0eLIrsRJNsRdvrc3vU5D33lNCxF-NrQYzHxCXp7ghmsbyup34yIMHpWOxeZyZSf~hwPbcZM70~hrzVqKDqVmjCAYXvVUuJMAd6sFWX-AAM5DQ5CT0l6ca6qKG3BewjkTnI7zjQoOOaFJtVBxz~j3XGGsFD15B8ooSGxdTbKKCFY4nKIzrNG-oRtbBFIkXbQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                    src="../assets/feeturre_02.png"
                     alt="Artist Info"
                     width="100%"
                     class="img-fluid progressive__img progressive--not-loaded"
