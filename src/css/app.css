@@ -130,9 +130,6 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, a { font-family: "Sora", sans-serif;;
     border-radius: 50%;
     padding: 5px;
 }
-.navbar-transparent .navbar-inner {
-    border: 0;
-}
 .headingBlock {    
     padding: 45px 16px;
     background: linear-gradient(45deg, rgba(24,186,212,1) 0%, rgba(49,182,128,1) 50%, rgba(128,194,66,1) 100%);
@@ -356,7 +353,7 @@ margin-bottom: 0px; }
 .userInfo__details h4 { font-size: 25px; margin: 0px; }
 
 a.theme-color {
-    color: #00CB50 !important;
+    color: #00CB50 ;
     text-decoration: none;
     transition: all 0.5s;
 }
@@ -482,7 +479,7 @@ a.theme-color {
 }
 .font-med:first-child {
     font-size: 20px;
-    /* color: #000000 !important; */
+    color: #000000 !important;
 }
 .details-page .detailsBox__left .musicwrapper .mCustomScrollbar .badgewrapper__list {
     font-size: 15px !important;
@@ -652,6 +649,9 @@ iframe { width: 100% !important; }
     line-height: 23px;
     font-size: 19px !important;
 }
+.listBox__detailFeeturres > div h2 {
+    max-width: 85%;
+}
 .listBox__detailFeeturres > div span {
     font-size: 20px;
     margin-left: 15px;
@@ -663,9 +663,9 @@ iframe { width: 100% !important; }
     color: #fff;
     text-align: right;
     margin-left: auto;
-    position: absolute;
     right: 0;
     top: 4px;
+    position: absolute;
 }
 
 .listBox--verified .listBox__detailFeeturres .sub {
@@ -675,9 +675,25 @@ iframe { width: 100% !important; }
 
 .listBox__detailFeeturres .genres {
     display: block;
-    color: #c9c9c9bf;
+    /*color: #c9c9c9bf;
     font-size: 9px;
-    min-height: 28px;
+    min-height: 28px;*/
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+    margin: 0px !important;
+    -webkit-text-decoration: underline !important;
+    -webkit-text-decoration: underline !important;
+    text-decoration: underline !important;
+    background-color: #f3ec78;
+    background-image: linear-gradient( 45deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .feeturreitems .row,
 .mgmtlist .row {
@@ -735,9 +751,9 @@ iframe { width: 100% !important; }
     bottom: 0;
     right: 0;
     top: 170px;
-    height: 2px;
-    width: 93%;
-    background-color: #c4c4c430;
+    height: 1px;
+    width: 90%;
+    background-color: #e0e0e0;
     display: block;
     z-index: 15;
     -webkit-transform-origin: 50% 100%;
@@ -1043,8 +1059,15 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; }
 .musicwrapper li { 
     line-height: 36px; 
     font-size: 17px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+.details-page .mt-0 .musicwrapper li { 
+    border-bottom: 0;
+    padding-bottom: 0;
 }
 .musicwrapper li:first-child { font-size: 16px; font-weight: bold; margin-bottom: 20px; }
+
 
 /* .versionData, .versionData a { color: #ccccccbf; line-height: 25px; }
 .versionData { position: absolute; bottom: 0px; } */
@@ -1139,6 +1162,17 @@ input[type="number"]::placeholder {
 .audioPlayer::-webkit-media-controls-panel {
     background: linear-gradient( 90deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% ) !important;
 }
+.audioPlayer::-webkit-media-controls-current-time-display,
+.audioPlayer::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+}
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  color: #ffffff;
+}
+
+
+  
 
 .popup .toolbar .sheet-close {
     color: #000000 !important;
@@ -1149,8 +1183,8 @@ input[type="number"]::placeholder {
     margin-top: 20px;
 }
 .details-page .mt-0 #musicInfo {
-    border-top: 1px solid #8b8b8b;
-    border-bottom: 1px solid #8b8b8b;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
     margin-top: 20px;
 }
 .detailsBox__right .video__videoBox .block {
@@ -1223,4 +1257,42 @@ input[type="number"]::placeholder {
     background: #fcfcfc;
     border-radius: 20px;
     margin-bottom: 15px;
+}
+.home_3{
+    margin-top: 50px;
+}
+.home_3 h2{
+    position: relative;
+}
+.home_3 h2::before{
+    content: '';
+    position: absolute;
+    left: 17px;
+    bottom: 0;
+    right: 0;
+    top: -25px;
+    height: 1px;
+    width: 90%;
+    background-color: #e0e0e0;
+    display: block;
+    z-index: 15;
+    transform-origin: 50% 100%;
+}
+
+/* .listBox__detailFeeturres > div .amount */
+
+.feeturreitems .listBox__detailFeeturres > div {
+    display: block;
+}
+.feeturreitems .listBox__detailFeeturres > div h2 {
+    margin: 18px 0 10px 0;
+}
+.feeturreitems .listBox--verified .listBox__detailFeeturres .sub {
+    position: absolute;
+    top: -25px;
+    white-space: break-spaces;
+    min-width: 130px;
+}
+.feeturreitems .listBox__detailFeeturres .genres {
+    margin-top: 10px !important;
 }
