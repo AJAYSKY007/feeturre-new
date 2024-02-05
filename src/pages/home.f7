@@ -147,7 +147,7 @@ Artistry</h1>
 </div>   
  
   <div class="block ArtistList" >
-    <!-- innerHTML=${home_feeturre} -->
+<!-- innerHTML=${home_feeturre} -->
   <div class="artistitems feeturreitems" > 
     <div class="row listRow listRowdisable">
       <div class="col-lg-3 col-md-4 col-6 col-50">
@@ -164,7 +164,7 @@ Artistry</h1>
           >
             <div class="listBox__img progressive">
               <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1638300475r88x51pl.png?Expires=1706785320&amp;Signature=R2IR1R~kMdUILZgVksM4HABrqiR2y2bibaW9KoHPz6L2oi1TLeuRs27dj1Jirljj~gg8EkbC7c5X2MS~-YD7hVXVoKhnyJHzeLdBAgd1aL0obftwvqn5UtknZWxToGm~-~8WILLJFNspew2TPJmj~j9ayIlfEv6VNEW~PNVnLYepDbxDGPhD0RhCQZVM3EfgIUSb4M3EeN6NslHXe5Rg3JoBUK5Ec6eB2Xdwp1l2pUFkYaRL5t0HR78hcP6acS0BZMI~NnXL7zPgXHI0web6iba2GRP~~X5Te1YtsXyBsxmPxzKeqbkR-TOCE6UtwS~sBC9ShtBIsNVL-lTqRHwikg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
+                src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ujV02kAdKX5jA3NruD0TkD0ElBqlUl1634527486.png?Expires=1707118069&Signature=U89o6KGT02laHngDb9z0FL3Ill7ZnV6ws8X647PP7TdStQi6linEmv7uUskQ6rqMFrkRvGM-a8Nh9bbO5QnyEuiIPL8O~JM2gs6mGh0qOjir6VT9kZ1ASFZy6gf2yvH7MRXCz55OplMo9twNvY~pdSD7x0ytSvVjtKpW48mbW9kEHzJxk-DH4gKnnEFY1nqcblnLZ97IR8qfFrrq45YVQdqJsfw219fH7PhDb~ZLZ~DRKW71L1Q5jHtNqh9TSOsTdkUcY7d6RlFw~zTx3MVUIEkzuf~uKbiWksS2mP2wEbme8CQs9JGpFUPzS8F11ms3TABHemXpULGXYyoopoLL9g__&Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
                 alt="artist"
                 class="img-fluid progressive__img progressive--not-loaded"
               />
@@ -176,238 +176,16 @@ Artistry</h1>
           <div class="listBox__detailFeeturres" style="padding-left: 0px">
             <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/ujV02kAdKX5jA3NruD0TkD0ElBqlUl1634527486.png?Expires=1706785321&amp;Signature=FF-V1FHC1tjUcDXnxKX-JJOTXr1Wuwe~6XrpdSK1e3nJhDsqCGqTv53v-4RKsHX~J3DGX1VUUJL6jAKhuQXM6102c4M6~UGfhmEy3VV6EDGEzwA0vX4RGnmATLxZeTmLLTMLm-7w4a8yVHNoD6p0lkg76J6GdoM~jaOFBvGmpIf4yxQ8R9o3bpHSNgox-zCMAWMExL24Xh5e8MDawott1K3MiKZVinK30jeQ~m~SvDxNpzmaFJ3sJRJhsYm2qHIZ50QCZ5jMd5xksZxmvSc8~hKcXnHJK7yEUZglH2RyNLH4nld0M305fRiMvgmzMm5et-ywN-thqVgllrSvrxrSXg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
             <div class="d-flex justify-content-between flex-wrap">
+              <p class="sub h-18 font-bold">@John Monopoly</p>
               <h2 class="h-27 font-bold col-100">
                 I'll Help You Pick Your Next Single
               </h2>
               <span class="amount font-bold" style="position: relative">$500</span>
             </div>
-            <p class="sub h-18 font-bold">@John Monopoly</p>
-            <span class="genres font-semi"></span>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-4 col-6 col-50">
-        <div class="listBox listBox--verified">
-          <!--  <div class="listBox__favorite">
-                        <label>
-                            <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
-                            <span class="icon-favorite"></span>
-                        </label>
-                    </div> -->
-          <a
-            href="/feeturre-detail/instagram-shout-out-to-10k-followers"
-            class="stretched-link"
-          >
-            <div class="listBox__img progressive">
-              <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1636944951MLxNPRL7.png?Expires=1706785321&amp;Signature=gLcRIcvQAkWgxW6aviOuCXyn-Y0nIAN9CwSDGVXLXdQBdC~LI7~jrI6rZB6hd56KbLZCakPGY3nUxkMY8IU56P-QQJmtgp1XZTNZAyPEDt8H7uz6C-vo4GiX3tU339uTJb2dUygS~1OnbliqkC1iqufCVzumYqnBXwL7LygJadHcHO6Qf6zTeSWttkP9H4rqiOcyVC6qmdYxBnccMeLm2hO101MF6jgD8YcNE79cIXPhIWYwiQv0t0xpth5rPlNxa5H5UTfkT7v99-KIvBSWj5UvjZ4bYeJONO1~QLfZhrvWRNnN2eYRRdBg0K4hwwvXaFiFp06L4e6C1RlLSvkRvQ__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
-                alt="artist"
-                class="img-fluid progressive__img progressive--not-loaded"
-              />
-              <div class="playBtn">
-                <span class="icon-play"></span>
-              </div>
-            </div>
-          </a>
-          <div class="listBox__detailFeeturres" style="padding-left: 0px">
-            <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/1Lfgrb95yuwFsBNPNx9FWYpl8BeXUy1636517508.png?Expires=1706785321&amp;Signature=Ijz~xaLwBl5Zn-iq-9dh18JMoJD23u8yCmQFa9gZW3VooKYi2jKX1wEw5hIpwwdZj4YsMzxgLXUSxQOMIDkz~7OFUJKAzPi7NxRJMJ-fW1Bcf7uIQryqqiOY~PvzsHRQ1zeoNQ7J~9EJgqOFG9bvL7z-X9S6KVSUHPNkDFRLzvI9ZQaMtz70nMbeCIkv5GwaXU~Q2fCluISAktlUY4jCDD~c579RlKGUeR941TB7fMtBf5sSBcsJWQuKMcmQ--xQa~KInAY2-YkjqHimtjReYg8UWKYNIx0IAL1gN5XWCd4pn5pThxP7742Np~VW1dhy7cmkq4zpEpa76-~5Yahltg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
-            <div class="d-flex justify-content-between flex-wrap">
-              <h2 class="h-27 font-bold col-100">
-                Instagram Shout out to 10k+ Followers
-              </h2>
-              <span class="amount font-bold" style="position: relative">$100</span>
-            </div>
-            <p class="sub h-18 font-bold">@Wyndell Burris</p>
-            <span class="genres font-semi"></span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 col-50">
-        <div class="listBox listBox--verified">
-          <!--  <div class="listBox__favorite">
-                        <label>
-                            <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
-                            <span class="icon-favorite"></span>
-                        </label>
-                    </div> -->
-          <a href="/feeturre-detail/flow-bass-guitar-1-1" class="stretched-link">
-            <div class="listBox__img progressive">
-              <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1635286301mvGVplSt.png?Expires=1706785321&amp;Signature=AoE2CryQ-Wxoet3ojASMfQmca6GA5AeOnXRYuajF8JaRygFlebV6x3lmJ2W9Qqw~WVIoNH~ekJxPl1Ordws~qi1WfXKQr0SC9Byo5680LigjBnCyHnQ8hAYDY-sA~TyWwhEuKP9RYiBL3~4Uw0BwQbDN5oy3qi9WOVfo8HfYX4uaHJQHvGCuh633xmGQVuHvXEIvVic6nXeiKblchnjBPDUfyAfnwvtWHizvVA4ejcaFNMgWk~vNVYow4lUejLsLEVRUBSwR7jUWMGz9~uhP2cPGjAVu47ThmUgh~VrM7ZwIOjDLpNCWPNAY9FeJZR4hPe98BgBqqxJAjSdhGJu3ew__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
-                alt="artist"
-                class="img-fluid progressive__img progressive--not-loaded"
-              />
-              <div class="playBtn">
-                <span class="icon-play"></span>
-              </div>
-            </div>
-          </a>
-          <div class="listBox__detailFeeturres" style="padding-left: 0px">
-            <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/0aE6z6pqAdOggLta0RgxBknAHsK3PA1630276708.png?Expires=1706785321&amp;Signature=j9mFTscyGyJs~Pz~2RNiI9TtaOZYejJpQpog8xt3RfrFmkgwp0NzzfrIf-YYiNZAdZfQwWiXnurMq5xgmDebyeETElssPvPwQgPEnQRLu52MELNaSL47TzKTKUmC3bvIPJLL~qLUNH4tWinGTcCQhn3tteyV-evIcsybjcZx6~AFhHHh2-MuNL2Bl2c0Wa4QGMWPxVPtmzWXitySwEM7nWNWeKsyJ2BDqzdSuIg~IUo7f8DVh8eYpKqvkidmcW5l1FlLVCqeIF75qFzEPinLw0hHnPYEVfcWc5lPPiHmTTAUQdfjpwlg0QQHCLPHCavsJj8jlMr21aLsB3-lrtlswA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
-            <div class="d-flex justify-content-between flex-wrap">
-              <h2 class="h-27 font-bold col-100">Flow Bass Guitar 1</h2>
-              <span class="amount font-bold" style="position: relative">$850</span>
-            </div>
-            <p class="sub h-18 font-bold">@Derick Thompson</p>
-            <span class="genres font-semi">HipHop, Jazz</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 col-50">
-        <div class="listBox listBox--verified">
-          <!--  <div class="listBox__favorite">
-                        <label>
-                            <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
-                            <span class="icon-favorite"></span>
-                        </label>
-                    </div> -->
-          <a href="/feeturre-detail/song-features-1-verse" class="stretched-link">
-            <div class="listBox__img progressive">
-              <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1636823210H8mw26Im.png?Expires=1706785321&amp;Signature=JC6DQ~oBSZHGILXtbS25EA0GhYVb~v5plL4r0d88P4iaah2oOq380Hj3mHWQIMh2J05P4JRSAh6lIxYHOYLsK~cG97qFepzQCkKWPCRO9Nx~MHXVX7aus3r1jeayJGS9krHJW5xD2n-c9U2WUg7r05Xef11S26MtW35ZN1T0rYYrTQFWeVnp1aBmhPP6kaU4vSh~xWqP2KUVIxHinQkLIB5rGa4iYrtaDgUglcg-tBYwYt8CCLLB85fOhv4vFRS~SgRU9Ff405FL2rOSNk5zSqJAGVra94yMJ2dV59XBSXf153659GaUhgf~9xpAV~wVF-sJrN~FU4OgPFe3JN6G6w__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
-                alt="artist"
-                class="img-fluid progressive__img progressive--not-loaded"
-              />
-              <div class="playBtn">
-                <span class="icon-play"></span>
-              </div>
-            </div>
-          </a>
-          <div class="listBox__detailFeeturres" style="padding-left: 0px">
-            <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/0daUvEdgDkzQUM30DpifRwV1NWMNTo1635963850.png?Expires=1706785321&amp;Signature=ZEjcuJdHRtOp60TRferDRC23MHph99ybPOpgesTUAig6PBqUd82i3y4oGHWOzlPclQ~7JJXU0qAaV0Uu6wPrC91QF~Nb91H-IqLBk~m8hSd2~iY8~azC3L4BGjtNwlytIuqlqfZyUEA26tcYVPBeJcghfkUteLfRSgEfioJcyqbkJF493YL353oWIqShwbHRIUh7Jo0v7U8cAhdFDJGDdBTkoJdiFmLntBgyq0NeoZBWng-ITNFTBgSp8sMLVpg5o204Ok8fnnwRmp6LZpOEKso2clcyq~PKTRZK4MSddWEPapIxoPjPVuHE31UB-MkUl8V0AfJSoOOYlLKu2-B0Iw__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
-            <div class="d-flex justify-content-between flex-wrap">
-              <h2 class="h-27 font-bold col-100">Song features (1 verse)</h2>
-              <span class="amount font-bold" style="position: relative">$750</span>
-            </div>
-            <p class="sub h-18 font-bold">@Sade Grant</p>
-            <span class="genres font-semi">All</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 col-50">
-        <div class="listBox listBox--verified">
-          <!--  <div class="listBox__favorite">
-                        <label>
-                            <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
-                            <span class="icon-favorite"></span>
-                        </label>
-                    </div> -->
-          <a href="/feeturre-detail/dream-hook-1" class="stretched-link">
-            <div class="listBox__img progressive">
-              <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1635996966vwsuIUOJ.png?Expires=1706785321&amp;Signature=hIOtau4RDCVrRUAXujJEo35MhJ1cqP957jl850iKN2SWSmvymfiBoggM0RRropgtW5TJ218Ptu1S3dBwYi6nyUor1EeyNayIQbzsS6SMF4B7S0Ta66FCr0Q2ClOCqr9-fcsEvH3Oq1E4LtwX7SiPCzdjVnjU88YFWg5trCvipbzgAIh3qpoUmKYMI0c~ZJmEhTX6l1gUH4nJ0MF~QkmjmRpi-PGiviBc~u3bqxK2fewMD6qHp1UGkuit~GnuoOlR5zaCHNVVfkti-USOvT8sFz8kmkrcVljzSj3YlzKudKf7chelUE0Ci8FexA2dSkFzDwjzrlDXJPiVC-59Jv--VA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
-                alt="artist"
-                class="img-fluid progressive__img progressive--not-loaded"
-              />
-              <div class="playBtn">
-                <span class="icon-play"></span>
-              </div>
-            </div>
-          </a>
-          <div class="listBox__detailFeeturres" style="padding-left: 0px">
-            <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/A3mdCPy71tlatjBBkRg8DGQvgIISPC1629944945.png?Expires=1706785321&amp;Signature=Lmbd4sAJRF3lS3E3NclvKM-NNmdXhogWEiKWuszmROVIT7nwfDFT-NhnCKEWGjd3Nkw-FYy5MtvR41sAjbzUwSVWmfR2gOKFOyli8WrKrcoBhAb6AvKyxFljYV3JZhmDwLS-KT0Ld903XUCHH73TDMeJ46dFjSFaym2HctiRRhI62xwnQR3Cg~nAoPT6q6V8HXcOOCF0qbTXGPzixjFrEdAd1JIc41l9PWSV0947ieth7i0CLV3Ke9yFraJFNze8jjOgx5mTqH2XZCIAXH2LycMYi6UMn02Fd89QTTrsV7czhKQtXVgXgcL~iJ79vQt8ZqZcS2NXrHFqRgale8ulJg__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
-            <div class="d-flex justify-content-between flex-wrap">
-              <h2 class="h-27 font-bold col-100">Dream (Hook)</h2>
-              <span class="amount font-bold" style="position: relative">$500</span>
-            </div>
-            <p class="sub h-18 font-bold">@Sincerely Collins</p>
-            <span class="genres font-semi">HipHop, Rap, RnB</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 col-50">
-        <div class="listBox listBox--verified">
-          <!--  <div class="listBox__favorite">
-                        <label>
-                            <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
-                            <span class="icon-favorite"></span>
-                        </label>
-                    </div> -->
-          <a href="/feeturre-detail/violin-hook-1" class="stretched-link">
-            <div class="listBox__img progressive">
-              <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/16313160595aTJVKdc.png?Expires=1706785321&amp;Signature=gRTjYxDvHoVcw5Kw48B4K5wJNqkjenZKkAsFfDrKWRFcha~pqqblxgWI4JRWuggGcbNFkofL5Or3OFxmSFW~BQ-Rop8NRUl0WausLMXPIlIqlhbwX130gwVF1GcWE6nJDn8x4iKfYAfE01LrWA7ndp4pXbLC~4Xf9KJA6CzaHzSwI9PcgSVAN0nRXdG--r4idSMW9gbjK4QOirHYYPdxjTbYasLEcxqTup4dMEKMY8EMTzYU1TjtOx1ybw12aNZ-o~zg88Tkj7X0sgOZA3xaECSXiqqh0lmPGu8Is9aL~0J9O8XAH4uUibD2zlYjiW5staTUwD9YSbZRMKXSQ2z9JA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
-                alt="artist"
-                class="img-fluid progressive__img progressive--not-loaded"
-              />
-              <div class="playBtn">
-                <span class="icon-play"></span>
-              </div>
-            </div>
-          </a>
-          <div class="listBox__detailFeeturres" style="padding-left: 0px">
-            <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/q2RwlS0GebipcQeikkHAppudBZ2mcm1641475025.png?Expires=1706785321&amp;Signature=VwshY6--pWggi2m-9Ax4aQaGkC~h5tkrbWlnfyiwmrk06hfz3QM6vjOaVjA6He04JeTq2SNgPDFsftvKJc4NoN2Ax-LY1b~swU3mT04FctqxCsiZFgWq93uhgxGH1JbuVyNIDp7Q2JciiRx0tmLC~~npLXoapH3Pk76k9nnc0xrIY6tcv4sw9Eo1Qqg1phyoRiYgfOkx6NtoWA2ZMwkP-2W5Oyn2mEkA9D61yC5sMgiqqyLU5B2i0zmD9RYFkQQmSg-zKvKPDx~zjswYw1kDg6ykte~O1r1MEsiNztmZc8w5MvnIA7YVgtQt9cNbYE1CxWm5WC0A6iXGB1-dPxD-JA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
-            <div class="d-flex justify-content-between flex-wrap">
-              <h2 class="h-27 font-bold col-100">Violin Hook</h2>
-              <span class="amount font-bold" style="position: relative">$250</span>
-            </div>
-            <p class="sub h-18 font-bold">@Simone Bonét</p>
-            <span class="genres font-semi">All, HipHop, RnB</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 col-50">
-        <div class="listBox listBox--verified">
-          <!--  <div class="listBox__favorite">
-                        <label>
-                            <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
-                            <span class="icon-favorite"></span>
-                        </label>
-                    </div> -->
-          <a href="/feeturre-detail/workin" class="stretched-link">
-            <div class="listBox__img progressive">
-              <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1631135679nRHSpIQk.png?Expires=1706785321&amp;Signature=e0sv1O~BhFSI~iUfgkH4kXswARfFhowIgTmKSU0xl9cGIsxgkP8LmkVyC35qVGHiGFwTKvbNDvM2BBbBpq3is~mfXcWpsGDaIAUQDMsRjBX3GoQF2N~qMPdMnH3WdgCgcMgyZXLDiCccoAxvbMtESwumr4CIq8TOXrg32pfNfjP0AlqblA6MarSXCDij5W0FgKIMGuEBEo9FeKXTQtddwa0IwPfdb6vM9P-nnZ2HB-HgHRD4FPL9HIaxLqAuV5LCo9GlgWB7baeNW-j3LSLgMcqLJH8RfsnimPZyIOnGJjS0YtfqSMBRefEuvSil1A36SwqOKOFfXpCIYUeysiZT2A__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
-                alt="artist"
-                class="img-fluid progressive__img progressive--not-loaded"
-              />
-              <div class="playBtn">
-                <span class="icon-play"></span>
-              </div>
-            </div>
-          </a>
-          <div class="listBox__detailFeeturres" style="padding-left: 0px">
-            <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/slTlWRaNJEzp70js6wS4jDpELUqXJH1629826550.png?Expires=1706785321&amp;Signature=DCyhQEKqnKk71ZDslyqAbAc5qnRSvylQxx6EueJF2tdfAj9WMz026969ALln45157vK8~2x18q53GbzvbolCZINz1atMIxnoQwceULYHS7QhDstY6CnjMimWjo-Au5CuNTjEyIg2EOvKmh-WVzXC-9t0LMIuqg4RdqeXCq5eroWx7HIJ2CHf0Xjp3yJLqoehkd~vLRYWBEVN5mLiYLl1KVUdUw3aWPrd2PoAxXynM49Q-sHlr~0m1KEK5-30i-9pfIe2wgWALqYUHsbyVmqoKeg4JQn6RjGMDjBCiWpDUF0BABg1TBYDC-OXxlubQpw~RILWQGQchHKF6o~-Fns8YA__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
-            <div class="d-flex justify-content-between flex-wrap">
-              <h2 class="h-27 font-bold col-100">Workin</h2>
-              <span class="amount font-bold" style="position: relative">$1000</span>
-            </div>
-            <p class="sub h-18 font-bold">@Official Super Cr3w</p>
-            <span class="genres font-semi">Hip Hop</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 col-50">
-        <div class="listBox listBox--verified">
-          <!--  <div class="listBox__favorite">
-                        <label>
-                            <input type="checkbox" onclick="event.stopPropagation(); event.preventDefault(); showLoginMessage();">
-                            <span class="icon-favorite"></span>
-                        </label>
-                    </div> -->
-          <a href="/feeturre-detail/colorhate-instrumental" class="stretched-link">
-            <div class="listBox__img progressive">
-              <img
-                src="https://d3gsffvv7iizq6.feeturre.com/FeeturreContent/1631162251GgGuxunD.png?Expires=1706785321&amp;Signature=lly8KwXOGj1~WE~utSQV6mLc1nCdCCgSUOSyca43l67oT5FdfRw8oOiZkSP~T34FgALUFILZNpW1B6mFwOex7Zn5Eq6oa7nvJQ58nE2tgBQD9nopVlGGxmvK1ABV9h98OjVwaP3Ht84~TWob911EQsWEwilTft2y6Z3wmNWIx89QyKELRwy6OuVK6LMggrBsmWTZhoiyUX31xykBSjpCcK23IR6PZaswSiTLl9eTjitxJbiI4MjeuOIabRK4-p0MzQfVT9xiqam7XhyTVwub8tvoPbJRohxUawcnBPSivoH6bStAkusjrJcQfo3O2IwgPPRsvcvR~CGEEPaKZGTuNw__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q"
-                alt="artist"
-                class="img-fluid progressive__img progressive--not-loaded"
-              />
-              <div class="playBtn">
-                <span class="icon-play"></span>
-              </div>
-            </div>
-          </a>
-          <div class="listBox__detailFeeturres" style="padding-left: 0px">
-            <!-- <img src="https://d3gsffvv7iizq6.feeturre.com/user_profile/vRcvy2TXQJNiQQHEaCnqWGu38g15P91628563914.png?Expires=1706785321&amp;Signature=IL0x1OW2WPFhlaYut0sngULSpLfhoKp2R6xA3UnBeNVRSFdZStrnOIuKAp3nrczJXjYvlSlSZsvtUWvYQ2XQxspSVdSkwsNPMkSq280TxCFei43IkamG3X1nio~s8hLis20xF~kzVAzHlS~THlrFfaf3TRJmj7fCRMLsWfR6AHLSlS56rUy1AoEr3hqWUoRmbJztmSM74SQpb~9NV~qtKZbr304M-DsSof0COYH-NvBzlHwPJpS0gzypwlySZd9wEiItOlqDM1GGkijq6aNjNmxZg57BOy-JTwvD6n5UkEIwHr-LZNSL6ItHdXO6xbywdimfsk9gMm2lmKj2s8VOZw__&amp;Key-Pair-Id=APKAINPYW7SPPIXHSW4Q" alt="artist" class="img-fluid"> -->
-            <div class="d-flex justify-content-between flex-wrap">
-              <h2 class="h-27 font-bold col-100">Colorhate instrumental</h2>
-              <span class="amount font-bold" style="position: relative">$800</span>
-            </div>
-            <p class="sub h-18 font-bold">@Taymak Beatz</p>
-            <span class="genres font-semi">HipHop, Rap</span>
-          </div>
-        </div>
-      </div>
+
     </div>
     
 
