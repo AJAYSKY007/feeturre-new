@@ -1,7 +1,7 @@
 <template>
   <div class="page" data-name="feeturre-details">
     <!-- Top Navbar -->
-    <div class="navbar navbar-small navbar-transparent">
+    <div class="navbar navbar-small">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
         <div class="left">
@@ -15,10 +15,7 @@
           /></a>
         </div>
         <div class="right">
-          <!--  <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-panel=".panel-left" class="panel-open link"
-            ><i class="icons material-icons">more_vert</i></a
-          >
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
         </div>
       </div>
     </div>

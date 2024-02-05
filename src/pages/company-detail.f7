@@ -11,8 +11,7 @@
         </div>
         <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>
         <div class="right">
-           <!--  <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
         </div>
          
       </div>
@@ -20,7 +19,7 @@
  
 
   
-   <div class="page-content ptr-content"  data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
+   <div class="page-content ptr-content no-padding"  data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
   
  
 
@@ -149,7 +148,7 @@
         <div class="commonSection__heading text-center">
           <h2 class="h-37 font-hbold">Our Artists</h2>
         </div>
-        <div class="feeturre__videoBox">
+        <div class="feeturre__videoBox ourArtist">
           <div class="row listRow">
             <div class="col-lg-3 col-md-4 col-6">
               <div class="listBox listBox--verified">

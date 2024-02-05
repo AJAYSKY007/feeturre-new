@@ -60,8 +60,11 @@ ${hasMoreItems && $h`
 <div class="popup popup-push filterPopup">
  <div class="navbar navbar-small">
      <div class="navbar-inner">
+      <div class="left">
+        <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">west</i></a>
+      </div>
+      <div class="title">Filter</div>
         <div class="right">
-          <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">close</i></a>
         </div>
     </div>
 </div>

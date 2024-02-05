@@ -3,16 +3,14 @@
 
 
      <!-- Top Navbar -->
-    <div class="navbar navbar-small navbar-transparent">
+    <div class="navbar navbar-small">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
           <div class="left">
           <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
         </div>
-        <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div>
         <div class="right">
-        <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><i class="icons material-icons">more_vert</i></a>
+          <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
         </div>
          
       </div>
@@ -235,10 +233,10 @@
           </div>
           <div class="feeturre__videoBox">
             <div class="custom-tabs customCentertabs">
-              <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                <!-- <li class="nav-item" role="presentation">
+              <!-- <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
                                <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="false" onclick="getFeeturreList('All');">ALL</a>
-                           </li> -->
+                           </li>
                 <li class="nav-item" role="presentation">
                   <a
                     class="nav-link tab-link tab-link-active"
@@ -263,7 +261,22 @@
                     >LEASES</a
                   >
                 </li>
-              </ul>
+              </ul> -->
+              <div class="segmented segmented-strong">
+                <a 
+                    id="exclusives-tab"
+                    data-toggle="tab" href="#exclusives" class="tab-link tab-link-active button" 
+                    role="tab"
+                    aria-controls="leases"
+                    aria-selected="false">Audio</a>
+                <a 
+                    id="exclusives-tab"
+                    data-toggle="tab" href="#leases" class="tab-link button" 
+                    role="tab"
+                    aria-controls="leases"
+                    aria-selected="false">Video</a>
+                <span class="segmented-highlight"></span>
+              </div>
               <div class="tabs-animated-wrap" id="myTabContent">
                 <!-- <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                                <div id="allList"></div>
@@ -310,12 +323,17 @@
                                 <h2 class="h-27 font-bold col-100">
                                   Song Reviews
                                 </h2>
+                              </div>
+                              <div class="d-flex">
+                                <p class="sub h-18 font-bold">Sincerely Collins</p>
                                 <span class="amount font-bold">$20</span>
                               </div>
-                              <p class="sub h-18 font-bold">Sincerely Collins</p>
-                              <span class="genres font-semi"
-                                >Influence<br
-                              /></span>
+                              <div class="btn-tonal">
+                                <a href="" class="button button-tonal">Audio</a>
+                                  <a href="" class="button button-tonal">Video</a>
+                                  <a href="" class="button button-tonal">All</a>
+                              </div>
+                                  
                             </div>
                           </div>
                         </div>
@@ -351,12 +369,19 @@
                                 <h2 class="h-27 font-bold col-100">
                                   Custom 16 Bar Featured Verse
                                 </h2>
-                                <span class="amount font-bold">$500</span>
                               </div>
-                              <p class="sub h-18 font-bold">Sincerely Collins</p>
-                              <span class="genres font-semi"
-                                >Audio<br />HipHop, Rap, Pop</span
-                              >
+                              <div class="d-flex">
+                                <p class="sub h-18 font-bold">Sincerely Collins</p>
+                                <span class="amount font-bold">$500</span>
+
+                              </div>
+                              <div class="btn-tonal">
+                                <a href="" class="button button-tonal">Audio</a>
+                              <a href="" class="button button-tonal">Video</a>
+                              <a href="" class="button button-tonal">All</a>
+                              </div>
+                              
+                              
                             </div>
                           </div>
                         </div>
@@ -415,12 +440,19 @@
                                 <h2 class="h-27 font-bold col-100">
                                   Dream (Hook)
                                 </h2>
-                                <span class="amount font-bold">$500</span>
                               </div>
-                              <p class="sub h-18 font-bold">Sincerely Collins</p>
-                              <span class="genres font-semi"
-                                >Audio<br />HipHop, Rap, RnB</span
-                              >
+                              <div class="d-flex">
+                                <p class="sub h-18 font-bold">Sincerely Collins</p>
+                                <span class="amount font-bold">$500</span>
+
+                              </div>
+                              <div class="btn-tonal">
+                                <a href="" class="button button-tonal">Audio</a>
+                                  <a href="" class="button button-tonal">Video</a>
+                                  <a href="" class="button button-tonal">All</a>
+                              </div>
+                              
+                              
                             </div>
                           </div>
                         </div>

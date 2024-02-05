@@ -55,8 +55,11 @@
     <div class="popup popup-push filterPopup">
       <div class="navbar navbar-small">
         <div class="navbar-inner">
+          <div class="left">
+            <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">west</i></a>
+          </div>
+          <div class="title">Filter</div>
            <div class="right">
-             <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">close</i></a>
            </div>
        </div>
    </div>
@@ -68,15 +71,21 @@
             <main class="main-content feeturre-page bgGrey">
               <div class="container">
                 <div class="py-45 pb-0">
-                    <ul class="row feeturreFilterTab">
+                    <!-- <ul class="row feeturreFilterTab">
                       <li class="col">
                         <a href="#audio" class="tab-link tab-link-active">Audio</a>
                       </li>
                       <li class="col"><a href="#video" class="tab-link">Video</a></li>
                       <li class="col">
-                        <a href="#influence" class="tab-link">INFLUENCE</a>
+                        <a href="#influence" class="tab-link">Influence</a>
                       </li>
-                    </ul>
+                    </ul> -->
+                    <div class="segmented segmented-strong">
+                      <a href="#audio" class="tab-link tab-link-active button">Audio</a>
+                      <a href="#video" class="tab-link button">Video</a>
+                      <a href="#influence" class="tab-link button">Influence</a>
+                      <span class="segmented-highlight"></span>
+                    </div>
                   
                   <div class="tabs-animated-wrap">
                     <div class="tabs test">
