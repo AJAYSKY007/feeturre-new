@@ -123,16 +123,16 @@
                 </ul>
 
                 <div class="social-media">
-                  <a href="">
+                  <a href="https://www.facebook.com/Feeturre/">
                      <img src="./assets/facebook_logo.png" alt=""/>
                   </a>
-                  <a href="">
+                  <a href="https://www.tiktok.com/@feeturre?lang=en">
                      <img src="./assets/tiktok_logo.png" alt=""/>
                   </a>
-                  <a href="">
+                  <a href="https://www.instagram.com/feeturre/">
                      <img src="./assets/instagram_logo.png" alt=""/>
                   </a>
-                  <a href="">
+                  <a href="https://twitter.com/feeturre/">
                      <img src="./assets/twitter_logo.png" alt=""/>
                   </a>
                 </div>
@@ -185,7 +185,7 @@
         </a> -->
         
         <div class="segmented segmented-strong">
-          <a href="/artists/" class="tab-link tab-link-active button">
+          <a href="/artists/" class="tab-link button">
             <i class="f7-icons"> person_3_fill</i> 
             Creators
           </a>
@@ -195,7 +195,7 @@
           </a>
           <a href="/management/" class="tab-link button">
             <i class="f7-icons"> music_albums_fill</i>
-            MGMT
+            Rep..
           </a>
           <a href="#" @click="${go_to_help}" class="tab-link button">
             <i class="f7-icons">globe</i>

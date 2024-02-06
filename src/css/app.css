@@ -40,6 +40,7 @@
   height: 31px !important;
 }
 
+
 .md .toggle input[type="checkbox"]:checked + .toggle-icon {
     background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(128,194,66,1) 100%);
     border: 0;
@@ -210,10 +211,16 @@ h3 {
 .tabbar-labels .tabbar-label {
   font-size: 11px;
 }
-
 .logo {
-  /* width: 125px; */
-  margin-top: -25px;
+    position: relative;
+}
+.logo_light {
+    position: absolute;
+    width: 169px;
+    z-index: 5;
+}
+.logo_dark {
+    display: none !important;
 }
 
 .text-center {
@@ -484,6 +491,7 @@ a {
   font-weight: 700;
   padding-right: 20px;
   line-height: 22px;
+  max-height: 45px;
   padding-left: 6px;
   margin-top: 8px !important;
   margin-bottom: 0px !important;
