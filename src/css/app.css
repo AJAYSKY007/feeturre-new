@@ -212,7 +212,8 @@ h3 {
 }
 
 .logo {
-  width: 125px;
+  /* width: 125px; */
+  margin-top: -25px;
 }
 
 .text-center {
@@ -1898,6 +1899,9 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 .dark-mode p {
   color: #959595;
 }
+.dark-mode .bg2 p {
+  color: #ffffff;
+}
 
 .dark-mode .toolbar-bottom {
   background: #1c1c1c;
@@ -1959,11 +1963,11 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 .dark-mode .contentDetails {
   color: #000000;
   background-color: #0d0d0d;
-  border: 1px solid ##454545;
+  border: 1px solid #454545;
 }
 
 .dark-mode .heading--verified {
-  border: 1px solid ##454545 !important;
+  border: 1px solid #454545 !important;
   background: #0d0d0d;
 }
 
@@ -1973,12 +1977,12 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 
 .dark-mode .contentDetails__list {
   background: #0d0d0d;
-  border-top: 1px solid ##454545;
+  border-top: 1px solid #454545;
 }
 
 .dark-mode .musicwrapper__feeturrelist {
   background: #0d0d0d;
-  border: 1px solid ##454545;
+  border: 1px solid #454545;
 }
 
 .dark-mode .contentDetails__list label,

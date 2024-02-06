@@ -6,7 +6,13 @@
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
         
-        <div class="left"><a href="/" class="link" ><img src="../assets/logo.svg" class="logo" width="150" /></a></div>
+        <div class="left">
+          <!-- <a href="/" class="link" ><img src="../assets/logo_02.png" class="logo" width="150" /></a> -->
+
+          
+
+
+        </div>
         <div class="title"></div>
         <div class="right">
 
