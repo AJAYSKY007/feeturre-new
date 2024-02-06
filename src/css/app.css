@@ -19,7 +19,7 @@
 /* --f7-md-primary: linear-gradient( 45deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% ) !important; */
 
 --f7-navbar-height: 85px;
---f7-tabbar-icons-height: 90px;
+--f7-tabbar-icons-height: 80px;
 --f7-list-item-min-height: 25px;
 
 --f7-panel-width: 85%;
@@ -131,8 +131,9 @@ h1,h2,h3 { margin: 0px; }
 .popClose { padding: 10px 20px; }
 
 .tabbar-labels .tabbar-label { font-size: 11px; }
-
-.logo { margin-top: -25px; }
+.logo {
+    width: 125px;
+}
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -1023,7 +1024,7 @@ section.feeturre { padding: 20px; margin-bottom: 80px;}
 
 
 .panel .page-content {
-    background: linear-gradient( 115deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% );
+    background: linear-gradient( 115deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% ) !important;
 }
 .panel .block {
     padding: 0;
@@ -1329,6 +1330,22 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
     background: transparent;
     margin-bottom: 5px;
 }
+.toolbar-bottom .segmented-strong a {
+    font-size: 15px;
+}
+.toolbar-bottom .segmented-strong {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 15px;
+    border-radius: 20px 20px 0 0;
+}
+.toolbar-bottom .segmented-strong::after{
+    height: 0;
+    background: none;
+}
+.toolbar-bottom .segmented-strong .segmented-highlight, .ios .segmented-strong-ios .segmented-highlight, .md .segmented-strong-md .segmented-highlight {
+    top: 0;
+}
 .segmented-strong:hover{
     background: none;
 }
@@ -1341,7 +1358,6 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
     bottom: 0;
     background: linear-gradient( 45deg, rgba(24, 187, 212, 0.2) 0%, rgba(49, 182, 128, 0.2) 50%, rgba(128, 194, 66, 0.2) 100% );
 }
-
 .segmented a {
     display: block;
     text-align: center;
@@ -1430,7 +1446,8 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
     background:#0d0d0d;  
 }
 .dark-mode .material-symbols-outlined,
-.dark-mode .segmented a.tab-link-active {
+.dark-mode .segmented a.tab-link-active,
+.dark-mode a.theme-color {
     color: #ffffff;
 }
 .dark-mode .navbar .material-symbols-outlined {
@@ -1445,7 +1462,7 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 .dark-mode .navbar-inner {
     border-bottom: 2px solid #242424;
 }
-.dark-mode h2, .dark-mode h4, .dark-mode h5 {
+.dark-mode h2,.dark-mode h3, .dark-mode h4, .dark-mode h5 {
     color: #ffffff;
 }
 .dark-mode .button.button-fill-border {
@@ -1462,13 +1479,20 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
     background-color: #0d0d0d;
     border: 1px solid #242424;
 }
-.dark-mode .heading {
-    border: 1px solid #242424;
+.dark-mode .heading--verified {
+    border: 1px solid #242424 !important;
     background: #0d0d0d;
 }
-.dark-mode .contentDetails__list{ 
+.dark-mode .mt-0.detailsBox__right .heading {
+    border: 0;
+}
+.dark-mode .contentDetails__list {
     background: #0d0d0d;
     border-top: 1px solid #242424;
+}
+.dark-mode .musicwrapper__feeturrelist {  
+    background: #0d0d0d;
+    border: 1px solid #242424;
 }
 .dark-mode .contentDetails__list label,
 .dark-mode .headingBlock p {
@@ -1484,8 +1508,44 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 .dark-mode .details-page .detailsBox__left .totalFigure__box {
     background-color: #161616;
 }
-
-
+.details-page .mt-0 #musicInfo {
+    border-top: 1px solid #242424;
+    border-bottom: 1px solid #242424;
+    margin-top: 20px;
+}
+.dark-mode .details-page .detailsComments .detailsBox__right .listBox {
+    background: #0d0d0d;
+}
+.dark-mode .navbar-small {
+    background: #0d0d0d;
+}
+.dark-mode .navbar-small .title {
+    color: #ffffff;
+}
+.dark-mode .list .item-title {
+    color: #ffffff;
+}
+.dark-mode .filterOuter .item-inner:before,
+.dark-mode .list .item-after {
+    color: #ffffff !important;
+}
+.dark-mode .filterOuter .list ul li, 
+.dark-mode .filterSection .list ul li {
+    border-bottom: 1px solid #242424;
+}
+.dark-mode .keywords input[type="text"] {
+    border-bottom: 0;
+    color: #ffffff;
+}
+.dark-mode .sheet-modal-inner ul, 
+.dark-mode .sheet-modal .page-content{
+    background-color: #0d0d0d;
+}
+.dark-mode .list input[type='number'],
+.dark-mode .list input[type='text'],
+.dark-mode .tagsinputplaceholder {
+    color: #ffffff;
+}
 
 
 

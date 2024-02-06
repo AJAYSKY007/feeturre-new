@@ -167,7 +167,7 @@
 
     <div class="toolbar tabbar-icons toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="/artists/" class="tab-link">
+        <!-- <a href="/artists/" class="tab-link">
           <i class="f7-icons"> person_3_fill</i> 
           <span class="tabbar-label">Creators</span>
         </a>
@@ -182,7 +182,27 @@
         <a href="#" @click="${go_to_help}" class="tab-link">
           <i class="f7-icons">globe</i>
           <span class="tabbar-label">Web</span>
-        </a>
+        </a> -->
+        
+        <div class="segmented segmented-strong">
+          <a href="/artists/" class="tab-link tab-link-active button">
+            <i class="f7-icons"> person_3_fill</i> 
+            Creators
+          </a>
+          <a href="/feeturres/" class="tab-link button">
+            <i class="f7-icons">music_note</i>
+            Marketplace
+          </a>
+          <a href="/management/" class="tab-link button">
+            <i class="f7-icons"> music_albums_fill</i>
+            MGMT
+          </a>
+          <a href="#" @click="${go_to_help}" class="tab-link button">
+            <i class="f7-icons">globe</i>
+            Web
+          </a>
+          <span class="segmented-highlight"></span>
+        </div>
       </div>
     </div>
 
