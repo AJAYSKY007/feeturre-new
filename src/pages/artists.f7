@@ -1,5 +1,5 @@
 <template>
-<div class="page" data-name="artists">
+<div class="page dark-mode" data-name="artists">
 
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
@@ -49,7 +49,7 @@
  
  <div class="block secTitle">
   <div class="row">
-<h2>Browse Artists</h2>
+<h2>Browse Creators</h2>
 <a href="#" data-popup=".popup-push" class="popup-open link" ><span class="material-symbols-outlined"> filter_alt </span></a>
  
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="feeturres">
+  <div class="page dark-mode" data-name="feeturres">
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
       <div class="navbar-bg"></div>
@@ -64,7 +64,7 @@
        </div>
    </div>
 
-      <div class="page-content no-padding">
+      <div class="page-content dark-mode no-padding">
         <div class="block">
           <input type="hidden" name="name" />
           <div class="filterOuter" innerHTML="${filterOptions}">

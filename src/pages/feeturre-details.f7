@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="feeturre-details">
+  <div class="page dark-mode" data-name="feeturre-details">
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
       <div class="navbar-bg"></div>

@@ -1,5 +1,5 @@
 <template>
-<div class="page" data-name="management">
+<div class="page dark-mode" data-name="management">
 
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
@@ -33,7 +33,7 @@
 
  <div class="block secTitle">
   <div class="row">
-<h2>Browse Management</h2>
+<h2>Browse Representation</h2>
 <a href="#" data-popup=".popup-push" class="popup-open link" ><span class="material-symbols-outlined"> filter_alt </span></a>
 
  

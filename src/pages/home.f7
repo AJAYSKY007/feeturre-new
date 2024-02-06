@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="home">
+  <div class="page dark-mode" data-name="home">
     
     <!-- Top Navbar -->
     <div class="navbar">
@@ -92,7 +92,7 @@ Artistry</h1>
  <div class="block">
 
 <div class="row">
-<div><a href="/artists/" class=" button button-large button-fill">Artists</a></div>
+<div><a href="/artists/" class=" button button-large button-fill">Creators</a></div>
 <div><a href="/test/" class=" button button-large button-fill-border">Feeturres</a></div>
 
 </div>
