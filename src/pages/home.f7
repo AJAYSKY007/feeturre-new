@@ -1,5 +1,5 @@
 <template>
-  <div class="page dark-mode" data-name="home">
+  <div class="page" data-name="home">
     
     <!-- Top Navbar -->
     <div class="navbar">
@@ -505,6 +505,11 @@ $on('pageInit', (e, page) => {
  if (localStorage.getItem('theme') === 'dark') {
     $$('body').addClass('dark-mode');
   }
+
+$$(".toolbar-btn .tab-link").click(function(){
+    $$('.tab-link').removeClass('tab-link-active')
+    $$(this).addClass('tab-link-active')
+});
 
 
  // set to either landscape

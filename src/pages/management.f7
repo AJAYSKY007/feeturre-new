@@ -1,398 +1,383 @@
 <template>
-<div class="page dark-mode" data-name="management">
-
+  <div class="page" data-name="management">
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
-          <div class="left">
-          <a href="#" class="link back" ><i class="icons material-icons">west</i></a>
+        <div class="left">
+          <a href="#" class="link back"
+            ><i class="icons material-icons">west</i></a
+          >
         </div>
         <!-- <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div> -->
         <div class="right">
           <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>
+          <label class="toggle mode-toggle">
+            <input type="checkbox" />
+            <span class="toggle-icon"></span>
+          </label>
+          <a href="#" data-panel=".panel-left" class="panel-open link"
+            ><span class="material-symbols-outlined">segment</span></a
+          >
         </div>
-         
       </div>
     </div>
 
-    
-
-
-  
-  <div class="page-content infinite-scroll-content ptr-content" @infinite=${loadMore} data-ptr-distance="65" @ptr:refresh=${pageRefresh}>
-  
- 
-
- <div class="ptr-preloader">
+    <div
+      class="page-content infinite-scroll-content ptr-content"
+      @infinite="${loadMore}"
+      data-ptr-distance="65"
+      @ptr:refresh="${pageRefresh}"
+    >
+      <div class="ptr-preloader">
         <div class="preloader"></div>
         <div class="ptr-arrow"></div>
       </div>
 
-
- <div class="block secTitle">
-  <div class="row">
-<h2>Browse Representation</h2>
-<a href="#" data-popup=".popup-push" class="popup-open link" ><span class="material-symbols-outlined"> filter_alt </span></a>
-
- 
-</div>
-
-</div> 
- 
-
-<div class="block ArtistList mgmtlist">
- 
-<div class="artistitems" innerHTML=${all_artists}></div>
-
-${hasMoreItems && $h`
-      <div class="preloader infinite-scroll-preloader"></div>
-`}
-
-</div>
-
-
-
-  </div>
-
-
-<div class="popup dark-mode popup-push filterPopup">
- <div class="navbar navbar-small">
-     <div class="navbar-inner">
-      <div class="left">
-        <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">west</i></a>
+      <div class="block secTitle">
+        <div class="row">
+          <h2>Browse Representation</h2>
+          <a href="#" data-popup=".popup-push" class="popup-open link"
+            ><span class="material-symbols-outlined"> filter_alt </span></a
+          >
+        </div>
       </div>
-      <div class="title">Filter</div>
-        <div class="right">
-        </div>
+
+      <div class="block ArtistList mgmtlist">
+        <div class="artistitems" innerHTML="${all_artists}"></div>
+
+        ${hasMoreItems && $h`
+        <div class="preloader infinite-scroll-preloader"></div>
+        `}
+      </div>
     </div>
-</div>
 
-    
-    <div class="page-content no-padding">
-    <div class="block">
-     
-        <input type="hidden" name="name" />
-     <div class="filterOuter" innerHTML=${filterOptions} >
-
-
-      <main class="main-content feeturre-page bgGrey">
-        <div class="container">
-          <div class="py-45 pb-0">
-            <div class="filterSection" id="searchFilter">
-              <div class="filterHead d-block d-xl-none align-items-center">
-                <h3 class="h-27 font-med mb-0">Filter</h3>
-                <a href="javascript:void(0);" id="filterClose" class="filterClose"
-                  ><em class="icon-close"></em
-                ></a>
-              </div>
-              <div class="list">
-                <form id="mgmt_form">
-                  <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
-                    <li>
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Search"
-                          name="searchValue"
-                          id="searchValue"
-                        />
-                      </div>
-                    </li>
-                    <li>
-                      <a
-                        class="item-link smart-select smart-select-init"
-                        data-open-in="sheet"
-                      >
-                        <select
-                          class="form-control selectpicker"
-                          name="managementType"
-                          data-size="5"
-                          title="Management Type"
-                        >
-                          <option value="">All</option>
-                          <option value="Management">Management</option>
-                          <!-- <option value="Manager">Manager</option> -->
-                          <option value="Agency">Agency</option>
-                          <!-- <option value="Executive">Executive</option> -->
-                          <option value="A&amp;R">A&amp;R</option>
-                          <option value="Record_Label">Record Label</option>
-                          <option value="Studio_Owner">Studio Owner</option>
-                        </select>
-                        <div class="item-content">
-                          <div class="item-inner">
-                            <div class="item-title">Verification</div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </form>
-              </div>
-            </div>
+    <div class="popup popup-push filterPopup">
+      <div class="navbar navbar-small">
+        <div class="navbar-inner">
+          <div class="left">
+            <a href="#" data-panel=".panel-left" class="popup-close link"
+              ><i class="icons material-icons">west</i></a
+            >
           </div>
+          <div class="title">Filter</div>
+          <div class="right"></div>
         </div>
-      </main>
-     </div>
+      </div>
 
-     <button type="button" @click="${filterArtistData}" class="btn btn-primary ripple-effect filterbtn clickbtn popup-close" id="artist-filter-click" value="Apply Filter" >Apply Filter</button>
+      <div class="page-content no-padding">
+        <div class="block">
+          <input type="hidden" name="name" />
+          <div class="filterOuter" innerHTML="${filterOptions}">
+            <main class="main-content feeturre-page bgGrey">
+              <div class="container">
+                <div class="py-45 pb-0">
+                  <div class="filterSection" id="searchFilter">
+                    <div
+                      class="filterHead d-block d-xl-none align-items-center"
+                    >
+                      <h3 class="h-27 font-med mb-0">Filter</h3>
+                      <a
+                        href="javascript:void(0);"
+                        id="filterClose"
+                        class="filterClose"
+                        ><em class="icon-close"></em
+                      ></a>
+                    </div>
+                    <div class="list">
+                      <form id="mgmt_form">
+                        <ul
+                          class="filterSection__wrapper list-unstyled pl-0 mb-0"
+                        >
+                          <li>
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Search"
+                                name="searchValue"
+                                id="searchValue"
+                              />
+                            </div>
+                          </li>
+                          <li>
+                            <a
+                              class="item-link smart-select smart-select-init"
+                              data-open-in="sheet"
+                            >
+                              <select
+                                class="form-control selectpicker"
+                                name="managementType"
+                                data-size="5"
+                                title="Management Type"
+                              >
+                                <option value="">All</option>
+                                <option value="Management">Management</option>
+                                <!-- <option value="Manager">Manager</option> -->
+                                <option value="Agency">Agency</option>
+                                <!-- <option value="Executive">Executive</option> -->
+                                <option value="A&amp;R">A&amp;R</option>
+                                <option value="Record_Label">
+                                  Record Label
+                                </option>
+                                <option value="Studio_Owner">
+                                  Studio Owner
+                                </option>
+                              </select>
+                              <div class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title">Verification</div>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
 
-
-
-    
+          <button
+            type="button"
+            @click="${filterArtistData}"
+            class="btn btn-primary ripple-effect filterbtn clickbtn popup-close"
+            id="artist-filter-click"
+            value="Apply Filter"
+          >
+            Apply Filter
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-
-
-
-</div>
 </template>
 <script>
+  import $$ from "dom7";
 
-import $$ from 'dom7';
+  export default function (
+    props,
+    {
+      $store,
+      $f7,
+      $on,
+      $onBeforeMount,
+      $onMounted,
+      $onBeforeUnmount,
+      $onUnmounted,
+      $update,
+    }
+  ) {
+    const api_url = "https://feeturre.com/api/";
+    const header = { Authorization: "Basic VGFsZW50OkZlZQ==" };
 
+    let all_artists = "";
+    let filterOptions = "";
 
-export default function (props, {$store, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted, $update }) {
+    let filterSet = false;
+    let flag = 0;
+    let page_num_load = 1;
+    let filter_flag = 0;
 
-const api_url = 'https://feeturre.com/api/';
-const header = { "Authorization": "Basic VGFsZW50OkZlZQ=="} ;
+    let allowInfinite = true;
+    let hasMoreItems = true;
+    let lastItem = 20;
 
-let all_artists = '';
-let filterOptions = '';
+    const go_to_signup = () => {
+      var url = "https://feeturre.com/login";
+      var target = "_blank";
+      var options = "location = yes";
+      var ref = cordova.InAppBrowser.open(url, target, options);
 
-let filterSet = false;
-let flag=0;
-let page_num_load=1;
-let filter_flag =0;
+      ref.addEventListener("loadstart", loadstartCallback);
+      ref.addEventListener("loadstop", loadstopCallback);
+      ref.addEventListener("loaderror", loaderrorCallback);
+      ref.addEventListener("exit", exitCallback);
 
-let allowInfinite = true;
-let hasMoreItems = true;
-let lastItem = 20;
+      function loadstartCallback(event) {
+        //console.log('Loading started: '  + event.url)
+      }
 
+      function loadstopCallback(event) {
+        //console.log('Loading finished: ' + event.url)
+      }
 
+      function loaderrorCallback(error) {
+        //console.log('Loading error: ' + error.message)
+      }
 
-const go_to_signup = ( ) => {
+      function exitCallback() {
+        //console.log('Browser is closed...')
+      }
+    };
 
-    
-       var url = 'https://feeturre.com/login';
-       var target = '_blank';
-       var options = "location = yes"
-       var ref = cordova.InAppBrowser.open(url, target, options);
-       
-       ref.addEventListener('loadstart', loadstartCallback);
-       ref.addEventListener('loadstop', loadstopCallback);
-       ref.addEventListener('loaderror', loaderrorCallback);
-       ref.addEventListener('exit', exitCallback);
+    //Get all Artist
+    const get_artist = (page) => {
+      var apiUrl = api_url + "load-company-list";
 
-       function loadstartCallback(event) {
-          //console.log('Loading started: '  + event.url)
-       }
+      fetch(apiUrl, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        data: { page: page_num_load, limit: 12, offset: 0 },
+        // body: JSON.stringify(data), // Pass your data directly to the data option
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json(); // Parse the JSON response
+          } else {
+            throw new Error("Failed to fetch data");
+          }
+        })
+        .then(function (data) {
+          // Handle the API response data
 
-       function loadstopCallback(event) {
-          //console.log('Loading finished: ' + event.url)
-       }
+          var artist = data;
+          if (artist.success == true) {
+            all_artists = artist.data;
+            flag += 12;
+            page_num_load += 1;
+            $update();
+          }
+          $update();
+        });
+      // $f7.request({
+      //                 url: api_url+'load-company-list',
+      //                 method : "GET",
+      //                 timeout: 0,
+      //                 data: { 'page':page_num_load,'limit': 12,'offset': 0},
+      //                 //crossDomain: false,
+      //                 headers: header,
+      //                 success: function(data) {
 
-       function loaderrorCallback(error) {
-          //console.log('Loading error: ' + error.message)
-       }
+      //                     //console.log(data);
 
-       function exitCallback() {
-          //console.log('Browser is closed...')
-       }
-   
+      //                     var artist = JSON.parse(data);
+      //                     if(artist.success == true)
+      //                     {
 
-}
+      //                          all_artists = artist.data;
+      //                          flag += 12;
+      //                          page_num_load+=1;
+      //                          $update();
+      //                     }
 
+      //                 },
+      //             })
+    };
 
-//Get all Artist
-const get_artist = ( page ) => {
-var apiUrl = api_url+"load-company-list";
+    const filterArtistData = () => {
+      filterSet = true;
+      page_num_load = 1;
+      filter_flag = 0;
 
-fetch(apiUrl, {
-                method: 'GET',
-                headers: {  'Content-Type': 'application/json',},
-                data: { 'page':page_num_load,'limit': 12,'offset': 0},
-// body: JSON.stringify(data), // Pass your data directly to the data option
-              })
-              .then(function (response) {
-                if (response.status === 200) {
-                  return response.json(); // Parse the JSON response
-                } else {
-                  throw new Error('Failed to fetch data');
-                }
-              })
-              .then(function (data) {
-                // Handle the API response data
-              
-                var artist = data;   
-                  if(artist.success == true)
-                  {
+      var formData = $f7.form.convertToData("#mgmt_form");
 
-                    all_artists = artist.data;
-                    flag += 12;
-                    page_num_load += 1;
-                    $update();
+      var apiUrl = api_url + "load-company-list";
 
-                  }
-                  $update();
-              })
-// $f7.request({
-//                 url: api_url+'load-company-list',
-//                 method : "GET",
-//                 timeout: 0,
-//                 data: { 'page':page_num_load,'limit': 12,'offset': 0},
-//                 //crossDomain: false,
-//                 headers: header,
-//                 success: function(data) {
+      fetch(apiUrl, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        data: {
+          page: page_num_load,
+          limit: 12,
+          offset: 0,
+          search_value: formData.searchValue,
+          management_type: formData.managementType,
+        },
+        // body: JSON.stringify(data), // Pass your data directly to the data option
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json(); // Parse the JSON response
+          } else {
+            throw new Error("Failed to fetch data");
+          }
+        })
+        .then(function (data) {
+          // Handle the API response data
 
-//                     //console.log(data);
+          var artist = data;
+          if (artist.success == true) {
+            all_artists = artist.data;
+            flag += 12;
+            page_num_load += 1;
+            $update();
+          }
+          $update();
+        });
 
-//                     var artist = JSON.parse(data);
-//                     if(artist.success == true)
-//                     {
+      //  $f7.request({
+      //             url: api_url+'load-company-list',
+      //             method : "GET",
+      //             data: { 'page':page_num_load,'limit': 12,'offset': 0, 'search_value': formData.searchValue, 'management_type': formData.managementType },
+      //             timeout: 0,
+      //             //crossDomain: false,
+      //             headers: header,
+      //             success: function(data) {
 
-//                          all_artists = artist.data;
-//                          flag += 12; 
-//                          page_num_load+=1;
-//                          $update(); 
-//                     }
-     
-//                 },  
-//             })
+      //                 var artist = JSON.parse(data);
 
+      //                 if(artist.success == true)
+      //                 {
 
-}
+      //                   //console.log(feeturres.data);
 
+      //                      all_artists = artist.data;
+      //                      flag += 12;
+      //                      page_num_load += 1;
 
-const filterArtistData = () => {
+      //                      $update();
+      //                 }
 
+      //             },
+      //         })
+    };
 
-        filterSet = true;
-        page_num_load = 1;
-        filter_flag = 0;
-
-     
-      
-     var formData = $f7.form.convertToData('#mgmt_form');
-
- 
-      
-     var apiUrl = api_url+"load-company-list";
-
-     fetch(apiUrl, {
-                method: 'GET',
-                headers: {  'Content-Type': 'application/json',},
-                data: { 'page':page_num_load,'limit': 12,'offset': 0, 'search_value': formData.searchValue, 'management_type': formData.managementType },
-// body: JSON.stringify(data), // Pass your data directly to the data option
-              })
-              .then(function (response) {
-                if (response.status === 200) {
-                  return response.json(); // Parse the JSON response
-                } else {
-                  throw new Error('Failed to fetch data');
-                }
-              })
-              .then(function (data) {
-                // Handle the API response data
-              
-                var artist = data;   
-                  if(artist.success == true)
-                  {
-
-                    all_artists = artist.data;
-                    flag += 12;
-                    page_num_load += 1;
-                    $update();
-
-                  }
-                  $update();
-              })
-    
- 
-    //  $f7.request({
-    //             url: api_url+'load-company-list',
-    //             method : "GET",
-    //             data: { 'page':page_num_load,'limit': 12,'offset': 0, 'search_value': formData.searchValue, 'management_type': formData.managementType },
-    //             timeout: 0,
-    //             //crossDomain: false,
-    //             headers: header,
-    //             success: function(data) {
-
-                 
-
-    //                 var artist = JSON.parse(data);
-
-
-    //                 if(artist.success == true)
-    //                 {
-
-    //                   //console.log(feeturres.data);
-
-    //                      all_artists = artist.data;
-    //                      flag += 12;
-    //                      page_num_load += 1;
-                          
-    //                      $update(); 
-    //                 }
-     
-    //             },  
-    //         })
-        
-
-}
-
-
-
-
-const loadMore = () => {
+    const loadMore = () => {
       if (!allowInfinite) return;
       allowInfinite = false;
 
-      var formData = $f7.form.convertToData('#mgmt_form');
-        
+      var formData = $f7.form.convertToData("#mgmt_form");
 
       setTimeout(function () {
-        var apiUrl = api_url+"load-company-list";
+        var apiUrl = api_url + "load-company-list";
 
         fetch(apiUrl, {
-                method: 'GET',
-                headers: {  'Content-Type': 'application/json',},
-                data: {
-                'page': page_num_load,
-                'offset': flag,'limit': 12, 
-                'search_value': formData.searchValue, 'management_type': formData.managementType
-                },
-// body: JSON.stringify(data), // Pass your data directly to the data option
-              })
-              .then(function (response) {
-                if (response.status === 200) {
-                  return response.json(); // Parse the JSON response
-                } else {
-                  throw new Error('Failed to fetch data');
-                }
-              })
-              .then(function (data) {
-                // Handle the API response data
-              
-                var artist = data;   
-                  if(artist.success == true)
-                  {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+          data: {
+            page: page_num_load,
+            offset: flag,
+            limit: 12,
+            search_value: formData.searchValue,
+            management_type: formData.managementType,
+          },
+          // body: JSON.stringify(data), // Pass your data directly to the data option
+        })
+          .then(function (response) {
+            if (response.status === 200) {
+              return response.json(); // Parse the JSON response
+            } else {
+              throw new Error("Failed to fetch data");
+            }
+          })
+          .then(function (data) {
+            // Handle the API response data
 
-                    
-
-                  }
-                  $update();
-              })
+            var artist = data;
+            if (artist.success == true) {
+            }
+            $update();
+          });
 
         // $f7.request({
         //         url: api_url+'load-company-list',
         //         method : "GET",
         //         data: {
         //         'page': page_num_load,
-        //         'offset': flag,'limit': 12, 
+        //         'offset': flag,'limit': 12,
         //         'search_value': formData.searchValue, 'management_type': formData.managementType
         //     },
         //         timeout: 0,
@@ -408,18 +393,10 @@ const loadMore = () => {
         //          },
         //         success: function(data) {
 
-
         //             var response = JSON.parse(data);
-
-    
-               
-
 
         //         setTimeout(function() {
 
-                    
-     
-                      
         //              if(response.last_page < page_num_load ){
         //                   hasMoreItems = false;
         //                   $update();
@@ -427,127 +404,112 @@ const loadMore = () => {
         //                 }
         //              else {
 
-                        
-
         //              }
-
 
         //             $$('.artistitems').append(response.data);
         //             //$("#load-more-click").prop('disabled',false);
 
         //             flag += 12;
         //             page_num_load = page_num_load + 1;
-                         
-                    
+
         //             }, 1000);
 
-        //         $update(); 
-                
+        //         $update();
 
-   
-                     
-     
-        //         },  
+        //         },
         //     })
-
-
-
-
-   
 
         allowInfinite = true;
         lastItem += 20;
 
         $update();
       }, 1000);
-}
+    };
 
+    const pageRefresh = (e, done) => {
+      setTimeout(() => {
+        get_artist();
 
-const pageRefresh = (e, done) => {
-
-     setTimeout(() => { 
-     
-
-       get_artist();
-
-      // Update state to rerender
+        // Update state to rerender
         $update();
 
         // When loading done, we need to reset it
         done();
       }, 2000);
+    };
 
-}
+    const get_filter_options = (page) => {
+      var apiUrl = api_url + "company-filter";
 
+      fetch(apiUrl, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        // body: JSON.stringify(data), // Pass your data directly to the data option
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json(); // Parse the JSON response
+          } else {
+            throw new Error("Failed to fetch data");
+          }
+        })
+        .then(function (data) {
+          // Handle the API response data
 
-const get_filter_options = ( page ) => {    
+          var artist = data;
+          if (artist.success == true) {
+          }
+          $update();
+        });
+      // $f7.request({
+      //                 url: api_url+'company-filter',
+      //                 method : "GET",
+      //                 timeout: 0,
 
-          var apiUrl = api_url+"company-filter";
-  
-          fetch(apiUrl, {
-                  method: 'GET',
-                  headers: {  'Content-Type': 'application/json',},
-  // body: JSON.stringify(data), // Pass your data directly to the data option
-                })
-                .then(function (response) {
-                  if (response.status === 200) {
-                    return response.json(); // Parse the JSON response
-                  } else {
-                    throw new Error('Failed to fetch data');
-                  }
-                })
-                .then(function (data) {
-                  // Handle the API response data
-                
-                  var artist = data;   
-                    if(artist.success == true)
-                    {
-  
-                      
-  
-                    }
-                    $update();
-                })
-// $f7.request({
-//                 url: api_url+'company-filter',
-//                 method : "GET",
-//                 timeout: 0,
-                
-//                 //crossDomain: false,
-//                 headers: header,
-//                 success: function(data) {
+      //                 //crossDomain: false,
+      //                 headers: header,
+      //                 success: function(data) {
 
-                    
-//                 if(data)
-//                 {
-//                    filterOptions = data;
-//                 }
-//                 else
-//                 {
-//                    filterOptions = 'Nothing Found';
-//                 }
+      //                 if(data)
+      //                 {
+      //                    filterOptions = data;
+      //                 }
+      //                 else
+      //                 {
+      //                    filterOptions = 'Nothing Found';
+      //                 }
 
-                   
-     
-//                 },  
-//             })
+      //                 },
+      //             })
+    };
 
+    $on("pageInit", (e, page) => {
+      get_artist();
+      get_filter_options();
+      var toggle = $f7.toggle.create({
+        el: ".mode-toggle",
+        on: {
+          change: function (e) {
+            console.log("Toggle changed");
+            if (e.checked) {
+              $$("body").addClass("dark-mode");
+              var isDarkMode = $$("body").hasClass("dark-mode");
+              localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+            } else {
+              $$("body").removeClass("dark-mode");
+              var isDarkMode = $$("body").hasClass("dark-mode");
+              localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+            }
+          },
+        },
+      });
 
-}
+      // Check localStorage for theme preference on app init
+      if (localStorage.getItem("theme") === "dark") {
+        $$("body").addClass("dark-mode");
+      }
+    });
 
-
-$on('pageInit', (e, page) => {
-
-    get_artist();
-    get_filter_options();
-       
-});
-
-
-
-
-
-
-  return $render;
-};
+    return $render;
+  }
 </script>

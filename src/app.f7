@@ -54,7 +54,7 @@
     </div>-->
 
     <div class="panel panel-left panel-cover panel-init" id="panel-nested" data-container-el="#panel-page">
-      <div class="page dark-mode">
+      <div class="page">
         <div class="page-content">
              <div class="list ">
                <ul>
@@ -144,7 +144,7 @@
  
 
     <!-- Your main view, should have "view-main" class -->
-    <div class="view dark-mode view-main view-init safe-areas" data-url="/">
+    <div class="view view-main view-init safe-areas" data-url="/">
        
 
 
@@ -165,7 +165,7 @@
 
 
 
-    <div class="toolbar tabbar-icons toolbar-bottom">
+    <div class="toolbar tabbar-icons toolbar-bottom toolbar-btn">
       <div class="toolbar-inner">
         <!-- <a href="/artists/" class="tab-link">
           <i class="f7-icons"> person_3_fill</i> 

@@ -1,23 +1,34 @@
 <template>
-  <div class="page dark-mode" data-name="feeturres">
+  <div class="page" data-name="feeturres">
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
         <div class="left">
-          <a href="#" class="link back"><i class="icons material-icons">west</i></a>
+          <a href="#" class="link back"
+            ><i class="icons material-icons">west</i></a
+          >
         </div>
         <!-- <div class="title"><a href="/" class="link" ><img src="./logo.svg" class="logo" height="40" /></a></div> -->
         <div class="right">
           <!-- <a href="/" class="link" ><i class="icons material-icons">roofing</i></a> -->
-          <a href="#" data-panel=".panel-left" class="panel-open link"><span
-              class="material-symbols-outlined">segment</span></a>
+          <label class="toggle mode-toggle">
+            <input type="checkbox" />
+            <span class="toggle-icon"></span>
+          </label>
+          <a href="#" data-panel=".panel-left" class="panel-open link"
+            ><span class="material-symbols-outlined">segment</span></a
+          >
         </div>
       </div>
     </div>
 
-    <div class="page-content infinite-scroll-content ptr-content" @infinite="${loadMore}" data-ptr-distance="65"
-      @ptr:refresh="${pageRefresh}">
+    <div
+      class="page-content infinite-scroll-content ptr-content"
+      @infinite="${loadMore}"
+      data-ptr-distance="65"
+      @ptr:refresh="${pageRefresh}"
+    >
       <div class="ptr-preloader">
         <div class="preloader"></div>
         <div class="ptr-arrow"></div>
@@ -38,8 +49,9 @@
       <div class="block secTitle">
         <div class="row">
           <h2>Browse Marketplace</h2>
-          <a href="#" data-popup=".popup-push" class="popup-open link"><span class="material-symbols-outlined">
-              filter_alt </span></a>
+          <a href="#" data-popup=".popup-push" class="popup-open link"
+            ><span class="material-symbols-outlined"> filter_alt </span></a
+          >
         </div>
       </div>
 
@@ -52,17 +64,18 @@
       </div>
     </div>
 
-    <div class="popup dark-mode popup-push filterPopup">
+    <div class="popup popup-push filterPopup">
       <div class="navbar navbar-small">
         <div class="navbar-inner">
           <div class="left">
-            <a href="#" data-panel=".panel-left" class="popup-close link" ><i class="icons material-icons">west</i></a>
+            <a href="#" data-panel=".panel-left" class="popup-close link"
+              ><i class="icons material-icons">west</i></a
+            >
           </div>
           <div class="title">Filter</div>
-           <div class="right">
-           </div>
-       </div>
-   </div>
+          <div class="right"></div>
+        </div>
+      </div>
 
       <div class="page-content no-padding">
         <div class="block">
@@ -71,7 +84,7 @@
             <main class="main-content feeturre-page bgGrey">
               <div class="container">
                 <div class="py-45 pb-0">
-                    <!-- <ul class="row feeturreFilterTab">
+                  <!-- <ul class="row feeturreFilterTab">
                       <li class="col">
                         <a href="#audio" class="tab-link tab-link-active">Audio</a>
                       </li>
@@ -80,20 +93,28 @@
                         <a href="#influence" class="tab-link">Influence</a>
                       </li>
                     </ul> -->
-                    <div class="segmented segmented-strong">
-                      <a href="#audio" class="tab-link tab-link-active button">Audio</a>
-                      <a href="#video" class="tab-link button">Video</a>
-                      <a href="#influence" class="tab-link button">Influence</a>
-                      <span class="segmented-highlight"></span>
-                    </div>
-                  
+                  <div class="segmented segmented-strong">
+                    <a href="#audio" class="tab-link tab-link-active button"
+                      >Audio</a
+                    >
+                    <a href="#video" class="tab-link button">Video</a>
+                    <a href="#influence" class="tab-link button">Influence</a>
+                    <span class="segmented-highlight"></span>
+                  </div>
+
                   <div class="tabs-animated-wrap">
                     <div class="tabs test">
                       <div id="audio" class="tab tab-active">
                         <div class="list">
                           <form id="audio_search">
-                            <input type="hidden" name="filter_type" value="Audio" />
-                            <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
+                            <input
+                              type="hidden"
+                              name="filter_type"
+                              value="Audio"
+                            />
+                            <ul
+                              class="filterSection__wrapper list-unstyled pl-0 mb-0"
+                            >
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -150,7 +171,7 @@
                                   </div>
                                 </div>
                               </li>
-        
+
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -164,7 +185,9 @@
                                   >
                                     <option value="Both">Both</option>
                                     <option value="Verified">Verified</option>
-                                    <option value="Non-Verified">Non-Verified</option>
+                                    <option value="Non-Verified">
+                                      Non-Verified
+                                    </option>
                                   </select>
                                   <div class="item-content">
                                     <div class="item-inner">
@@ -359,8 +382,12 @@
                                     title="Price"
                                   >
                                     <option value="">None</option>
-                                    <option value="Low_to_high">Low to high</option>
-                                    <option value="High_to_low">High to low</option>
+                                    <option value="Low_to_high">
+                                      Low to high
+                                    </option>
+                                    <option value="High_to_low">
+                                      High to low
+                                    </option>
                                   </select>
                                   <div class="item-content">
                                     <div class="item-inner">
@@ -437,8 +464,14 @@
                       <div id="video" class="tab">
                         <div class="list">
                           <form id="video_search">
-                            <input type="hidden" name="filter_type" value="Video" />
-                            <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
+                            <input
+                              type="hidden"
+                              name="filter_type"
+                              value="Video"
+                            />
+                            <ul
+                              class="filterSection__wrapper list-unstyled pl-0 mb-0"
+                            >
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -532,7 +565,7 @@
                                   </div>
                                 </div>
                               </li>
-        
+
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -546,7 +579,9 @@
                                   >
                                     <option value="">Both</option>
                                     <option value="Verified">Verified</option>
-                                    <option value="Non-Verified">Non-Verified</option>
+                                    <option value="Non-Verified">
+                                      Non-Verified
+                                    </option>
                                   </select>
                                   <div class="item-content">
                                     <div class="item-inner">
@@ -681,7 +716,7 @@
                                   </div>
                                 </a>
                               </li>
-        
+
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -694,8 +729,12 @@
                                     title="Price"
                                   >
                                     <option value="">Any</option>
-                                    <option value="Low_to_high">Low to high</option>
-                                    <option value="High_to_low">High to low</option>
+                                    <option value="Low_to_high">
+                                      Low to high
+                                    </option>
+                                    <option value="High_to_low">
+                                      High to low
+                                    </option>
                                   </select>
                                   <div class="item-content">
                                     <div class="item-inner">
@@ -704,7 +743,7 @@
                                   </div>
                                 </a>
                               </li>
-        
+
                               <li class="keywords">
                                 <div class="form-group tagsInput">
                                   <input
@@ -722,8 +761,14 @@
                       <div id="influence" class="tab">
                         <div class="list">
                           <form id="influence_search">
-                            <input type="hidden" name="filter_type" value="Influence" />
-                            <ul class="filterSection__wrapper list-unstyled pl-0 mb-0">
+                            <input
+                              type="hidden"
+                              name="filter_type"
+                              value="Influence"
+                            />
+                            <ul
+                              class="filterSection__wrapper list-unstyled pl-0 mb-0"
+                            >
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -749,16 +794,20 @@
                                     <option value="Discuss">Discuss</option>
                                     <option value="Connect">Connect</option>
                                     <option value="Repost">Repost</option>
-                                    <option value="Live Stream">Live Stream</option>
+                                    <option value="Live Stream">
+                                      Live Stream
+                                    </option>
                                   </select>
                                   <div class="item-content">
                                     <div class="item-inner">
-                                      <div class="item-title">Influence Type</div>
+                                      <div class="item-title">
+                                        Influence Type
+                                      </div>
                                     </div>
                                   </div>
                                 </a>
                               </li>
-        
+
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -782,7 +831,7 @@
                                   </div>
                                 </a>
                               </li>
-        
+
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -796,7 +845,9 @@
                                   >
                                     <option value="">Any</option>
                                     <option value="Verified">Verified</option>
-                                    <option value="Non-Verified">Non-Verified</option>
+                                    <option value="Non-Verified">
+                                      Non-Verified
+                                    </option>
                                     <option value="Both">Both</option>
                                   </select>
                                   <div class="item-content">
@@ -806,7 +857,7 @@
                                   </div>
                                 </a>
                               </li>
-        
+
                               <!-- <li>
                             <div class="form-group">
                                 <select class="form-control selectpicker" name="format_type" data-size="5" title="">
@@ -822,7 +873,7 @@
                                 </select>
                             </div>
                         </li> -->
-        
+
                               <li>
                                 <a
                                   class="item-link smart-select smart-select-init"
@@ -843,12 +894,16 @@
                                     <option value="5">Soundcloud</option>
                                     <option value="6">Youtube</option>
                                     <option value="7">Twitch</option>
-                                    <option value="8">Use On All Platforms</option>
+                                    <option value="8">
+                                      Use On All Platforms
+                                    </option>
                                     <option value="9">Zoom</option>
                                   </select>
                                   <div class="item-content">
                                     <div class="item-inner">
-                                      <div class="item-title">Promotional Platform</div>
+                                      <div class="item-title">
+                                        Promotional Platform
+                                      </div>
                                     </div>
                                   </div>
                                 </a>
@@ -865,8 +920,12 @@
                                     title="price"
                                   >
                                     <option value="">Any</option>
-                                    <option value="Low_to_high">Low to high</option>
-                                    <option value="High_to_low">High to low</option>
+                                    <option value="Low_to_high">
+                                      Low to high
+                                    </option>
+                                    <option value="High_to_low">
+                                      High to low
+                                    </option>
                                   </select>
                                   <div class="item-content">
                                     <div class="item-inner">
@@ -875,7 +934,7 @@
                                   </div>
                                 </a>
                               </li>
-        
+
                               <!--  <li class="">
                             <div class="form-group tagsInput">
                                 <select multiple data-role="tagsinput" class="form-control" id="influence-keyword" name="keyword" placeholder="Keywords"></select>
@@ -887,15 +946,20 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </main>
           </div>
-          <button type="button" @click="${filterArtistData}" class="btn btn-primary ripple-effect filterbtn clickbtn popup-close" id="artist-filter-click" value="Apply Filter" >Apply Filter</button>
-
+          <button
+            type="button"
+            @click="${filterArtistData}"
+            class="btn btn-primary ripple-effect filterbtn clickbtn popup-close"
+            id="artist-filter-click"
+            value="Apply Filter"
+          >
+            Apply Filter
+          </button>
         </div>
-        
       </div>
     </div>
   </div>
@@ -1248,6 +1312,29 @@
     $on("pageInit", (e, page) => {
       get_feeturres();
       get_filter_optioms(); //filter form popup
+
+      var toggle = $f7.toggle.create({
+        el: ".mode-toggle",
+        on: {
+          change: function (e) {
+            console.log("Toggle changed");
+            if (e.checked) {
+              $$("body").addClass("dark-mode");
+              var isDarkMode = $$("body").hasClass("dark-mode");
+              localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+            } else {
+              $$("body").removeClass("dark-mode");
+              var isDarkMode = $$("body").hasClass("dark-mode");
+              localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+            }
+          },
+        },
+      });
+
+      // Check localStorage for theme preference on app init
+      if (localStorage.getItem("theme") === "dark") {
+        $$("body").addClass("dark-mode");
+      }
     });
 
     return $render;
