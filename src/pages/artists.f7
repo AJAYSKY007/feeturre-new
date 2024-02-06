@@ -72,7 +72,7 @@ ${hasMoreItems && $h`
 
   </div>
 
-<div class="popup popup-push filterPopup">
+<div class="popup popup-push filterPopup dark-mode">
     
     <!-- <div class="row">
       <div class="col-100 text-right popClose"><a class="link popup-close">Close</a></div>

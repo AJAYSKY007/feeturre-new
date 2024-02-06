@@ -6,7 +6,7 @@
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
         
-        <div class="left"><a href="/" class="link" ><img src="../assets/logo_1.png" class="logo" width="150" /></a></div>
+        <div class="left"><a href="/" class="link" ><img src="../assets/logo.svg" class="logo" width="150" /></a></div>
         <div class="title"></div>
         <div class="right">
           <a href="#" data-panel=".panel-left" class="panel-open link" ><span class="material-symbols-outlined">segment</span></a>

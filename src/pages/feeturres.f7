@@ -52,7 +52,7 @@
       </div>
     </div>
 
-    <div class="popup popup-push filterPopup">
+    <div class="popup dark-mode popup-push filterPopup">
       <div class="navbar navbar-small">
         <div class="navbar-inner">
           <div class="left">
@@ -64,7 +64,7 @@
        </div>
    </div>
 
-      <div class="page-content dark-mode no-padding">
+      <div class="page-content no-padding">
         <div class="block">
           <input type="hidden" name="name" />
           <div class="filterOuter" innerHTML="${filterOptions}">

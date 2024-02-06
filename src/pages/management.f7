@@ -57,7 +57,7 @@ ${hasMoreItems && $h`
   </div>
 
 
-<div class="popup popup-push filterPopup">
+<div class="popup dark-mode popup-push filterPopup">
  <div class="navbar navbar-small">
      <div class="navbar-inner">
       <div class="left">
