@@ -38,7 +38,39 @@
     --f7-ptr-top: -66px;
     --f7-input-placeholder-color: rgb(255 255 255 / 35%);
 }
-
+.toggle-icon{
+	width: 51px !important;
+	height: 31px !important;
+}
+.md .toggle input[type=checkbox]:checked+.toggle-icon {
+    background: linear-gradient(45deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% );
+    border-color: transparent;
+}
+.md .toggle input[type=checkbox]:checked+.toggle-icon:after {
+    background: #fff;
+    width: 15px !important;
+    height: 15px !important;
+    top: 5px;
+    left: 8px !important;
+}
+.md .toggle-icon{
+	background: linear-gradient(45deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% );
+    border-color: transparent;
+}
+.md .toggle-icon:after{
+    background: yellow;
+}
+.toogle_moon::before{
+	content: "";
+    position: absolute !important;
+    width: 15px !important;
+    height: 15px !important;
+    background: linear-gradient(45deg, rgba(24, 186, 212, 1) 0%, rgba(49, 182, 128, 1) 50%, rgba(128, 194, 66, 1) 100% ) !important;
+    right: 12px !important;
+    border-radius: 50% !important;
+    top: 7px !important;
+    z-index: 15;
+}
 body {
   overscroll-behavior: none;
   font-family: "Sora", sans-serif;
@@ -485,7 +517,7 @@ a.theme-color {
     text-align: center !important;
     margin-bottom: 5px !important;
     border-radius: 5px !important;
-    border: 1px solid #33cc66 !important;
+    border: 1px solid #144c27 !important;
     background: linear-gradient( 45deg, rgba(24, 187, 212, 0.09) 0%, rgba(49, 182, 128, 0.09) 50%, rgba(128, 194, 66, 0.09) 100% ) !important;
 }
 .details-page .mt-0 .detailsBox__left .musicwrapper .musicInfo .badgewrapper__list {
@@ -498,7 +530,7 @@ a.theme-color {
     text-align: center !important;
     margin-bottom: 5px !important;
     border-radius: 5px !important;
-    border: 1px solid #00CB50 !important;
+    border: 1px solid #144c27 !important;
     background: linear-gradient( 45deg, rgba(24, 187, 212, 0.09) 0%, rgba(49, 182, 128, 0.09) 50%, rgba(128, 194, 66, 0.09) 100% ) !important;
 }
 .musicwrapper__price h4 {
@@ -1225,7 +1257,7 @@ audio::-webkit-media-controls-panel {
     padding: 18px 5px;
     border: 1px solid #dedcdc;
     background: #fcfcfc;
-    border-radius: 13px;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 .contentDetails .heading {
@@ -1367,5 +1399,104 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
         box-shadow: 0 30px 20px -20px #00cb5080; }
     
      */
+
+
+/* ------------------------------ dark-mode ------------------------------ */
+
+.dark-mode .page-content { 
+    background: #0d0d0d; 
+    color: #ffffff; 
+}
+.dark-mode .toolbar-bottom a, 
+.dark-mode .toolbar-bottom .f7-icons,
+.dark-mode .navbar .material-icons,
+.dark-mode .listBox__detailFeeturres > div h2,
+.dark-mode .mgmtlist .listBox__detailArtist > div h2 {
+    color: #ffffff; 
+}
+.dark-mode p {
+    color: #959595;
+}
+.dark-mode .toolbar-bottom { 
+    background: #1c1c1c;
+    border-radius: 20px 20px 0 0;
+}
+.dark-mode .navbar .icon { 
+    color: #ffffff;
+}
+.dark-mode .navbar-bg,
+.dark-mode .details-page .detailsBox__left,
+.dark-mode .details-page .detailsBox__right { 
+    background:#0d0d0d;  
+}
+.dark-mode .material-symbols-outlined,
+.dark-mode .segmented a.tab-link-active {
+    color: #ffffff;
+}
+.dark-mode .navbar .material-symbols-outlined {
+    border: 1px solid #242424;
+}
+.dark-mode .listBox {
+    border: 1px solid #242424;
+}
+.dark-mode .home_3 h2::before, .bg2 h2::before {
+    background-color: #242424;
+}
+.dark-mode .navbar-inner {
+    border-bottom: 2px solid #242424;
+}
+.dark-mode h2, .dark-mode h4, .dark-mode h5 {
+    color: #ffffff;
+}
+.dark-mode .button.button-fill-border {
+    background: #0d0d0d;
+}
+.dark-mode .feeturreitems .listBox__detailFeeturres .d-flex h2 {
+    color: #ffffff;
+}
+.dark-mode .musicwrapper li {
+    border-bottom: 1px solid #242424;
+}
+.dark-mode .contentDetails {
+    color: #000000;
+    background-color: #0d0d0d;
+    border: 1px solid #242424;
+}
+.dark-mode .heading {
+    border: 1px solid #242424;
+    background: #0d0d0d;
+}
+.dark-mode .contentDetails__list{ 
+    background: #0d0d0d;
+    border-top: 1px solid #242424;
+}
+.dark-mode .contentDetails__list label,
+.dark-mode .headingBlock p {
+    color: #ffffff !important;
+}
+.dark-mode span,
+.dark-mode .contentDetails h3 {
+    color: #888888;
+}
+.dark-mode .btn-tonal {
+    border-top: 1px solid #242424;
+}
+.dark-mode .details-page .detailsBox__left .totalFigure__box {
+    background-color: #161616;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

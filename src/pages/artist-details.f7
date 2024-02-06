@@ -1,5 +1,5 @@
 <template>
-<div class="page" data-name="artist-details">
+<div class="page dark-mode" data-name="artist-details">
 
 
      <!-- Top Navbar -->
@@ -229,7 +229,7 @@
       <section class="feeturre" style="padding-bottom: 100px">
         <div class="container">
           <div class="commonSection__heading">
-            <h2 class="h-37 font-hbold">Artist Shop</h2>
+            <h2 class="h-37 font-hbold">Creators Shop</h2>
           </div>
           <div class="feeturre__videoBox">
             <div class="custom-tabs customCentertabs">
