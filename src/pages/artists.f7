@@ -1,5 +1,5 @@
 <template>
-<div class="page dark-mode" data-name="artists">
+<div class="page" data-name="artists">
 
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
