@@ -222,7 +222,9 @@ h3 {
     position: absolute;
     max-width: 150px;
     z-index: 5;
+    display: none;
 }
+
 .text-center {
   text-align: center;
 }
@@ -2069,6 +2071,12 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 }
 .dark-mode .feeturresListbox h1 {
   color: #ffffff;
+}
+.dark-mode .logo_light {
+  display: none;
+}
+.dark-mode .logo_dark {
+  display: block;
 }
 
 /* ------------------------------------------------------------------------------------- */
