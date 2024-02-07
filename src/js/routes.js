@@ -5,6 +5,9 @@ import HowItWorksPage from '../pages/how-it-works.f7';
 import AllArtistsPage from '../pages/artists.f7';
 import AllManagementPage from '../pages/management.f7';
 import AllFeeturresPage from '../pages/feeturres.f7';
+import SkillforhirePage from '../pages/skill-for-hire.f7';
+import DigitalAssetsPage from '../pages/digital-assets.f7';
+import NftsPage from '../pages/nfts.f7';
 
 import PrivacyPage from '../pages/privacy-policy.f7';
 
@@ -65,6 +68,27 @@ var routes = [
   {
     path: '/feeturres/',
     component: AllFeeturresPage,
+    options: {
+      transition: 'f7-parallax',
+    },
+  },
+  {
+    path: '/skill-for-hire/',
+    component: SkillforhirePage,
+    options: {
+      transition: 'f7-parallax',
+    },
+  },
+  {
+    path: '/digital-assets/',
+    component: DigitalAssetsPage,
+    options: {
+      transition: 'f7-parallax',
+    },
+  },
+  {
+    path: '/nfts/',
+    component: NftsPage,
     options: {
       transition: 'f7-parallax',
     },
