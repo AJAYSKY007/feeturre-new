@@ -6,10 +6,12 @@
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
         
-        <div class="left logo">
+        <div class="left">
           <!-- <a href="/" class="link" ><img src="../assets/logo_02.png" class="logo" width="150" /></a> -->
-          <a href="/" class="link logo_light" ><img src="../assets/logo_light.png" class="" width="150" /></a>
-          <a href="/" class="link logo_dark" ><img src="../assets/logo_dark.png" class="" width="150" /></a>
+          <a href="/" class="link logo" >
+            <img src="../assets/logo_light.png" class="logo_light" width="150" />
+            <img src="../assets/logo_dark.png" class="logo_dark" width="150" />
+          </a>
 
 
 

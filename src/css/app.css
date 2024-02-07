@@ -40,13 +40,12 @@
   height: 31px !important;
 }
 
-
-.md .toggle input[type="checkbox"]:checked + .toggle-icon {
-    background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(128,194,66,1) 100%);
+.mode-toggle input[type="checkbox"]:checked + .toggle-icon {
+    background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(128,194,66,1) 100%) !important;
     border: 0;
 }
 
-.md .toggle input[type="checkbox"]:checked + .toggle-icon:after {
+.mode-toggle input[type="checkbox"]:checked + .toggle-icon:after {
     background: #fff;
     width: 20px !important;
     height: 20px !important;
@@ -54,7 +53,7 @@
     left: 6px!important;
 }
 
-.md .toggle-icon {
+.mode-toggle .toggle-icon {
   background: linear-gradient(
     45deg,
     rgba(24, 186, 212, 1) 0%,
@@ -64,23 +63,23 @@
   border-color: transparent;
   border: 0;
 }
-.md .toggle-icon::before{
+.mode-toggle input[type="checkbox"] + .toggle-icon::before{
     content: url(../assets/cloud.png);
     position: absolute;
     top: 0;
     right: 5px;
     z-index: 3;
 }
-.md .toggle input[type="checkbox"]:checked + .toggle-icon::before {
+.mode-toggle  input[type="checkbox"]:checked + .toggle-icon::before {
     content: url(/assets/stars.png);
     top: 8px;
     right: 28px;
     z-index: 0;
 }
-.md .toggle-icon:after {
+.mode-toggle .toggle-icon:after {
   background: yellow;
-  width: 30px;
-  height: 30px;
+  width: 31px;
+  height: 31px;
   top: 0;
   left: 0;
 }
@@ -216,13 +215,14 @@ h3 {
 }
 .logo_light {
     position: absolute;
-    width: 169px;
+    max-width: 150px;
     z-index: 5;
 }
 .logo_dark {
-    display: none !important;
+    position: absolute;
+    max-width: 150px;
+    z-index: 5;
 }
-
 .text-center {
   text-align: center;
 }
@@ -1787,7 +1787,6 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
   background: transparent;
   margin-bottom: 5px;
 }
-
 .toolbar-bottom .segmented-strong a {
   font-size: 15px;
 }
@@ -1941,7 +1940,7 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 }
 
 .dark-mode .home_3 h2::before,
-.bg2 h2::before {
+.dark-mode .bg2 h2::before {
   background-color: #454545;
 }
 
@@ -2057,4 +2056,11 @@ ul.feeturreFilterTab li { list-style:none; margin: 0px; padding: 0px; } */
 .dark-mode .list input[type="text"],
 .dark-mode .tagsinputplaceholder {
   color: #ffffff;
+}
+.dark-mode .sheet-modal .toolbar .sheet-close {
+  color: #fdfdfd !important;
+}
+.dark-mode .sheet-modal .toolbar {
+  background: #0d0d0d;
+  border-top: 1px solid #313131;
 }
