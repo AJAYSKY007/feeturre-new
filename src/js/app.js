@@ -18,6 +18,8 @@ import store from './store.js';
 // Import main app component
 import App from '../app.f7';
 
+import $$ from 'dom7';
+
 var device = getDevice();
 var app = new Framework7({
   name: 'Feeturre', // App name
@@ -62,7 +64,13 @@ var app = new Framework7({
   },
 });
 
-
+// Check localStorage for theme preference on app init
+if (localStorage.getItem('theme') === 'dark') {
+  $$('.view-main').addClass('dark-mode');
+}
+else{
+  $$('.view-main').removeClass('dark-mode');
+}
 
 Framework7.request.setup({
   headers: {

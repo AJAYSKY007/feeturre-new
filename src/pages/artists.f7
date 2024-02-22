@@ -1,5 +1,7 @@
 <template>
+ 
   <div class="page" data-name="artists">
+ 
     <!-- Top Navbar -->
     <div class="navbar navbar-small">
       <div class="navbar-bg"></div>
